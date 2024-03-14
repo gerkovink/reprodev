@@ -1,22 +1,46 @@
 ---
 title: "Tutorial 1"
 subtitle: "Reproducible programming with [`Quarto`](https://quarto.org)"
+authors:
+  - name: "Gerko Vink"
+    orcid: "0000-0001-9767-1924"
 editor: source
 ---
 
-We are going to use the `Quarto` publishing environment to create a reproducible research compendium. This is the first of two `Quarto`-related tutorials. In this tutorial, we will set up the project structure and fill the dummy scripts with some code. In [the second tutorial](tutorial_2.html), we will publish the compendium and create a reproducible manuscript.
+::: callout-note
+## Learning objectives in the tutorials
+This is a group project. Form groups of 3-4 people. Each group will work together on a mode of collaborative and open development.
 
-# Tutorial materials
-The tutorial materials consist of a project structure and dummy scripts that we will use, fill and publish (in [the second tutorial](_site/tutorial_2.html)). 
+- Tutorial 1: Create a group research compendium
+- Tutorial 2: Publish the group compendium by means of open development standards and create a reproducible group website
+- Tutorial 3: Create an individual FAIR R package and commit it to the group page, together with your group projects. 
+:::
 
-1. Right-click on the following link and select _Save Link As..._: [my-reproducible-manuscript.zip](https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/raw/main/my-reproducible-manuscript.zip)
-2. Save the zip file in a location that you can easily access. We recommend to **not** use the default download location of your browser.
-3. Extract the contents of the zipped file.
+We are going to use the `Quarto` publishing environment to create a reproducible research compendium. This is the first of two `Quarto`-related tutorials. In this tutorial, we will set up the project structure and fill the documents and create a reproduvible research compendium. The structure of this compendium is based on [these workshop materials](https://utrechtuniversity.github.io/workshop-reproducible-manuscripts/workshop-materials.html). In [the second tutorial](tutorial_2.html), we will publish the compendium and create a reproducible website with `Quarto`.
+
+# Open and collaborative
+This course has its own repository at `GitHub` where you can find all sources for the materials, the slides, the tutorials and the rendered course page. The materials in this course are fully open, which would allow anyone to take, borrow and  modify these materials to their liking and even contribute to the source of these materials directly If you look carefully to your right, you see a link that to `edit this page`. This link will take you directly to the `GitHub` source of this page. 
+
+# Course materials
+The tutorial materials consist of a project structure (borrowed from [here](https://utrechtuniversity.github.io/workshop-reproducible-manuscripts/workshop-materials.html)) and dummy scripts that we will use, fill and later on publish. 
+
+We will work in `R`, althought the materials and flow would be easily applicable to `Python`. The reason for the focus on `R` is to set up a development mode for the next session that I will give on May 31. Because we are focusing on development in `R`, I will outline the `RStudio IDE` workflows. It is not hard to adapt these workflows to e.g. `VScode` or `Jupyter Lab`.
+
+That said, the materials are available [in this branch of the course repository](https://github.com/gerkovink/reprodev/tree/exercise_quarto). 
+You can download the materials by following these steps:
+
+1. Open the [`exercise_quarto` branch](https://github.com/gerkovink/reprodev/tree/exercise_quarto).
+2. Click on the green `Code` button and select `Download ZIP`.
+
+![](tutorial_1_img/down.png)
+
+3. Save the zip file in a location that you can easily access. We recommend to **not** use the default download location of your browser.
+4. Extract the contents of the zipped file.
 
 The materials should look like this:
 
 ```
-my-reproducible-manuscript
+reprodev-exercise_quarto
 ├── data
 │   └── data.csv
 ├── docs
@@ -29,3 +53,57 @@ my-reproducible-manuscript
 ├── LICENSE.md
 └── README.md
 ```
+
+# Let's start
+If you've followed the above steps, you can start creating the Quarto document that your group will work on in this tutorial.
+
+::: {.panel-tabset}
+
+## Rstudio
+
+**1. Create an RStudio Project**
+
+- In RStudio, click _File_ > _New Project_ > _Existing Directory_. 
+- Browse to your folder `reprodev-exercise_quarto` in which you have saved the workshop materials.
+- Check the _Open in new session_ option.
+- Click _Create Project_. This will create a `reprodev-exercise_quarto.Rproj` file.
+
+**2. Document your project for reproducibility**
+
+Your project already contains pre-made folders, a README file and a License.
+Open the `README.md` file and fill it with a few relevant details, for example:
+
+- Purpose and contents of the project
+- Your names (Authors)
+- The date of creation
+- Etc.
+
+**3. Create a Quarto document for your manuscript.**
+
+- In RStudio, click _File_ -> _New File_ -> _Quarto Document_
+- Give your document a title, such as `reprodev-exercise_quarto`.
+- Add yourselves as authors. A great way to do this is by including some persistent digital identifier, like an [ORCID](https://orcid.org) iD. See e.g. the following code block
+
+```{r eval=FALSE}
+authors:
+  - name: "Gerko Vink"
+    orcid: "0000-0001-9767-1924"
+  - name: "Your Name"
+    orcid: "0000-0000-0000-0000"
+  - name: "Your Name"
+    orcid: "0000-0000-0000-0000"
+  - name: "Your Name"
+    orcid: "0000-0000-0000-0000"
+```
+
+- For now, the default output format (HTML) and engine (knitr) are fine.
+- Uncheck the _Use visual markdown editor_ option.
+- Click _Create_. A new Quarto document opens.
+
+**4. Render the Quarto document to HTML**
+
+- Save the Quarto document in the `docs` folder within the `reprodev-exercise_quarto` folder.  
+Give the file a clear name, without using  spaces. For example, `reprodev-exercise_quarto.qmd` or `my-manuscript.qmd`.
+- Once everything has been saved correctly, click the _Render_ button in the menu bar.
+- The rendered HTML copy of your document will appear in your web browser or alongside the editor in RStudio. You will also see a `yourchosenfilename.html` file appear in the `docs` folder.
+:::

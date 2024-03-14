@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -121,7 +155,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#tutorial-materials" id="toc-tutorial-materials" class="nav-link active" data-scroll-target="#tutorial-materials">Tutorial materials</a></li>
+  <li><a href="#open-and-collaborative" id="toc-open-and-collaborative" class="nav-link active" data-scroll-target="#open-and-collaborative">Open and collaborative</a></li>
+  <li><a href="#course-materials" id="toc-course-materials" class="nav-link" data-scroll-target="#course-materials">Course materials</a></li>
+  <li><a href="#lets-start" id="toc-lets-start" class="nav-link" data-scroll-target="#lets-start">Let’s start</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/gerkovink/reprodev/edit/main/tutorial_1.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/gerkovink/reprodev/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -146,17 +182,45 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>We are going to use the <code>Quarto</code> publishing environment to create a reproducible research compendium. This is the first of two <code>Quarto</code>-related tutorials. In this tutorial, we will set up the project structure and fill the dummy scripts with some code. In <a href="tutorial_2.html">the second tutorial</a>, we will publish the compendium and create a reproducible manuscript.</p>
-<section id="tutorial-materials" class="level1">
-<h1>Tutorial materials</h1>
-<p>The tutorial materials consist of a project structure and dummy scripts that we will use, fill and publish (in <a href="_site/tutorial_2.html">the second tutorial</a>).</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Learning objectives in the tutorials
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is a group project. Form groups of 3-4 people. Each group will work together on a mode of collaborative and open development.</p>
+<ul>
+<li>Tutorial 1: Create a group research compendium</li>
+<li>Tutorial 2: Publish the group compendium by means of open development standards and create a reproducible group website</li>
+<li>Tutorial 3: Create an individual FAIR R package and commit it to the group page, together with your group projects.</li>
+</ul>
+</div>
+</div>
+<p>We are going to use the <code>Quarto</code> publishing environment to create a reproducible research compendium. This is the first of two <code>Quarto</code>-related tutorials. In this tutorial, we will set up the project structure and fill the documents and create a reproduvible research compendium. The structure of this compendium is based on <a href="https://utrechtuniversity.github.io/workshop-reproducible-manuscripts/workshop-materials.html">these workshop materials</a>. In <a href="tutorial_2.html">the second tutorial</a>, we will publish the compendium and create a reproducible website with <code>Quarto</code>.</p>
+<section id="open-and-collaborative" class="level1">
+<h1>Open and collaborative</h1>
+<p>This course has its own repository at <code>GitHub</code> where you can find all sources for the materials, the slides, the tutorials and the rendered course page. The materials in this course are fully open, which would allow anyone to take, borrow and modify these materials to their liking and even contribute to the source of these materials directly If you look carefully to your right, you see a link that to <code>edit this page</code>. This link will take you directly to the <code>GitHub</code> source of this page.</p>
+</section>
+<section id="course-materials" class="level1">
+<h1>Course materials</h1>
+<p>The tutorial materials consist of a project structure (borrowed from <a href="https://utrechtuniversity.github.io/workshop-reproducible-manuscripts/workshop-materials.html">here</a>) and dummy scripts that we will use, fill and later on publish.</p>
+<p>We will work in <code>R</code>, althought the materials and flow would be easily applicable to <code>Python</code>. The reason for the focus on <code>R</code> is to set up a development mode for the next session that I will give on May 31. Because we are focusing on development in <code>R</code>, I will outline the <code>RStudio IDE</code> workflows. It is not hard to adapt these workflows to e.g.&nbsp;<code>VScode</code> or <code>Jupyter Lab</code>.</p>
+<p>That said, the materials are available <a href="https://github.com/gerkovink/reprodev/tree/exercise_quarto">in this branch of the course repository</a>. You can download the materials by following these steps:</p>
 <ol type="1">
-<li>Right-click on the following link and select <em>Save Link As…</em>: <a href="https://github.com/UtrechtUniversity/workshop-reproducible-manuscripts/raw/main/my-reproducible-manuscript.zip">my-reproducible-manuscript.zip</a></li>
+<li>Open the <a href="https://github.com/gerkovink/reprodev/tree/exercise_quarto"><code>exercise_quarto</code> branch</a>.</li>
+<li>Click on the green <code>Code</code> button and select <code>Download ZIP</code>.</li>
+</ol>
+<p><img src="tutorial_1_img/down.png" class="img-fluid"></p>
+<ol start="3" type="1">
 <li>Save the zip file in a location that you can easily access. We recommend to <strong>not</strong> use the default download location of your browser.</li>
 <li>Extract the contents of the zipped file.</li>
 </ol>
 <p>The materials should look like this:</p>
-<pre><code>my-reproducible-manuscript
+<pre><code>reprodev-exercise_quarto
 ├── data
 │   └── data.csv
 ├── docs
@@ -168,6 +232,61 @@ ul.task-list li input[type="checkbox"] {
 │   └── dummy.R
 ├── LICENSE.md
 └── README.md</code></pre>
+</section>
+<section id="lets-start" class="level1">
+<h1>Let’s start</h1>
+<p>If you’ve followed the above steps, you can start creating the Quarto document that your group will work on in this tutorial.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Rstudio</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><strong>1. Create an RStudio Project</strong></p>
+<ul>
+<li>In RStudio, click <em>File</em> &gt; <em>New Project</em> &gt; <em>Existing Directory</em>.</li>
+<li>Browse to your folder <code>reprodev-exercise_quarto</code> in which you have saved the workshop materials.</li>
+<li>Check the <em>Open in new session</em> option.</li>
+<li>Click <em>Create Project</em>. This will create a <code>reprodev-exercise_quarto.Rproj</code> file.</li>
+</ul>
+<p><strong>2. Document your project for reproducibility</strong></p>
+<p>Your project already contains pre-made folders, a README file and a License. Open the <code>README.md</code> file and fill it with a few relevant details, for example:</p>
+<ul>
+<li>Purpose and contents of the project</li>
+<li>Your names (Authors)</li>
+<li>The date of creation</li>
+<li>Etc.</li>
+</ul>
+<p><strong>3. Create a Quarto document for your manuscript.</strong></p>
+<ul>
+<li>In RStudio, click <em>File</em> -&gt; <em>New File</em> -&gt; <em>Quarto Document</em></li>
+<li>Give your document a title, such as <code>reprodev-exercise_quarto</code>.</li>
+<li>Add yourselves as authors. A great way to do this is by including some persistent digital identifier, like an <a href="https://orcid.org">ORCID</a> iD. See e.g.&nbsp;the following code block</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>authors<span class="sc">:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="sc">-</span> name<span class="sc">:</span> <span class="st">"Gerko Vink"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    orcid<span class="sc">:</span> <span class="st">"0000-0001-9767-1924"</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="sc">-</span> name<span class="sc">:</span> <span class="st">"Your Name"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    orcid<span class="sc">:</span> <span class="st">"0000-0000-0000-0000"</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="sc">-</span> name<span class="sc">:</span> <span class="st">"Your Name"</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    orcid<span class="sc">:</span> <span class="st">"0000-0000-0000-0000"</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="sc">-</span> name<span class="sc">:</span> <span class="st">"Your Name"</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    orcid<span class="sc">:</span> <span class="st">"0000-0000-0000-0000"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>For now, the default output format (HTML) and engine (knitr) are fine.</li>
+<li>Uncheck the <em>Use visual markdown editor</em> option.</li>
+<li>Click <em>Create</em>. A new Quarto document opens.</li>
+</ul>
+<p><strong>4. Render the Quarto document to HTML</strong></p>
+<ul>
+<li>Save the Quarto document in the <code>docs</code> folder within the <code>reprodev-exercise_quarto</code> folder.<br>
+Give the file a clear name, without using spaces. For example, <code>reprodev-exercise_quarto.qmd</code> or <code>my-manuscript.qmd</code>.</li>
+<li>Once everything has been saved correctly, click the <em>Render</em> button in the menu bar.</li>
+<li>The rendered HTML copy of your document will appear in your web browser or alongside the editor in RStudio. You will also see a <code>yourchosenfilename.html</code> file appear in the <code>docs</code> folder.</li>
+</ul>
+</div>
+</div>
+</div>
 
 
 </section>
