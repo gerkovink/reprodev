@@ -1,9 +1,0 @@
----
-title: "Lectures"
----
-
-# Lecture slides
-Hieronder vind je de lecture slides voor de verschillende onderdelen van de cursus.
-
-- [Lecture 1: Introductie markup, scripting en reproduceren](slides/lec-1-speaker.html)
-- [Lecture 2: Reproduceerbaar programmeren met `Quarto`](https://quarto.org)
