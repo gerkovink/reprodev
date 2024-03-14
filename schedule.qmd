@@ -1,0 +1,19 @@
+---
+title: "Schedule"
+---
+
+| Timeslot      | Activiteit                                             |
+|---------------|--------------------------------------------------------|
+| 09:00 - 09:30 | Inloop                                                 |
+| 09:30 - 10:30 | Introductie markup, scripting en reproduceren          |
+| 10:30 - 10:45 | Pauze                                                  |
+| 10:45 - 11:45 | Tutorial: Reproduceerbaar programmeren met [`Quarto`](https://quarto.org) <br> *In deze tutorial werken deelnemers in groepsverband aan het maken van een reproduceerbaar archief*             |
+| 12:00 - 12:30 | Introductie tot Git en FAIR development flows          |
+| 12:30 - 13:30 | Lunch                                                  |
+| 13:30 - 14:30 | Tutorial: [`git`](https://git-scm.com) en [`GitHub`](https://github.com) <br> *Deelnemers leren samenwerken aan code middels `git` en GitHub. De basis voor deze tutorial is de groepsopdracht die in de ochtend is gemaakt.* |
+| 14:30 - 14:45 | Pauze                                                  |
+| 14:45 - 15:45 | Live workshop R package maken, testen en publiceren <br> *Deelnemers volgen de docent in de workshop waarbij ze hun groepsopdracht individueel publiceren als refereerbeer, vindbaar en werkbaar R-package* |
+| 15:45 - 16:00 | Pauze                                                  |
+| 16:00 - 16:30 | Afronden en inleveren individuele opdracht             |
+
+: Schedule {tbl-colwidths="[15,85]"}
