@@ -13,6 +13,7 @@ website:
       - tutorial_1.qmd
       - tutorial_2.qmd
       - tutorial_3.qmd
+      - final.qmd
   repo-url: https://github.com/gerkovink/reprodev
   repo-actions: [edit, issue]
 

@@ -275,4 +275,4 @@ The last in-line code chunk makes it painfully clear why piping in coding is so 
 :::
 
 # Next tutorial
-You will need your `Quarto` document and the research compendium for the next tutorial. Make sure that you have saved it all. 
+You will need your group's `Quarto` document and the research compendium for the next tutorial. Make sure that you have saved it all. 

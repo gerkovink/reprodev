@@ -1,6 +1,11 @@
 ---
 title: "Tutorial 3"
 subtitle: "How to develop, test and publish `R`-packages"
+authors:
+  - name: "Gerko Vink"
+    orcid: "0000-0001-9767-1924"
+  - name: "Hanne Oberman"
+    orcid: "0000-0003-3276-2141"
 editor: source
 ---
 

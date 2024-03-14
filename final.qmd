@@ -1,0 +1,24 @@
+---
+title: "Final Hand-in"
+---
+
+:::: {.columns}
+::: {.column width="60%"}
+To finalize the day:
+
+1. Fork [this repository]()
+2. Adjust the readme to add your content in the following way
+
+- your name
+  - your Tutorial 2 GitHub repo AND a link to your rendered `Quarto` (i.e. html) file.
+  - a link to the [Zenodo](https://zenodo.org) entry of your personal `R`-package
+  
+3. Propose the changes in a Pull Request to the original repository
+
+Done!
+:::
+
+::: {.column width="40%"}
+![](https://imgs.xkcd.com/comics/git_2x.png){width=70%}
+:::
+::::
