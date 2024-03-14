@@ -1,24 +1,10 @@
 [
   {
-    "objectID": "schedule.html",
-    "href": "schedule.html",
-    "title": "Schedule",
-    "section": "",
-    "text": "Schedule\n\n\n\n\n\n\nTimeslot\nActiviteit\n\n\n\n\n09:00 - 09:30\nInloop\n\n\n09:30 - 10:30\nIntroductie markup, scripting en reproduceren\n\n\n10:30 - 10:45\nPauze\n\n\n10:45 - 11:45\nTutorial: Reproduceerbaar programmeren met Quarto  In deze tutorial werken deelnemers in groepsverband aan het maken van een reproduceerbaar archief\n\n\n12:00 - 12:30\nIntroductie tot Git en FAIR development flows\n\n\n12:30 - 13:30\nLunch\n\n\n13:30 - 14:30\nTutorial: git en GitHub  Deelnemers leren samenwerken aan code middels git en GitHub. De basis voor deze tutorial is de groepsopdracht die in de ochtend is gemaakt.\n\n\n14:30 - 14:45\nPauze\n\n\n14:45 - 15:45\nLive workshop R package maken, testen en publiceren  Deelnemers volgen de docent in de workshop waarbij ze hun groepsopdracht individueel publiceren als refereerbeer, vindbaar en werkbaar R-package\n\n\n15:45 - 16:00\nPauze\n\n\n16:00 - 16:30\nAfronden en inleveren individuele opdracht"
-  },
-  {
     "objectID": "tutorial_1.html",
     "href": "tutorial_1.html",
     "title": "Tutorial 1",
     "section": "",
-    "text": "We are going to use the Quarto package to create a reproducible research compendium.\n\nTutorial materials\nThe tutorial materials consist of a project structure and dummy scripts that we will use, fill and publish (in the second tutorial).\n\nRight-click on the following link and select Save Link As…: my-reproducible-manuscript.zip\nSave the zip file in a location that you can easily access. We recommend to not use the default download location of your browser.\nExtract the contents of the zipped file.\n\nThe materials should look like this:\nmy-reproducible-manuscript\n├── data\n│   └── data.csv\n├── docs\n├── results\n└── scripts\n│   ├── do_addition.py\n│   ├── do_addition.R\n│   ├── dummy.py\n│   └── dummy.R\n├── LICENSE.md\n└── README.md"
-  },
-  {
-    "objectID": "tutorial_2.html",
-    "href": "tutorial_2.html",
-    "title": "Tutorial 2",
-    "section": "",
-    "text": "Time\nActivity\n\n\n\n\n09:00 - 09:30\nInloop\n\n\n09:30 - 10:30\nIntroductie markup, scripting en reproduceren\n\n\n10:30 - 10:45\nPauze\n\n\n10:45 - 11:45\nTutorial: Reproduceerbaar programmeren met Quarto"
+    "text": "We are going to use the Quarto publishing environment to create a reproducible research compendium. This is the first of two Quarto-related tutorials. In this tutorial, we will set up the project structure and fill the dummy scripts with some code. In the second tutorial, we will publish the compendium and create a reproducible manuscript.\n\nTutorial materials\nThe tutorial materials consist of a project structure and dummy scripts that we will use, fill and publish (in the second tutorial).\n\nRight-click on the following link and select Save Link As…: my-reproducible-manuscript.zip\nSave the zip file in a location that you can easily access. We recommend to not use the default download location of your browser.\nExtract the contents of the zipped file.\n\nThe materials should look like this:\nmy-reproducible-manuscript\n├── data\n│   └── data.csv\n├── docs\n├── results\n└── scripts\n│   ├── do_addition.py\n│   ├── do_addition.R\n│   ├── dummy.py\n│   └── dummy.R\n├── LICENSE.md\n└── README.md"
   },
   {
     "objectID": "index.html",
@@ -26,6 +12,27 @@
     "title": "Reproducible Programming and Development",
     "section": "",
     "text": "Teaching team: Gerko Vink & Carlos Poses\n\n\nIntroductie\nWelkom bij deze cursusdag, speciaal ontworpen voor aankomende data science professionals die zich willen verdiepen in de praktische ontwikkelvaardigheden die essentieel zijn voor de co-creatie van code en software. In de dynamische wereld van data science is de kunst van samenwerking tussen data analisten, ontwikkelaars en eindgebruikers cruciaal. Deze dag staat daarom in het teken van hands-on leren en samenwerken, met een sterke focus op praktische toepassing.\n\n\nDoel\nHet hoofddoel van deze cursusdag is om jou, als trainee, te voorzien van de vaardigheden en kennis die nodig zijn om effectief bij te dragen aan het ontwikkelingsproces binnen multidisciplinaire teams. Door een combinatie van korte verdiepende sessies en praktische groepsopdrachten, krijg je de kans om direct in teamverband toe te passen wat je leert. Dit alles met het oog op het versterken van jouw vaardigheden in het ontwikkelen, testen, en deployen van code en software, met een speciale focus op FAIR (Findable, Accessible, Interoperable, Reusable) software workflows.\nJe wordt uitgedaagd om je kennis van markup talen, scripting, programmeren, en meer te verdiepen. Door middel van een reeks interactieve tutorials en workshops zul je uiteindelijk leren hoe je een eigen reproduceerbaar R-package kunt ontwikkelen, testen, publiceren en documenteren. Het programma is zorgvuldig samengesteld om je door het volledige ontwikkelingsproces te leiden, van de eerste kennismaking met markup en scripting tot aan de afronding en inlevering van een individuele opdracht.\nAan het einde van deze dag zul je een sterke basis hebben in de belangrijkste ontwikkelflows en -praktijken die van belang zijn voor elke data science ontwikkelaar."
+  },
+  {
+    "objectID": "lectures.html",
+    "href": "lectures.html",
+    "title": "Lectures",
+    "section": "",
+    "text": "Lecture slides\nHieronder vind je de lecture slides voor de verschillende onderdelen van de cursus.\n\nLecture 1: Introductie markup, scripting en reproduceren\nLecture 2: Reproduceerbaar programmeren met Quarto"
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Schedule\n\n\n\n\n\n\nTimeslot\nActiviteit\n\n\n\n\n09:00 - 09:30\nInloop\n\n\n09:30 - 10:30\nIntroductie markup, scripting en reproduceren\n\n\n10:30 - 10:45\nPauze\n\n\n10:45 - 11:45\nTutorial: Reproduceerbaar programmeren met Quarto  In deze tutorial werken deelnemers in groepsverband aan het maken van een reproduceerbaar archief\n\n\n12:00 - 12:30\nIntroductie tot Git en FAIR development flows\n\n\n12:30 - 13:30\nLunch\n\n\n13:30 - 14:30\nTutorial: git en GitHub  Deelnemers leren samenwerken aan code middels git en GitHub. De basis voor deze tutorial is de groepsopdracht die in de ochtend is gemaakt.\n\n\n14:30 - 14:45\nPauze\n\n\n14:45 - 15:45\nLive workshop R package maken, testen en publiceren  Deelnemers volgen de docent in de workshop waarbij ze hun groepsopdracht individueel publiceren als refereerbeer, vindbaar en werkbaar R-package\n\n\n15:45 - 16:00\nPauze\n\n\n16:00 - 16:30\nAfronden en inleveren individuele opdracht"
+  },
+  {
+    "objectID": "tutorial_2.html",
+    "href": "tutorial_2.html",
+    "title": "Tutorial 2",
+    "section": "",
+    "text": "Time\nActivity\n\n\n\n\n09:00 - 09:30\nInloop\n\n\n09:30 - 10:30\nIntroductie markup, scripting en reproduceren\n\n\n10:30 - 10:45\nPauze\n\n\n10:45 - 11:45\nTutorial: Reproduceerbaar programmeren met Quarto"
   },
   {
     "objectID": "slides/lec-1.html#disclaimer",
@@ -264,12 +271,5 @@
     "title": "Tutorial 3",
     "section": "Other useful sources",
     "text": "Other useful sources\n\nThe R Packages book by Hadley Wickham and Jenny Bryan"
-  },
-  {
-    "objectID": "lectures.html",
-    "href": "lectures.html",
-    "title": "Lectures",
-    "section": "",
-    "text": "Lecture slides\nHieronder vind je de lecture slides voor de verschillende onderdelen van de cursus.\n\nLecture 1: Introductie markup, scripting en reproduceren\nLecture 2: Reproduceerbaar programmeren met Quarto"
   }
 ]
