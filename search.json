@@ -4,7 +4,28 @@
     "href": "tutorial_1.html",
     "title": "Tutorial 1",
     "section": "",
-    "text": "We are going to use the Quarto publishing environment to create a reproducible research compendium. This is the first of two Quarto-related tutorials. In this tutorial, we will set up the project structure and fill the dummy scripts with some code. In the second tutorial, we will publish the compendium and create a reproducible manuscript.\n\nTutorial materials\nThe tutorial materials consist of a project structure and dummy scripts that we will use, fill and publish (in the second tutorial).\n\nRight-click on the following link and select Save Link As…: my-reproducible-manuscript.zip\nSave the zip file in a location that you can easily access. We recommend to not use the default download location of your browser.\nExtract the contents of the zipped file.\n\nThe materials should look like this:\nmy-reproducible-manuscript\n├── data\n│   └── data.csv\n├── docs\n├── results\n└── scripts\n│   ├── do_addition.py\n│   ├── do_addition.R\n│   ├── dummy.py\n│   └── dummy.R\n├── LICENSE.md\n└── README.md"
+    "text": "Learning objectives in the tutorials\n\n\n\nThis is a group project. Form groups of 3-4 people. Each group will work together on a mode of collaborative and open development.\n\nTutorial 1: Create a group research compendium\nTutorial 2: Publish the group compendium by means of open development standards and create a reproducible group website\nTutorial 3: Create an individual FAIR R package and commit it to the group page, together with your group projects.\nWe are going to use the Quarto publishing environment to create a reproducible research compendium. This is the first of two Quarto-related tutorials. In this tutorial, we will set up the project structure and fill the documents and create a reproduvible research compendium. The structure of this compendium is based on these workshop materials. In the second tutorial, we will publish the compendium and create a reproducible website with Quarto."
+  },
+  {
+    "objectID": "tutorial_1.html#what-it-should-look-like",
+    "href": "tutorial_1.html#what-it-should-look-like",
+    "title": "Tutorial 1",
+    "section": "What It Should Look Like",
+    "text": "What It Should Look Like\nBelow is an image of the rendered output. Try to recreate it in your Quarto document."
+  },
+  {
+    "objectID": "tutorial_1.html#links-you-need",
+    "href": "tutorial_1.html#links-you-need",
+    "title": "Tutorial 1",
+    "section": "Links you need",
+    "text": "Links you need\n\nYou can find the link to the development repo of the mice package here: https://github.com/amices/mice\nThe link to the mice logo is: https://amices.org/mice/logo.png"
+  },
+  {
+    "objectID": "tutorial_1.html#dont-struggle-for-too-long",
+    "href": "tutorial_1.html#dont-struggle-for-too-long",
+    "title": "Tutorial 1",
+    "section": "Don’t struggle for too long",
+    "text": "Don’t struggle for too long\n\n\n\n\n\n\nExpand to see the solution\n\n\n\n\n\n# Meet `Quarto`\n\n`Quarto` enables you to weave together content and executable code into a finished document. \nTo learn more about Quarto see [https://quarto.org](https://quarto.org).\n\n# Meet the `boys` data \nThe `boys` data from the [`mice`](https://github.com/amices/mice){.pkg} package in [`R`]{.proglang} is a random sample of 10% from the cross-sectional data used to construct the Dutch growth references 1997. Variables `gen` and `phb` are ordered factors. `reg` is a factor.\n\nThe following table shows the first 6 rows of the `boys` data.\n\n:::: {.columns}\n::: {.column width=\"60%\"}\n```{r}\nhead(mice::boys)\n```\n:::\n\n::: {.column width=\"40%\"}\n![](https://amices.org/mice/logo.png){fig-align=\"right\" width=60%}\n:::\n::::"
   },
   {
     "objectID": "index.html",
