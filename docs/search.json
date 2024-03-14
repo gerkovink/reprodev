@@ -305,7 +305,7 @@
     "href": "tutorial_1.html#references",
     "title": "Tutorial 1",
     "section": "References",
-    "text": "References\nNow let’s start with a quick investigation into the boys data and its missingness.\n\nAdd the following syntax to your Quarto document:\n\n# The `boys` set is incomplete\nNot every value in the `mice::boys` set is observed. This may pose problems with the analysis of the `boys` data. To get an idea about the problem, we can use the [`ggmice`](https://github.com/amices/ggmice){.pkg} package to create a [`ggplot2`](https://ggplot2.tidyverse.org){.pkg} type plot of the missing values in the `boys` data.\n\n```{r mdpattern}\nggmice::plot_pattern(mice::boys)\n```\nThe above syntax uses the Quarto referencing environment to create a reference for the ggplot2 package."
+    "text": "References\nNow let’s start with a quick investigation into the boys data and its missingness.\n\nAdd the following syntax with code block to your Quarto document:\n\nNot every value in the `mice::boys` set is observed. This may pose problems with the analysis of the `boys` data. To get an idea about the problem, we can use missing data patterns. created the [`ggmice`](https://github.com/amices/ggmice){.pkg} package to create a [`ggplot2`](https://ggplot2.tidyverse.org){.pkg} [@ggplot2] type plot of the missing values in the `boys` data.\n\n```{r mdpattern}\nlibrary(mice)\nlibrary(ggmice)\n\n# visualize ggplot2-like missing data pattern\nmice::boys |&gt; \n  ggmice::plot_pattern()\n```\nThe above syntax uses the Quarto referencing environment to create a reference for the ggplot2 package.\n\nFor the referencing to work, you need to add the references.bib file to your project. You can find the file in the docs folder of your project. Add the following line to the YAML front matter of your Quarto document.\n\nbibliography: references.bib\n\nFind the reference for R, for package ggmice and for package mice HINT: You can use the \\citation() function in R\nAdd the references to text, where the reference for ggmice should be a ## renv"
   },
   {
     "objectID": "tutorial_1.html#renv",
@@ -313,5 +313,12 @@
     "title": "Tutorial 1",
     "section": "renv",
     "text": "renv"
+  },
+  {
+    "objectID": "tutorial_1.html#load-scripts",
+    "href": "tutorial_1.html#load-scripts",
+    "title": "Tutorial 1",
+    "section": "Load scripts",
+    "text": "Load scripts"
   }
 ]

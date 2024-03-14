@@ -57,6 +57,18 @@ reprodev-exercise_quarto
 # Let's start
 If you've followed the above steps, you can start creating the Quarto document that your group will work on in this tutorial.
 
+::: {#tip-one .callout-tip}
+## Install the required packages
+We will use some packages later on. It may be that you have not installed them to your machine, yet. So let's do that now:
+
+```{r eval=FALSE}
+install.packages("mice")  
+install.packages("ggmice")
+install.packages("ggplot2")
+install.packages("magrittr")
+```
+:::
+
 ::: {.panel-tabset}
 
 ## Rstudio
@@ -163,28 +175,103 @@ head(mice::boys)
 ````
 ::: 
 
-# Advanced options
+# Exercise
+
+The following panel treats several advanced options that you can use in your `Quarto` document. Follow them from left to right. 
 
 ::: {.panel-tabset}
 
-## References
+## 1. Code sourcing
+You can side load (aka source) scripts by using code chunks. An `R` code chunk has the form of:
+
+````
+```{{r}}
+#| chunk option 1
+#| chunk option 2
+```
+````
+
+To side-load a code file use:
+````
+```{{r}}
+#| file: "your-script.R"
+#| eval: true 
+```
+````
+The `file` option is the name of the file you want to load. The `eval` option is a boolean that determines if the code should be evaluated.
+
+Although `Quarto` unifies code and text, it is still a good idea to separate (parts of) the code from the text. Modular coding makes your documents easier to understand, read, maintain and debug. 
+
+1. Add the code file `_data_/read_data.R` to your document to read in the `boys` data.
+
+2. In a new code chunk, ask for the `head(boys)` to verify that your code sourcing is working.
+
+## 2. References
 
 Now let's start with a quick investigation into the `boys` data and its missingness. 
 
-1. Add the following syntax to your `Quarto` document:
+1. Add the following syntax with code block to your `Quarto` document:
 
 ````
-# The `boys` set is incomplete
-Not every value in the `mice::boys` set is observed. This may pose problems with the analysis of the `boys` data. To get an idea about the problem, we can use the [`ggmice`](https://github.com/amices/ggmice){.pkg} package to create a [`ggplot2`](https://ggplot2.tidyverse.org){.pkg} type plot of the missing values in the `boys` data.
+#| code-overflow: wrap
+Not every value in the `mice::boys` set is observed. This may pose problems with the analysis of the `boys` data. To get an idea about the problem, we can use missing data patterns. created the [`ggmice`](https://github.com/amices/ggmice){.pkg} package to create a [`ggplot2`](https://ggplot2.tidyverse.org){.pkg} [@ggplot2] type plot of the missing values in the `boys` data.
 
 ```{{r mdpattern}}
-ggmice::plot_pattern(mice::boys)
-```
+library(mice)
+library(ggmice)
 
+# visualize ggplot2-like missing data pattern
+mice::boys |> 
+  ggmice::plot_pattern()
+```
 ````
 
 The above syntax uses the `Quarto` referencing environment to create a reference for the `ggplot2` package. 
 
-2. 
+2. For the referencing to work, you need to add the `references.bib` file to your project. You can find the file in the docs folder of your project. Add the following line to the YAML front matter of your Quarto document. 
 
-## `renv`
+```yaml
+bibliography: references.bib
+```
+
+For more information about bibliographic data sources and `Quarto`, see the [`Quarto Citation reference`](https://quarto.org/docs/authoring/footnotes-and-citations.html).
+
+3. Find the reference for `R`, for package `ggmice` and for package `mice` HINT: You can use the `\citation()` function in `R`
+
+4. Add the references to text, where the reference for `ggmice` should take the form: Hanne Oberman [-@ggmice] and the reference for the others should take the form (Author, Year). 
+
+## 3. `renv`
+
+The `renv` package is a tool for creating reproducible environments in `R`. It is a good practice to use `renv` to manage the packages that you use in your project.
+
+If you have not yet installed the necessary packages, yet, it may be wise to do so now. See @tip-one for the code to install the necessary packages.
+
+Start `renv`
+```{r eval=FALSE}
+renv::init()
+```
+
+`renv::init()` adds three new files and directories to your project:
+
+- The project library, _renv/library_, is a library that contains all packages currently used by your project This is the key magic that makes `renv` work: instead of having one library containing the packages used in every project, `renv` gives you a separate library for each project. This gives you the benefits of isolation: different projects can use different versions of packages, and installing, updating, or removing packages in one project doesn’t affect any other project.
+- The lockfile, `renv.lock`, records enough metadata about every package that it can be re-installed on a new machine. We’ll come back to the lockfile shortly when we talk about `renv::snapshot()` and `renv::restore()`.
+- A project `R` profile, `.Rprofile`. This file is run automatically every time you start `R` (in that project), and `renv` uses it to configure your `R` session to use the project library. This ensures that once you turn on `renv` for a project, it stays on, until you deliberately turn it off.
+
+The next important pair of tools are `renv::snapshot()` and `renv::restore()`:
+
+`snapshot()` updates the lockfile with metadata about the currently-used packages in the project library. This is useful because you can then share the lockfile and other people or other computers can easily reproduce your current environment by running `restore()`, which uses the metadata from the lockfile to install exactly the same version of every package.
+
+This pair of functions gives you the benefits of reproducibility and portability: you are now tracking exactly which package versions you have installed so you or others can recreate them on other machines.
+
+## 4. in-line code
+The flexibility of `Quarto` is to add in-line code. This is a great way to add dynamic content to your text that is automatically updated from the data and analyses.
+
+1. Add the following text with in-line code to your document:
+
+```{r eval=FALSE}
+#| code-overflow: wrap
+# Descriptions of the `boys` data
+The `boys` data contains `r nrow(boys` rows and `r ncol(boys)` columns. In total there are `r sum(is.na(boys)` missing values in the `boys` data, with the highest number of missing values in the `r names(which.max(apply(mice::boys, 2, function(x) sum(is.na(x)))))` column. 
+```
+
+:::
