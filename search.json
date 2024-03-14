@@ -49,6 +49,13 @@
     "text": "Schedule\n\n\n\n\n\n\nTimeslot\nActiviteit\n\n\n\n\n09:00 - 09:30\nInloop\n\n\n09:30 - 10:30\nIntroductie markup, scripting en reproduceren\n\n\n10:30 - 10:45\nPauze\n\n\n10:45 - 11:45\nTutorial: Reproduceerbaar programmeren met Quarto  In deze tutorial werken deelnemers in groepsverband aan het maken van een reproduceerbaar archief\n\n\n12:00 - 12:30\nIntroductie tot Git en FAIR development flows\n\n\n12:30 - 13:30\nLunch\n\n\n13:30 - 14:30\nTutorial: git en GitHub  Deelnemers leren samenwerken aan code middels git en GitHub. De basis voor deze tutorial is de groepsopdracht die in de ochtend is gemaakt.\n\n\n14:30 - 14:45\nPauze\n\n\n14:45 - 15:45\nLive workshop R package maken, testen en publiceren  Deelnemers volgen de docent in de workshop waarbij ze hun groepsopdracht individueel publiceren als refereerbeer, vindbaar en werkbaar R-package\n\n\n15:45 - 16:00\nPauze\n\n\n16:00 - 16:30\nAfronden en inleveren individuele opdracht"
   },
   {
+    "objectID": "final.html",
+    "href": "final.html",
+    "title": "Final Hand-in",
+    "section": "",
+    "text": "To finalize the day:\n\nFork this repository\nAdjust the readme to add your content in the following way\n\n\nyour name\n\nyour Tutorial 2 GitHub repo AND a link to your rendered Quarto (i.e. html) file.\na link to the Zenodo entry of your personal R-package\n\n\n\nPropose the changes in a Pull Request to the original repository\n\nDone!"
+  },
+  {
     "objectID": "tutorial_2.html",
     "href": "tutorial_2.html",
     "title": "Tutorial 2",
