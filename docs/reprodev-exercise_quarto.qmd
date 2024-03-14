@@ -1,0 +1,58 @@
+---
+title: "reprodev-exercise_quarto"
+authors:
+  - name: "Gerko Vink"
+    orcid: "0000-0001-9767-1924"
+format: html
+bibliography: references.bib
+---
+
+# Meet `Quarto`
+
+`Quarto` enables you to weave together content and executable code into a finished document. 
+To learn more about Quarto see [https://quarto.org](https://quarto.org).
+
+# Meet the `boys` data 
+The `boys` data from the [`mice`](https://github.com/amices/mice){.pkg} package [@mice] in [`R`]{.proglang} [@R] is a random sample of 10% from the cross-sectional data used to construct the Dutch growth references 1997. Variables `gen` and `phb` are ordered factors. `reg` is a factor.
+
+The following table shows the first 6 rows of the `boys` data.
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r headboys}
+head(mice::boys)
+```
+:::
+
+::: {.column width="40%"}
+
+![](https://amices.org/mice/logo.png){fig-align="right" width=60%}
+:::
+::::
+
+# Read in the `boys` data. 
+
+```{r}
+#| file: "../scripts/read_data.R"
+#| eval: true 
+```
+
+```{r}
+head(boys)
+```
+
+# The `boys` set is incomplete
+Not every value in the `mice::boys` set is observed. This may pose problems with the analysis of the `boys` data. To get an idea about the problem, we can use missing data patterns. Hanne Oberman [-@ggmice] created the [`ggmice`](https://github.com/amices/ggmice){.pkg} package to create a [`ggplot2`](https://ggplot2.tidyverse.org){.pkg} [@ggplot2] type plot of the missing values in the `boys` data.
+
+```{r mdpattern}
+library(mice)
+library(ggmice)
+library(magrittr)
+
+# visualize ggplot2-like missing data pattern
+mice::boys |>
+  ggmice::plot_pattern()
+```
+
+# Descriptions of the `boys` data
+The `boys` data contains `r nrow(boys)` rows and `r ncol(boys)` columns. In total there are `r sum(is.na(boys))` missing values in the `boys` data, with the highest number of missing values in the `r names(which.max(apply(mice::boys, 2, function(x) sum(is.na(x)))))` column. 
