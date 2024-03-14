@@ -53,7 +53,7 @@
     "href": "tutorial_2.html",
     "title": "Tutorial 2",
     "section": "",
-    "text": "Time\nActivity\n\n\n\n\n09:00 - 09:30\nInloop\n\n\n09:30 - 10:30\nIntroductie markup, scripting en reproduceren\n\n\n10:30 - 10:45\nPauze\n\n\n10:45 - 11:45\nTutorial: Reproduceerbaar programmeren met Quarto"
+    "text": "Introduction\n\n\nExercise\n\n1. Create a new repository on GitHub2. Fork the repository3. Create a new branch4. Adjust the compendium5. Create a pull request6. Review the pull request7. Merge the pull request"
   },
   {
     "objectID": "slides/lec-1.html#disclaimer",
