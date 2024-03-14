@@ -577,5 +577,3 @@ Potential next steps include:
 ## Other useful sources
 
 - [The `R Packages` book by Hadley Wickham and Jenny Bryan](https://r-pkgs.org)
-
-# Shiny
