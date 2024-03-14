@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -143,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Tutorial 2</h1>
-<p class="subtitle lead"><a href="https://git-scm.com"><code>git</code></a> and <a href="https://github.com"><code>GitHub</code></a></p>
+<p class="subtitle lead"><a href="https://git-scm.com"><code>git</code></a> and <a href="https://github.com"><code>GitHub</code></a> - creating a visible portfolio</p>
 </div>
 
 
@@ -168,32 +202,130 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
+<p><code>git</code> and <code>GitHub</code> are tools that allow you to create a visible portfolio of your work. This tutorial will guide you through the process of creating a new repository on GitHub, forking the repository, creating a new branch, adjusting the compendium, creating a pull request, reviewing the pull request, and merging the pull request.</p>
+<p>Finally, we will make the portfolio visible by creating a website rendering and publishing our <code>Quarto</code> document to <code>GitHub Pages</code>.</p>
 </section>
 <section id="exercise" class="level1">
 <h1>Exercise</h1>
+<p>Divide your group in two teams:</p>
+<p>Team A will be the owner of the repository. Team B will fork the repository and act as a contributor to the repository. Follow the instructions together and make sure that you understand the process. If you have any questions, please ask me, or Carlos.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">1. Create a new repository on GitHub</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">2. Fork the repository</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">3. Create a new branch</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">4. Adjust the compendium</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">5. Create a pull request</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false">6. Review the pull request</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" role="tab" aria-controls="tabset-1-7" aria-selected="false">7. Merge the pull request</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">1. Publish a new repository</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">2. Add content</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">3. Fork the repository</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">3. Create a new branch</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">4. Adjust the compendium</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false">5. Create a pull request</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" role="tab" aria-controls="tabset-1-7" aria-selected="false">6. Review and merge the pull request</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-8" role="tab" aria-controls="tabset-1-8" aria-selected="false">7. Make the portfolio visible</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-
+<p>First, we will create a new repository on with <code>GitHub</code> desktop.</p>
+<ol type="1">
+<li>Choose <em>File &gt; New Repository</em></li>
+</ol>
+<p><img src="tutorial_2_img/new.png" class="img-fluid" style="width:50.0%"></p>
+<ol start="2" type="1">
+<li>Choose a name for the repository and a location on your computer and click <em>Create Repository</em></li>
+</ol>
+<ul>
+<li>Choose initialise this repository with a README</li>
+<li>Choose MIT License</li>
+<li>Choose <code>R</code> for <em>Git Ignore</em></li>
+</ul>
+<p><img src="tutorial_2_img/create.png" class="img-fluid" style="width:100.0%"> 3. Now publish the repository to <code>GitHub</code> by clicking <em>Publish Repository</em> and follow the instructions.</p>
+<ul>
+<li>Choose a name for the repository</li>
+<li>Untick <em>Keep this code private</em></li>
+</ul>
+<p><img src="tutorial_2_img/publish.png" class="img-fluid" style="width:100.0%"></p>
+<p>Now click <em>Publish Repository</em> and wait for the repo to be published.</p>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-
+<p>This one is easy!</p>
+<p>Add the content from Tutorial 1 to the folder that you just created. You can overwrite the <code>README.md</code> file with the one from Tutorial 1. There is no need to overwrite the <code>.gitignore</code> and <code>LICENSE</code> files, if relevant.</p>
+<p>Make sure that you add all files and folders - also the hidden ones - to the <code>git</code> repository on your machine.</p>
+<section id="are-all-folders-detected" class="level3 {callout-warning}">
+<h3 class="anchored" data-anchor-id="are-all-folders-detected">Are all folders detected?</h3>
+<p>Make sure that all folders in your repo are detected by <code>git</code>. If you are using <code>GitHub Desktop</code>, you can check this by clicking on the <em>Changes</em> tab. If you are using the command line, you can use the <code>git status</code> command.</p>
+<p>Depending on your platform, you might need to change the <code>docs</code> folder to <code>doc</code> or <code>documents</code> for it to be detected by <code>git</code>.</p>
+</section>
+<p>After making sure all changes to the folder are detected, create a commit message (<code>initial commit</code> is conventional) and click <em>Commit to main</em>, followed by <em>Push origin</em>.</p>
+<p><img src="tutorial_2_img/init.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-
+<p>Now the contributors (Team B) will fork the repository.</p>
+<ol type="1">
+<li>Find the repository on <code>GitHub</code> and click <em>Fork</em>.</li>
+</ol>
+<ul>
+<li>copying the main branch only will suffice</li>
+</ul>
+<p><img src="tutorial_2_img/fork.png" class="img-fluid" style="width:100.0%"></p>
+<ol start="2" type="1">
+<li>Clone the repository to your computer by clicking on the green code button and choosing <em>Open with GitHub Desktop</em> as the clone method.</li>
+</ol>
+<p><img src="tutorial_2_img/clone.png" class="img-fluid" style="width:100.0%"></p>
+<ol start="3" type="1">
+<li>Choose a location on your computer and click <em>Clone</em>.</li>
+</ol>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-
+<p>Never work on the main branch. Always create a new branch for your work.</p>
+<p><img src="tutorial_2_img/branch.png" class="img-fluid" style="width:100.0%"></p>
+<ol type="1">
+<li>Choose <em>Branch &gt; New Branch</em> and give the branch a name.</li>
+</ol>
+<ul>
+<li><code>dev</code> is a common name for a development branch</li>
+</ul>
+<p><img src="tutorial_2_img/dev.png" class="img-fluid" style="width:100.0%"></p>
+<ol start="2" type="1">
+<li>Now you can start working on the repository.</li>
+</ol>
 </div>
 <div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
-
+<p>This is a free exercise. You must add something to the <code>Quarto</code> file and re-render.</p>
+<ol type="1">
+<li>Use your creativity and add two things to the <code>Quarto</code> file from Tutorial 1.</li>
+</ol>
+<ul>
+<li>The funniest image you know or can find</li>
+<li>The funniest or coolest video you know or can find</li>
+</ul>
+<ol start="2" type="1">
+<li><p>Re-render the <code>Quarto</code> file and make sure that the changes are visible in the <em>html</em> folder.</p></li>
+<li><p>Commit the changes to the repository and push the changes to your fork of the repository on <code>GitHub</code> by clicking <em>Push Origin</em>.</p></li>
+</ol>
 </div>
 <div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
-
+<p>Now that you have contributed to the project and have made changes to the repository, you can create a pull request to the main repository.</p>
+<ol type="1">
+<li>Go to the forked repository on <code>GitHub</code> and click on <em>Compare &amp; pull request</em>. <img src="tutorial_2_img/pr.png" class="img-fluid" style="width:100.0%"></li>
+</ol>
+<p>Alternatively, you can click on the <em>Preview Pull request</em> button in <code>GitHub Desktop</code>.</p>
+<p><img src="tutorial_2_img/prgh.png" class="img-fluid" style="width:100.0%"> 2. Review the changes that you made and click <em>Create pull request</em>.</p>
+<ul>
+<li>choose <code>main</code> as the base (destination) repository branch and the branch that your changes are on as the compare branch</li>
+<li>add an informative title and description</li>
+<li>detail the changes that you made</li>
+<li>assign someone to review the pull request (if relevant)</li>
+</ul>
+<p>In general, try to make the life of the maintainer as easy as possible by properly documenting your contributions.</p>
+<p><img src="tutorial_2_img/prmes.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 <div id="tabset-1-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-7-tab">
-
+<p>Now the owner of the repository (Team A) will review the pull request. This is best done in the <em>Files changed</em> tab and by studying the <em>Commits</em> tab.</p>
+<p><img src="tutorial_2_img/filch.png" class="img-fluid" style="width:100.0%"></p>
+<p>Go through the files and look at the code. Alternatively, you can check out the <em>PR branch</em> in <code>GitHub Desktop</code> and see the changes in the files on your machine and the commits in the <em>Changes</em> tab.</p>
+<p><img src="tutorial_2_img/prbranch.png" class="img-fluid" style="width:100.0%"> If you are happy, you can approve the changes and continue with merging the pull request. Approving is done with the <em>Review changes</em> button under the <em>Files changed</em> tab. It is nice to write a message to the contributor to thank them for their contribution.</p>
+<p>Click on <em>Merge pull request</em> and then <em>Confirm merge</em> to merge the pool request. The changes are now merged into the main branch of the repository.</p>
+<p>The development cycle is now complete and the contributed changes are part of the main repository.</p>
+</div>
+<div id="tabset-1-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-8-tab">
+<p>Finally, we will make the portfolio visible by creating a website rendering and publishing our <code>Quarto</code> document to <code>GitHub Pages</code>.</p>
+<ol type="1">
+<li><p>Go to the settings of the repository and scroll down to the <em>Pages</em> section.</p></li>
+<li><p>Choose the <code>main</code> branch as the source for the website and click <em>Save</em>. <img src="tutorial_2_img/pages.png" class="img-fluid" style="width:100.0%"></p></li>
+<li><p>Scroll down and choose <em>Enforce HTTPS</em> if available. This allows you to piggyback on the <code>GitHub</code> global certificate and have a securely accessible website. <img src="tutorial_2_img/https.png" class="img-fluid" style="width:100.0%"></p></li>
+<li><p>Wait for the website to be published. This can take a few minutes. You can check the status of the website by going to the <em>Actions</em> tab of the repository.</p></li>
+<li><p>Update the README file with a link to the rendered <code>Quarto</code> document. If you did not change any parameters, this would be realized by adding the following code to the <code>README.md</code> file:</p></li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>The rendered <span class="in">`Quarto`</span> file can be found <span class="co">[</span><span class="ot">here</span><span class="co">](/doc/reprodev-exercise_quarto.html)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Going to your repository webpage on GitHub (often something like https://YOURUSERNAME.github.io/REPOSITORYNAME) should now serve you the <code>README.md</code> as a landing page, with a working link to your rendered <code>Quarto</code> file.</p>
 </div>
 </div>
 </div>
