@@ -1,0 +1,26 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "reprodev"
+  navbar:
+    left:
+      - href: index.qmd
+        text: About
+      - schedule.qmd
+      - lectures.qmd
+      - tutorial_1.qmd
+      - tutorial_2.qmd
+      - tutorial_3.qmd
+  repo-url: https://github.com/gerkovink/reprodev
+  repo-actions: [edit, issue]
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+

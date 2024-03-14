@@ -1,0 +1,16 @@
+---
+title: "Reproducible Programming and Development"
+---
+
+- Teaching team: [Gerko Vink](https://www.gerkovink.com) & [Carlos Poses](https://carlosposes.github.io)
+
+# Introductie
+Welkom bij deze cursusdag, speciaal ontworpen voor aankomende data science professionals die zich willen verdiepen in de praktische ontwikkelvaardigheden die essentieel zijn voor de co-creatie van code en software. In de dynamische wereld van data science is de kunst van samenwerking tussen data analisten, ontwikkelaars en eindgebruikers cruciaal. Deze dag staat daarom in het teken van hands-on leren en samenwerken, met een sterke focus op praktische toepassing.
+
+# Doel
+Het hoofddoel van deze cursusdag is om jou, als trainee, te voorzien van de vaardigheden en kennis die nodig zijn om effectief bij te dragen aan het ontwikkelingsproces binnen multidisciplinaire teams. Door een combinatie van korte verdiepende sessies en praktische groepsopdrachten, krijg je de kans om direct in teamverband toe te passen wat je leert. Dit alles met het oog op het versterken van jouw vaardigheden in het ontwikkelen, testen, en deployen van code en software, met een speciale focus op FAIR (Findable, Accessible, Interoperable, Reusable) software workflows.
+
+Je wordt uitgedaagd om je kennis van markup talen, scripting, programmeren, en meer te verdiepen. Door middel van een reeks interactieve tutorials en workshops zul je uiteindelijk leren hoe je een eigen reproduceerbaar R-package kunt ontwikkelen, testen, publiceren en documenteren. Het programma is zorgvuldig samengesteld om je door het volledige ontwikkelingsproces te leiden, van de eerste kennismaking met markup en scripting tot aan de afronding en inlevering van een individuele opdracht.
+
+Aan het einde van deze dag zul je een sterke basis hebben in de belangrijkste ontwikkelflows en -praktijken die van belang zijn voor elke data science ontwikkelaar.
+
