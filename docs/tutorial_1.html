@@ -172,6 +172,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#dont-struggle-for-too-long" id="toc-dont-struggle-for-too-long" class="nav-link" data-scroll-target="#dont-struggle-for-too-long">Don’t struggle for too long</a></li>
   </ul></li>
   <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
+  <li><a href="#next-tutorial" id="toc-next-tutorial" class="nav-link" data-scroll-target="#next-tutorial">Next tutorial</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/gerkovink/reprodev/edit/main/tutorial_1.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/gerkovink/reprodev/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -246,12 +247,9 @@ Learning objectives in the tutorials
 ├── data
 │   └── data.csv
 ├── docs
-├── results
+│   └── references.bib
 └── scripts
-│   ├── do_addition.py
-│   ├── do_addition.R
-│   ├── dummy.py
-│   └── dummy.R
+│   └── read_data.R
 ├── LICENSE.md
 └── README.md</code></pre>
 </section>
@@ -442,7 +440,7 @@ Expand to see the solution
 <p>For more information about bibliographic data sources and <code>Quarto</code>, see the <a href="https://quarto.org/docs/authoring/footnotes-and-citations.html"><code>Quarto Citation reference</code></a>.</p>
 <ol start="3" type="1">
 <li><p>Find the reference for <code>R</code>, for package <code>ggmice</code> and for package <code>mice</code> HINT: You can use the <code>\citation()</code> function in <code>R</code></p></li>
-<li><p>Add the references to text, where the reference for <code>ggmice</code> should take the form: Hanne Oberman <span class="citation" data-cites="ggmice">[-@ggmice]</span> and the reference for the others should take the form (Author, Year).</p></li>
+<li><p>Add the references to text, where the reference for <code>ggmice</code> should take the form: Hanne Oberman (2023) and the reference for the others should take the form (Author, Year).</p></li>
 </ol>
 </div>
 <div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
@@ -471,9 +469,14 @@ Expand to see the solution
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-overflow-wrap code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Descriptions of the `boys` data</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>The <span class="st">`</span><span class="at">boys</span><span class="st">`</span> data contains <span class="st">`</span><span class="at">r nrow(boys</span><span class="st">`</span> rows and <span class="st">`</span><span class="at">r ncol(boys)</span><span class="st">`</span> columns. In total there are <span class="st">`</span><span class="at">r sum(is.na(boys)</span><span class="st">`</span> missing values <span class="cf">in</span> the <span class="st">`</span><span class="at">boys</span><span class="st">`</span> data, with the highest number of missing values <span class="cf">in</span> the <span class="st">`</span><span class="at">r names(which.max(apply(mice::boys, 2, function(x) sum(is.na(x)))))</span><span class="st">`</span> column. </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>The last in-line code chunk makes it painfully clear why piping in coding is so essential for the readability of your code. The flexibility about the in-line code is that it is automatically updated from the data and analyses - so as soon as one or the other changes, the output is updated accordingly when the <code>Quarto</code> document is rendered.</p>
 </div>
 </div>
 </div>
+</section>
+<section id="next-tutorial" class="level1">
+<h1>Next tutorial</h1>
+<p>You will need your <code>Quarto</code> document and the research compendium for the next tutorial. Make sure that you have saved it all.</p>
 
 
 </section>

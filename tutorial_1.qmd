@@ -44,12 +44,9 @@ reprodev-exercise_quarto
 ├── data
 │   └── data.csv
 ├── docs
-├── results
+│   └── references.bib
 └── scripts
-│   ├── do_addition.py
-│   ├── do_addition.R
-│   ├── dummy.py
-│   └── dummy.R
+│   └── read_data.R
 ├── LICENSE.md
 └── README.md
 ```
@@ -238,7 +235,7 @@ For more information about bibliographic data sources and `Quarto`, see the [`Qu
 
 3. Find the reference for `R`, for package `ggmice` and for package `mice` HINT: You can use the `\citation()` function in `R`
 
-4. Add the references to text, where the reference for `ggmice` should take the form: Hanne Oberman [-@ggmice] and the reference for the others should take the form (Author, Year). 
+4. Add the references to text, where the reference for `ggmice` should take the form: Hanne Oberman (2023) and the reference for the others should take the form (Author, Year). 
 
 ## 3. `renv`
 
@@ -274,4 +271,8 @@ The flexibility of `Quarto` is to add in-line code. This is a great way to add d
 The `boys` data contains `r nrow(boys` rows and `r ncol(boys)` columns. In total there are `r sum(is.na(boys)` missing values in the `boys` data, with the highest number of missing values in the `r names(which.max(apply(mice::boys, 2, function(x) sum(is.na(x)))))` column. 
 ```
 
+The last in-line code chunk makes it painfully clear why piping in coding is so essential for the readability of your code. The flexibility about the in-line code is that it is automatically updated from the data and analyses - so as soon as one or the other changes, the output is updated accordingly when the `Quarto` document is rendered. 
 :::
+
+# Next tutorial
+You will need your `Quarto` document and the research compendium for the next tutorial. Make sure that you have saved it all. 

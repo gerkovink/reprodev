@@ -18,7 +18,7 @@
     "href": "tutorial_2.html",
     "title": "Tutorial 2",
     "section": "",
-    "text": "Time\nActivity\n\n\n\n\n09:00 - 09:30\nInloop\n\n\n09:30 - 10:30\nIntroductie markup, scripting en reproduceren\n\n\n10:30 - 10:45\nPauze\n\n\n10:45 - 11:45\nTutorial: Reproduceerbaar programmeren met Quarto"
+    "text": "Introduction\n\n\nExercise\n\n1. Create a new repository on GitHub2. Fork the repository3. Create a new branch4. Adjust the compendium5. Create a pull request6. Review the pull request7. Merge the pull request"
   },
   {
     "objectID": "index.html",
@@ -320,5 +320,54 @@
     "title": "Tutorial 1",
     "section": "Load scripts",
     "text": "Load scripts"
+  },
+  {
+    "objectID": "tutorial_2.html#create-a-new-repository-on-github",
+    "href": "tutorial_2.html#create-a-new-repository-on-github",
+    "title": "Tutorial 2",
+    "section": "1. Create a new repository on GitHub",
+    "text": "1. Create a new repository on GitHub"
+  },
+  {
+    "objectID": "tutorial_2.html#fork-the-repository",
+    "href": "tutorial_2.html#fork-the-repository",
+    "title": "Tutorial 2",
+    "section": "2. Fork the repository",
+    "text": "2. Fork the repository"
+  },
+  {
+    "objectID": "tutorial_2.html#create-a-new-branch",
+    "href": "tutorial_2.html#create-a-new-branch",
+    "title": "Tutorial 2",
+    "section": "3. Create a new branch",
+    "text": "3. Create a new branch"
+  },
+  {
+    "objectID": "tutorial_2.html#adjust-the-compendium",
+    "href": "tutorial_2.html#adjust-the-compendium",
+    "title": "Tutorial 2",
+    "section": "4. Adjust the compendium",
+    "text": "4. Adjust the compendium"
+  },
+  {
+    "objectID": "tutorial_2.html#create-a-pull-request",
+    "href": "tutorial_2.html#create-a-pull-request",
+    "title": "Tutorial 2",
+    "section": "5. Create a pull request",
+    "text": "5. Create a pull request"
+  },
+  {
+    "objectID": "tutorial_2.html#review-the-pull-request",
+    "href": "tutorial_2.html#review-the-pull-request",
+    "title": "Tutorial 2",
+    "section": "6. Review the pull request",
+    "text": "6. Review the pull request"
+  },
+  {
+    "objectID": "tutorial_2.html#merge-the-pull-request",
+    "href": "tutorial_2.html#merge-the-pull-request",
+    "title": "Tutorial 2",
+    "section": "7. Merge the pull request",
+    "text": "7. Merge the pull request\n::"
   }
 ]
