@@ -146,9 +146,10 @@ Finally, we will make the portfolio visible by creating a website rendering and 
 3. Scroll down and choose _Enforce HTTPS_ if available. This allows you to piggyback on the `GitHub` global certificate and have a securely accessible website.
 ![](tutorial_2_img/https.png){width=100%}
 
-4. Wait for the website to be published. This can take a few minutes. You can check the status of the website by going to the _Actions_ tab of the repository.
+4. Wait for the website to be published. This can take a few minutes. You can check the status of the website by going to the _Actions_ tab of the repository. You can find your website address in the _Pages_ section of the repository settings.
+![](tutorial_2_img/where.png){width=100%}
 
-5. Update the README file with a link to the rendered `Quarto` document. If you did not change any parameters, this would be realized by adding the following code to the `README.md` file:
+5. Update the README file with a link to the rendered `Quarto` document. If you did not change any parameters, this would be realized by adding the following line to the `README.md` file:
 
 ```markdown
 The rendered `Quarto` file can be found [here](/doc/reprodev-exercise_quarto.html)
