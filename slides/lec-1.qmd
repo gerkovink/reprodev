@@ -1,5 +1,5 @@
 ---
-title: "All flavors markdown"
+title: "Quarto, RStudio and Reproducibility"
 author: 
   - name: Gerko Vink
     orcid: 0000-0001-9767-1924
@@ -11,7 +11,7 @@ author:
     email: h.i.oberman@uu.nl
     affiliations:
       - name: Methodology & Statistics @ UU
-date: 27 Sep 2023
+date: 15 Mar 2023
 date-format: "D MMM YYYY"
 bibliography: data/lec-2/publications.bib
 execute: 
@@ -25,13 +25,13 @@ format:
     transition: fade
     slide-number: true
     margin: 0.075
-    logo: "images/logo.png" 
+    logo: "images/logoUU.png" 
     toc: false
     toc-depth: 1
     toc-title: Outline
     scrollable: true
     reference-location: margin
-    footer: Gerko Vink and Hanne Oberman - Markup Languages @ UU
+    footer: Gerko Vink and Hanne Oberman - Methods & Statistics @ UU
 ---
 
 ## Disclaimer
@@ -39,6 +39,175 @@ format:
 I owe a debt of gratitude to many people as the thoughts and code in these slides are the process of years-long development cycles and discussions with my team, friends, colleagues and peers. When someone has contributed to the content of the slides, I have credited their authorship.
 
 Scientific references are in the footer. Opinions and figures are my own, AI generated or linked to source.
+
+## Disclaimer #2
+
+We have limited time and so much to talk about. Today we therefore focus on creating reproducible research compendiums with `Quarto` and developing `R` packages with `RStudio`. 
+
+We will not focus on programming. After all, programming you learn by doing, not by listening. If you'd like to learn more about programming, I suggest you take a look at the following resources: [https://www.gerkovink.com/rijkR/](https://www.gerkovink.com/rijkR/). This is last year's iteration of a different version of this course, but it contains a lot of useful information.
+
+That said, let's at least cover the programming basics.
+
+## R Programming basics
+- classes in R
+- vectors, matrices, arrays, data frames, tibbles
+- pipes
+  - `|>`, `%>%`, `%$%`, `%T>%`, `%<>%`. 
+- `future`
+- `purrr` and the `map`/`Reduce` workflows
+- `ggplot2` and `plotly`
+- `targets` (formerly `drake`)
+- rng's and `set.seed()`
+
+## This lecture
+
+- Reproducibility
+- Research compendiums
+- `Quarto`
+
+![](https://the-turing-way.netlify.app/_images/reproducibility.jpg)
+
+## Why bother?
+
+We would like our results to be as fully reproducible as possible:
+
+A. **Reproducibility is one of the pillars of science**
+
+  - It is the standard by which to judge scientific claims
+  - It helps the cumulative growth of knowledge - no duplication of effort
+
+B. **Reproducibility may greatly benefit you**
+
+  - You'll develop better work habits
+  - Better teamwork - especially with new team members
+  - Changing or amending your work is much easier
+  - Higher research impact - more likely to be picked up and cited
+
+## By the end of today...
+
+- ... you will have heard *what* reproducible research and programming is and *why* it is important
+- ... you will be able to *produce* a reproducible research archive from scratch
+- ... you'll have published an open `R` package with proper unit tests
+- ... and much more!
+
+
+## Definition
+
+![](https://the-turing-way.netlify.app/_images/reproducible-matrix.jpg)
+
+> A result is reproducible when the *same* analysis steps performed on the *same* dataset consistently produces the *same* answer.
+
+::: footer
+[The Turing way](https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions#rr-overview-definitions)
+:::
+
+## True or false?
+
+![](https://the-turing-way.netlify.app/_images/reproducible-matrix.jpg)
+
+In computational sciences - such as ours - simply having the data and code means that the results are not only replicable, but fully reproducible. 
+
+
+## Reproducibility of `R` scripts
+
+Reproducible research is not the norm: 
+
+> 74% of `R` files failed to complete without error
+
+<!-- 9000 unique R files published from 2010 to 2020 -->
+
+![](https://i1.rgstatic.net/publication/358754307_A_large-scale_study_on_research_code_quality_and_execution/links/621459fef02286737cb4084a/largepreview.png){fig-align=right}
+
+::: footer
+[Trisovic, Lau, Pasquier, et al., 2022](https://doi.org/10.1038/s41597-022-01143-6) 
+:::
+
+## Research compendium
+::: columns
+::: {.column width="50%"}
+![](https://the-turing-way.netlify.app/_images/research-compendium.svg){width=90%}
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8169292.svg)](https://doi.org/10.5281/zenodo.8169292)
+:::
+
+::: {.column width="45%"}
+
+:::
+:::
+
+## Definition
+
+- "A research compendium is a collection of all digital parts of a research project including 
+  - data, 
+  - code, 
+  - texts
+  - ...
+- The collection is created in such a way that reproducing all results is straightforward"[^1]
+- "The compendium serves as a means for distributing, managing, and updating the collection"[^2]
+
+[^1]: [The Turing Way](https://the-turing-way.netlify.app/reproducible-research/compendia)
+[^2]: [Gentleman & Temple Lang (2007)](https://doi.org/10.1198/106186007X178663)
+
+
+## Basic compendium
+A basic research compendium is just a folder...
+
+::: columns
+::: {.column width="50%"}
+```
+compendium/
+├── data
+│   └── my_data.csv
+├── analysis
+│   └── my_script.R
+├── requirements.txt
+└── README.md
+```
+:::
+
+::: {.column width="45%"}
+<!-- Where would you add these? -->
+<!-- ``` -->
+<!-- └── manuscript.qmd -->
+<!-- ``` -->
+<!-- ``` -->
+<!-- └── figures -->
+<!-- ``` -->
+:::
+:::
+
+## (Not so) basic compendium
+... but it can become extensive...
+
+```
+|
+├── paper/
+│   ├── paper.qmd       
+│   └── references.bib  
+| 
+├── figures/            
+|
+├── data/
+│   ├── raw_data/       
+│   └── clean_data/   
+|
+└── templates
+    └── journal_template.csl     
+```
+
+## (Not so) basic compendium
+...or even executable!
+
+```
+|
+├── _targets.R
+├── R/
+│   ├── functions_data.R
+│   ├── functions_analysis.R
+│   ├── functions_visualization.R
+└── data/
+    └── input_data.csv
+```
+![](https://books.ropensci.org/targets/man/figures/drake-graph.png){width=30%}
 
 ## RStudio
 
@@ -219,7 +388,7 @@ The code for the figures is
 
 ::: columns
 ::: {.column width="50%"}
-![A surfing $\epsilon\lambda\epsilon\phi h\alpha\nu\tau$](images/lec-2/elephantastic.png){fig-align="left" width="80%"}
+![A surfing $\epsilon\lambda\epsilon\phi h\alpha\nu\tau$](images/lec-2/elephantasticer.png){fig-align="left" width="80%"}
 
 $e^{i\pi} + 1 = 0$
 
@@ -229,7 +398,7 @@ The above figure is left-aligned <br> The caption is also left-aligned <br> The 
 ::: {.column width="50%"}
 <center>
 
-![A surfing elephant](images/lec-2/elephantastic.png){fig-align="center" width="80%"}
+![A surfing elephant](images/lec-2/elephantasticer.png){fig-align="center" width="80%"}
 
 </center>
 
@@ -246,7 +415,7 @@ The code for the slide is
 
 ::: columns
 ::: {.column width="50%"}
-![A surfing $\epsilon\lambda\epsilon\phi h\alpha\nu\tau$](images/lec-2/elephantastic.png){fig-align="left" width="80%"}
+![A surfing $\epsilon\lambda\epsilon\phi h\alpha\nu\tau$](images/lec-2/elephantasticer.png){fig-align="left" width="80%"}
 
 $e^{i\pi} + 1 = 0$
 
@@ -257,7 +426,7 @@ The equation is left-aligned too
 
 ::: {.column width="50%"}
 <center>
-![A surfing elephant](images/lec-2/elephantastic.png){fig-align="center" width="80%"}
+![A surfing elephant](images/lec-2/elephantasticer.png){fig-align="center" width="80%"}
 </center>
 
 $$e^{i\pi} + 1 = 0$$
@@ -276,7 +445,7 @@ The code for the slide is
 
 ::: columns
 ::: {.column width="50%"}
-![A surfing $\epsilon\lambda\epsilon\phi h\alpha\nu\tau$](images/lec-2/elephantastic.png){fig-align="left" width="80%"}
+![A surfing $\epsilon\lambda\epsilon\phi h\alpha\nu\tau$](images/lec-2/elephantasticer.png){fig-align="left" width="80%"}
 
 $e^{i\pi} + 1 = 0$
 
@@ -287,7 +456,7 @@ The equation is left-aligned too
 
 ::: {.column width="50%"}
 <center>
-![A surfing elephant](images/lec-2/elephantastic.png){fig-align="center" width="80%"}
+![A surfing elephant](images/lec-2/elephantasticer.png){fig-align="center" width="80%"}
 </center>
 
 $$e^{i\pi} + 1 = 0$$
@@ -392,23 +561,32 @@ END OF EXAMPLE
 
 ## `R` figures
 
-```{r, fig.width=3, fig.height=1}
-```
-
 ```{r, fig.width=15, fig.height=4}
 library(dygraphs)
 dygraph(nhtemp, main = "New Haven Temperatures", ylab = "Temp (F)") 
 ```
 
-## `R` figures
 
-```{r, fig.width=6, fig.height=2.5}
+````
+```{{r, fig.width=15, fig.height=4}}
+library(dygraphs)
+dygraph(nhtemp, main = "New Haven Temperatures", ylab = "Temp (F)") 
 ```
+````
+
+## `R` figures
 
 ```{r, fig.width=6, fig.height=2.5}
 library(dygraphs)
 dygraph(nhtemp, main = "New Haven Temperatures", ylab = "Temp (F)") 
 ```
+
+````
+```{{r, fig.width=6, fig.height=2.5}}
+library(dygraphs)
+dygraph(nhtemp, main = "New Haven Temperatures", ylab = "Temp (F)") 
+```
+````
 
 ## `R` figures
 

@@ -1,0 +1,31 @@
+---
+title: "All flavors markdown"
+author: 
+  - name: Gerko Vink
+    orcid: 0000-0001-9767-1924
+    email: g.vink@uu.nl
+    affiliations:
+      - name: Methodology & Statistics @ UU University
+date: 15 Mar 2023
+date-format: "D MMM YYYY"
+bibliography: data/lec-2/publications.bib
+execute: 
+  echo: true
+editor: source
+format: 
+  revealjs:
+    theme: [solarized, gerko.scss]
+    progress: true
+    multiplex: true
+    transition: fade
+    slide-number: true
+    margin: 0.075
+    logo: "images/logo.png" 
+    toc: false
+    toc-depth: 1
+    toc-title: Outline
+    scrollable: true
+    reference-location: margin
+    footer: Gerko Vink and Hanne Oberman - Methods & Statistics @ UU
+---
+
