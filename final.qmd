@@ -6,7 +6,7 @@ title: "Final Hand-in"
 ::: {.column width="60%"}
 To finalize the day:
 
-1. Fork [this repository](https://github.com/gerkovink/reprodev-exercise_quarto) and create a new branch
+1. Fork [this repository](https://github.com/gerkovink/reprodev2024) and create a new branch
 2. Adjust the readme to add your content in the following way
 
 - your name

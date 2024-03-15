@@ -7,6 +7,8 @@ authors:
 editor: source
 ---
 
+You can use [this repository](https://github.com/gerkovink/reprodev-exercise_quarto) as the base for Tutorial 2. 
+
 # Introduction
 `git` and `GitHub` are tools that allow you to create a visible portfolio of your work. This tutorial will guide you through the process of creating a new repository on `GitHub`, forking the repository, creating a new branch, adjusting the compendium, creating a pull request, reviewing the pull request, and merging the pull request.
 
