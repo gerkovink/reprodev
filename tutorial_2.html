@@ -166,8 +166,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#git" id="toc-git" class="nav-link" data-scroll-target="#git"><code>Git</code></a></li>
+  <li><a href="#github" id="toc-github" class="nav-link" data-scroll-target="#github"><code>GitHub</code></a></li>
+  </ul></li>
+  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a>
+  <ul class="collapse">
+  <li><a href="#to-continue" id="toc-to-continue" class="nav-link" data-scroll-target="#to-continue">To continue</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/gerkovink/reprodev/edit/main/tutorial_2.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/gerkovink/reprodev/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -202,8 +209,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p><code>git</code> and <code>GitHub</code> are tools that allow you to create a visible portfolio of your work. This tutorial will guide you through the process of creating a new repository on GitHub, forking the repository, creating a new branch, adjusting the compendium, creating a pull request, reviewing the pull request, and merging the pull request.</p>
+<p><code>git</code> and <code>GitHub</code> are tools that allow you to create a visible portfolio of your work. This tutorial will guide you through the process of creating a new repository on <code>GitHub</code>, forking the repository, creating a new branch, adjusting the compendium, creating a pull request, reviewing the pull request, and merging the pull request.</p>
 <p>Finally, we will make the portfolio visible by creating a website rendering and publishing our <code>Quarto</code> document to <code>GitHub Pages</code>.</p>
+<section id="git" class="level2">
+<h2 class="anchored" data-anchor-id="git"><code>Git</code></h2>
+<p><code>Git</code> is a free and open source version control system for text files. It can handle extensive change logging for you, no matter the size of the project. <code>Git</code> is fast and efficient, but its effectiveness depends also on the frequency you instruct it to log your project’s changes.</p>
+<p>You can see <code>Git</code> as a blank canvas that starts at a certain point in time. Every time you (or others) instruct <code>Git</code> to log any changes that have been made, <code>Git</code> adds the changes that are made to this canvas. We call the changes to the canvas <a href="https://help.github.com/articles/github-glossary/#commit"><code>commits</code></a>. With every <code>commit</code> an extensive log is created that includes at least the following information:</p>
+<ul>
+<li>the changes made</li>
+<li>who made the changes</li>
+<li>metadata</li>
+<li>a small piece of text that describe the changes made</li>
+</ul>
+<p>The difference between two commits - or the changes between them - are called <a href="https://help.github.com/articles/github-glossary/#diff"><code>diffs</code></a>.</p>
+<p>If you’d like to know much more about <code>Git</code>, <a href="https://git-scm.com/book/en/v2">this online book</a> is a very good resource. If you’d like to practice with the command line interface <a href="https://learngitbranching.js.org">use this webpage</a> for a quick course. <a href="https://happygitwithr.com">This book</a> covers pretty much everything you need to marry <code>Git</code> and <code>R</code>.</p>
+</section>
+<section id="github" class="level2">
+<h2 class="anchored" data-anchor-id="github"><code>GitHub</code></h2>
+<p><code>GitHub</code> is the social and user interface to <code>Git</code> that allows you to work in <a href="https://help.github.com/articles/github-glossary/#repository">repositories</a>. These repositories can be seen as project folders in which you publish your work, but you can also use them as test sites for development, testing, etcetera. There is a distinction between <a href="https://help.github.com/articles/github-glossary/#private-repository">private repositories</a> (only for you and those you grant access) and public repositories (visible for everyone).</p>
+<p>Your public repositories can be viewed and <a href="https://help.github.com/articles/github-glossary/#fork">forked</a> by everyone. <code>Forking</code> is when other people create a copy of your repository on their own account. This allows them to work on a repository without affecting the <code>master</code>. You can also do this yourself, but then the process is called <a href="https://help.github.com/articles/github-glossary/#branch"><code>branching</code></a> instead of forking. If you create a copy of a repository that is offline, the process is called <a href="https://help.github.com/articles/github-glossary/#clone"><code>cloning</code></a>.</p>
+<p><code>GitHub</code>’s ability to branch, fork and clone is very useful as it allows other people and yourself to experiment on (the code in) a repository before any definitive changes are <a href="https://help.github.com/articles/github-glossary/#merge"><code>merged</code></a> with the <code>master</code>. If you’re working in a forked repository, you can submit a <a href="https://help.github.com/articles/github-glossary/#pull-request"><code>pull request</code></a> to the repository collaborators to accept (or reject) any suggested changes.</p>
+<p>For now, this may be confusing, but I hope you recognize the benefits <code>GitHub</code> can have on the process of development and bug-fixing. For example, the most up-to-date version of the <code>mice</code> package in <code>R</code> can be directly installed from the <code>mice</code> repository with the following code:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="at">repo =</span> <span class="st">"stefvanbuuren/mice"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You can see that this process requires package <code>devtools</code> that expands the <code>R</code> functionality with essential development tools. Loading packages in <code>R</code> directly from their respective <code>GitHub</code> repositories, allows you to obtain the latest - often improved and less buggy - iteration of that software even before it is published on <a href="https://cran.r-project.org"><code>CRAN</code></a>.</p>
+</section>
 </section>
 <section id="exercise" class="level1">
 <h1>Exercise</h1>
@@ -324,13 +356,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Wait for the website to be published. This can take a few minutes. You can check the status of the website by going to the <em>Actions</em> tab of the repository. You can find your website address in the <em>Pages</em> section of the repository settings. <img src="tutorial_2_img/where.png" class="img-fluid" style="width:100.0%"></p></li>
 <li><p>Update the README file with a link to the rendered <code>Quarto</code> document. If you did not change any parameters, this would be realized by adding the following line to the <code>README.md</code> file:</p></li>
 </ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>The rendered <span class="in">`Quarto`</span> file can be found <span class="co">[</span><span class="ot">here</span><span class="co">](/doc/reprodev-exercise_quarto.html)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>The rendered <span class="in">`Quarto`</span> file can be found <span class="co">[</span><span class="ot">here</span><span class="co">](/doc/reprodev-exercise_quarto.html)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Going to your repository webpage on GitHub (often something like https://YOURUSERNAME.github.io/REPOSITORYNAME) should now serve you the <code>README.md</code> as a landing page, with a working link to your rendered <code>Quarto</code> file.</p>
 </div>
 </div>
 </div>
+<section id="to-continue" class="level2">
+<h2 class="anchored" data-anchor-id="to-continue">To continue</h2>
+<p>If you have time left, you can experiment with making your compendium into a <code>target</code>-powered data analylis pipeline. See <a href="https://books.ropensci.org/targets/walkthrough.html">this link</a> for more details.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

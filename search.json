@@ -35,11 +35,326 @@
     "text": "Teaching team: Gerko Vink & Carlos Poses\n\n\nIntroductie\nWelkom bij deze cursusdag, speciaal ontworpen voor aankomende data science professionals die zich willen verdiepen in de praktische ontwikkelvaardigheden die essentieel zijn voor de co-creatie van code en software. In de dynamische wereld van data science is de kunst van samenwerking tussen data analisten, ontwikkelaars en eindgebruikers cruciaal. Deze dag staat daarom in het teken van hands-on leren en samenwerken, met een sterke focus op praktische toepassing.\n\n\nDoel\nHet hoofddoel van deze cursusdag is om jou, als trainee, te voorzien van de vaardigheden en kennis die nodig zijn om effectief bij te dragen aan het ontwikkelingsproces binnen multidisciplinaire teams. Door een combinatie van korte verdiepende sessies en praktische groepsopdrachten, krijg je de kans om direct in teamverband toe te passen wat je leert. Dit alles met het oog op het versterken van jouw vaardigheden in het ontwikkelen, testen, en deployen van code en software, met een speciale focus op FAIR (Findable, Accessible, Interoperable, Reusable) software workflows.\nJe wordt uitgedaagd om je kennis van markup talen, scripting, programmeren, en meer te verdiepen. Door middel van een reeks interactieve tutorials en workshops zul je uiteindelijk leren hoe je een eigen reproduceerbaar R-package kunt ontwikkelen, testen, publiceren en documenteren. Het programma is zorgvuldig samengesteld om je door het volledige ontwikkelingsproces te leiden, van de eerste kennismaking met markup en scripting tot aan de afronding en inlevering van een individuele opdracht.\nAan het einde van deze dag zul je een sterke basis hebben in de belangrijkste ontwikkelflows en -praktijken die van belang zijn voor elke data science ontwikkelaar."
   },
   {
-    "objectID": "lectures.html",
-    "href": "lectures.html",
-    "title": "Lectures",
+    "objectID": "slides/lec-1.html#disclaimer",
+    "href": "slides/lec-1.html#disclaimer",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "Disclaimer",
+    "text": "Disclaimer\nI owe a debt of gratitude to many people as the thoughts and code in these slides are the process of years-long development cycles and discussions with my team, friends, colleagues and peers. When someone has contributed to the content of the slides, I have credited their authorship.\nScientific references are in the footer. Opinions and figures are my own, AI generated or linked to source."
+  },
+  {
+    "objectID": "slides/lec-1.html#disclaimer-2",
+    "href": "slides/lec-1.html#disclaimer-2",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "Disclaimer #2",
+    "text": "Disclaimer #2\nWe have limited time and so much to talk about. Today we therefore focus on creating reproducible research compendiums with Quarto and developing R packages with RStudio.\nWe will not focus on programming. After all, programming you learn by doing, not by listening. If you’d like to learn more about programming, I suggest you take a look at the following resources: https://www.gerkovink.com/rijkR/. This is last year’s iteration of a different version of this course, but it contains a lot of useful information.\nThat said, let’s at least cover the programming basics."
+  },
+  {
+    "objectID": "slides/lec-1.html#r-programming-basics",
+    "href": "slides/lec-1.html#r-programming-basics",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "R Programming basics",
+    "text": "R Programming basics\n\nclasses in R\nvectors, matrices, arrays, data frames, tibbles\npipes\n\n|&gt;, %&gt;%, %$%, %T&gt;%, %&lt;&gt;%.\n\nfuture\npurrr and the map/Reduce workflows\nggplot2 and plotly\ntargets (formerly drake)\nrng’s and set.seed()"
+  },
+  {
+    "objectID": "slides/lec-1.html#this-lecture",
+    "href": "slides/lec-1.html#this-lecture",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "This lecture",
+    "text": "This lecture\n\nReproducibility\nResearch compendiums\nQuarto"
+  },
+  {
+    "objectID": "slides/lec-1.html#why-bother",
+    "href": "slides/lec-1.html#why-bother",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "Why bother?",
+    "text": "Why bother?\nWe would like our results to be as fully reproducible as possible:\nA. Reproducibility is one of the pillars of science\n\nIt is the standard by which to judge scientific claims\nIt helps the cumulative growth of knowledge - no duplication of effort\n\nB. Reproducibility may greatly benefit you\n\nYou’ll develop better work habits\nBetter teamwork - especially with new team members\nChanging or amending your work is much easier\nHigher research impact - more likely to be picked up and cited"
+  },
+  {
+    "objectID": "slides/lec-1.html#by-the-end-of-today",
+    "href": "slides/lec-1.html#by-the-end-of-today",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "By the end of today…",
+    "text": "By the end of today…\n\n… you will have heard what reproducible research and programming is and why it is important\n… you will be able to produce a reproducible research archive from scratch\n… you’ll have published an open R package with proper unit tests\n… and much more!"
+  },
+  {
+    "objectID": "slides/lec-1.html#definition",
+    "href": "slides/lec-1.html#definition",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "Definition",
+    "text": "Definition\n\n\nA result is reproducible when the same analysis steps performed on the same dataset consistently produces the same answer.\n\n\nThe Turing way"
+  },
+  {
+    "objectID": "slides/lec-1.html#true-or-false",
+    "href": "slides/lec-1.html#true-or-false",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "True or false?",
+    "text": "True or false?\n\nIn computational sciences - such as ours - simply having the data and code means that the results are not only replicable, but fully reproducible."
+  },
+  {
+    "objectID": "slides/lec-1.html#reproducibility-of-r-scripts",
+    "href": "slides/lec-1.html#reproducibility-of-r-scripts",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "Reproducibility of R scripts",
+    "text": "Reproducibility of R scripts\nReproducible research is not the norm:\n\n74% of R files failed to complete without error\n\n\n\n\nTrisovic, Lau, Pasquier, et al., 2022"
+  },
+  {
+    "objectID": "slides/lec-1.html#research-compendium",
+    "href": "slides/lec-1.html#research-compendium",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "Research compendium",
+    "text": "Research compendium"
+  },
+  {
+    "objectID": "slides/lec-1.html#definition-1",
+    "href": "slides/lec-1.html#definition-1",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "Definition",
+    "text": "Definition\n\n“A research compendium is a collection of all digital parts of a research project including\n\ndata,\ncode,\ntexts\n…\n\nThe collection is created in such a way that reproducing all results is straightforward”1\n“The compendium serves as a means for distributing, managing, and updating the collection”2\n\nThe Turing WayGentleman & Temple Lang (2007)"
+  },
+  {
+    "objectID": "slides/lec-1.html#basic-compendium",
+    "href": "slides/lec-1.html#basic-compendium",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "Basic compendium",
+    "text": "Basic compendium\nA basic research compendium is just a folder…\n\n\ncompendium/\n├── data\n│   └── my_data.csv\n├── analysis\n│   └── my_script.R\n├── requirements.txt\n└── README.md"
+  },
+  {
+    "objectID": "slides/lec-1.html#not-so-basic-compendium",
+    "href": "slides/lec-1.html#not-so-basic-compendium",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "(Not so) basic compendium",
+    "text": "(Not so) basic compendium\n… but it can become extensive…\n|\n├── paper/\n│   ├── paper.qmd       \n│   └── references.bib  \n| \n├── figures/            \n|\n├── data/\n│   ├── raw_data/       \n│   └── clean_data/   \n|\n└── templates\n    └── journal_template.csl"
+  },
+  {
+    "objectID": "slides/lec-1.html#not-so-basic-compendium-1",
+    "href": "slides/lec-1.html#not-so-basic-compendium-1",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "(Not so) basic compendium",
+    "text": "(Not so) basic compendium\n…or even executable!\n|\n├── _targets.R\n├── R/\n│   ├── functions_data.R\n│   ├── functions_analysis.R\n│   ├── functions_visualization.R\n└── data/\n    └── input_data.csv"
+  },
+  {
+    "objectID": "slides/lec-1.html#rstudio",
+    "href": "slides/lec-1.html#rstudio",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "RStudio",
+    "text": "RStudio"
+  },
+  {
+    "objectID": "slides/lec-1.html#rstudio---integrated-development-environment-ide-for-r",
+    "href": "slides/lec-1.html#rstudio---integrated-development-environment-ide-for-r",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "RStudio - Integrated Development Environment (IDE) for R",
+    "text": "RStudio - Integrated Development Environment (IDE) for R\n\nRStudio is a powerful integrated development environment (IDE) designed specifically for the R programming language.\nIt offers a user-friendly interface and a suite of tools to enhance your R coding experience.\n\nKey Features of RStudio\n\n1. Code Editing: RStudio provides a code editor with syntax highlighting, autocompletion, and error checking, making your coding process more efficient.\n2. Console: An interactive R console allows you to execute R code line by line and view results in real time.\n3. Environment Pane: Keep track of your variables, data frames, and functions with the environment pane.\n4. Plots and Visualizations: Create and view plots, charts, and visualizations within RStudio.\n5. Integrated Help: Access R documentation, packages, and online resources directly from the IDE.\n6. Version Control: Easily integrate R projects with version control systems like Git.\n7. Markdown Support: RStudio seamlessly integrates with Markdown, making it an ideal choice for creating reproducible reports and documents.\n\nIt plays a crucial role in promoting reproducibility and collaboration in data science and statistical analysis."
+  },
+  {
+    "objectID": "slides/lec-1.html#rmarkdown-github-flavored-markdown-and-quarto",
+    "href": "slides/lec-1.html#rmarkdown-github-flavored-markdown-and-quarto",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "RMarkdown, GitHub-Flavored Markdown, and Quarto",
+    "text": "RMarkdown, GitHub-Flavored Markdown, and Quarto\n\nMarkdown is a lightweight markup language for creating formatted text using plain text. It’s easy to learn and widely used in various applications.\nGitHub-Flavored Markdown (GFM) is a variant of Markdown used on GitHub (next week), enhancing its capabilities for documentation and collaboration.\nRMarkdown is an extension of Markdown that allows you to embed R code and its output directly within a document.\n\nPerfect for creating reproducible reports, research papers, and presentations.\n\nQuarto is a comprehensive tool for creating reproducible and collaborative data science documents.\n\nCombines the power of Markdown, \\(\\LaTeX\\), and code execution to streamline document preparation."
+  },
+  {
+    "objectID": "slides/lec-1.html#popular-code-editors-for-r",
+    "href": "slides/lec-1.html#popular-code-editors-for-r",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "Popular Code Editors (for R)",
+    "text": "Popular Code Editors (for R)\n\nRStudio: Ideal for R programming with features tailored for data analysis and visualization.\nVisual Studio Code (VS Code): A versatile code editor with a vast ecosystem of extensions for various languages.\nEclipse (with StatET): Eclipse StatET is an integrated development environment (IDE) for R, offering features for R programming and data analysis.\n\nPopular Notebook Environments\n\nJupyter Notebooks: Widely used interactive kernel-based computing environment for data science and machine learning, supporting multiple (i.e. almost all) programming and scripting languages.\nRMarkdown: An R-based notebook environment that combines code, output, and narrative text in a single document."
+  },
+  {
+    "objectID": "slides/lec-1.html#structure-of-a-quarto-document",
+    "href": "slides/lec-1.html#structure-of-a-quarto-document",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "Structure of a Quarto Document",
+    "text": "Structure of a Quarto Document\n\nA Quarto document is organized into blocks, which serve as the fundamental building blocks of the document’s content.\nEach block can contain a combination of the following elements:\n\nText: Narrative content and explanations.\nCode: R code chunks for computations and data analysis.\nEquations: Mathematical equations and notation.\nFigures: Visualizations, charts, and images.\nTables: Data tables for presenting results.\nYAML Headers: Metadata and document configuration.\nSections and Subsections: Structuring the document into hierarchical sections for organization."
+  },
+  {
+    "objectID": "slides/lec-1.html#quarto-the-yaml-header",
+    "href": "slides/lec-1.html#quarto-the-yaml-header",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "Quarto: the YAML header",
+    "text": "Quarto: the YAML header\nYAML (YAML Ain’t Markup Language) is a human-readable data serialization format commonly used for configuration files and metadata in various programming and markup contexts.\n\nYAML is very simple and readable\nIn Quarto and many other applications, YAML is used to specify:\n\nDocument Metadata: Information about the document itself, such as the title, author, date, and document type.\nDocument Configuration: Settings related to the document’s behavior, appearance, and rendering, such as the output format (e.g., HTML, PDF), document template, and style options.\nCustom Variables: Definitions of custom variables or parameters that can be used throughout the document to control behavior or content.\n\n\nHere’s an example of a simple YAML header in a Quarto document:\n---\ntitle: \"All flavors markdown\"\nauthor: \n  - name: Gerko Vink\n    orcid: 0000-0001-9767-1924\n    email: g.vink@uu.nl\n    affiliations:\n      - name: Methodology & Statistics @ UU University\n  - name: Hanne Oberman\n    orcid: 0000-0003-3276-2141\n    email: h.i.oberman@uu.nl\n    affiliations:\n      - name: Methodology & Statistics @ UU\ndate: 13 Sep 2023\ndate-format: \"D MMM YYYY\"\nbibliography: data/lec-2/publications.bib\nexecute: \n  echo: true\neditor: source\nformat: \n  revealjs:\n    theme: [solarized, gerko.scss]\n    progress: true\n    multiplex: true\n    transition: fade\n    slide-number: true\n    margin: 0.075\n    logo: \"images/logo.png\" \n    toc: false\n    toc-depth: 1\n    toc-title: Outline\n    scrollable: true\n    reference-location: margin\n    footer: Gerko Vink and Hanne Oberman - Markup Languages @ UU\n---\nIn this example:\n\ntitle, author, and date provide metadata about the document.\noutput specifies settings related to the document’s output format and theme.\n\nThe YAML header is a powerful tool for customizing and configuring Quarto documents, allowing you to control how the document is rendered and presented. It ensures that important document information and settings are stored in a human-readable and structured format at the beginning of the document."
+  },
+  {
+    "objectID": "slides/lec-1.html#text-in-quarto",
+    "href": "slides/lec-1.html#text-in-quarto",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "Text in Quarto",
+    "text": "Text in Quarto\nText is text. Nothing more, nothing less\nHeader\nSubheader\nSubsubheader\n# This is a heading indicating a section\n## This is a heading indicating a subsection\n### This is a heading indicating a subsubsection\nBut in the above I used\n### Header\n#### Subheader\n##### Subsubheader"
+  },
+  {
+    "objectID": "slides/lec-1.html#figures",
+    "href": "slides/lec-1.html#figures",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "Figures",
+    "text": "Figures\n\n\n\n\n\nA surfing elephant\n\n\nThe above figure is left-aligned  The caption is also left-aligned\n\n\n\n\nA surfing elephant\n\n\nThe above figure is centered  The caption is still left-aligned\n\n\nThe code for the figures is\n![A surfing elephant](images/lec-2/elephantastic.png){fig-align=\"left\"}\n![A surfing elephant](images/lec-2/elephantastic.png){fig-align=\"center\"}"
+  },
+  {
+    "objectID": "slides/lec-1.html#columns-sizing-equations-and-proper-centering",
+    "href": "slides/lec-1.html#columns-sizing-equations-and-proper-centering",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "Columns, Sizing, Equations and proper centering",
+    "text": "Columns, Sizing, Equations and proper centering\n\n\n\n\n\nA surfing \\(\\epsilon\\lambda\\epsilon\\phi h\\alpha\\nu\\tau\\)\n\n\n\\(e^{i\\pi} + 1 = 0\\)\nThe above figure is left-aligned  The caption is also left-aligned  The equation is left-aligned too\n\n\n\n\n\nA surfing elephant\n\n\n\n\\[e^{i\\pi} + 1 = 0\\]\nThe above figure is centered  The caption is also centered  The equation is centered\n\n\nThe code for the slide is\n## Columns, Sizing, Equations and proper centering\n\n::: columns\n::: {.column width=\"50%\"}\n![A surfing $\\epsilon\\lambda\\epsilon\\phi h\\alpha\\nu\\tau$](images/lec-2/elephantasticer.png){fig-align=\"left\" width=\"80%\"}\n\n$e^{i\\pi} + 1 = 0$\n\nThe above figure is left-aligned &lt;br&gt;\nThe caption is also left-aligned &lt;br&gt;\nThe equation is left-aligned too\n:::\n\n::: {.column width=\"50%\"}\n&lt;center&gt;\n![A surfing elephant](images/lec-2/elephantasticer.png){fig-align=\"center\" width=\"80%\"}\n&lt;/center&gt;\n\n$$e^{i\\pi} + 1 = 0$$\n\nThe above figure is centered &lt;br&gt;\nThe caption is also centered &lt;br&gt;\nThe equation is centered\n:::\n\n:::\n\nThe code for the slide is\n\n``` markdown\n## Columns, Sizing, Equations and proper centering\n\n::: columns\n::: {.column width=\"50%\"}\n![A surfing $\\epsilon\\lambda\\epsilon\\phi h\\alpha\\nu\\tau$](images/lec-2/elephantasticer.png){fig-align=\"left\" width=\"80%\"}\n\n$e^{i\\pi} + 1 = 0$\n\nThe above figure is left-aligned &lt;br&gt;\nThe caption is also left-aligned &lt;br&gt;\nThe equation is left-aligned too\n:::\n\n::: {.column width=\"50%\"}\n&lt;center&gt;\n![A surfing elephant](images/lec-2/elephantasticer.png){fig-align=\"center\" width=\"80%\"}\n&lt;/center&gt;\n\n$$e^{i\\pi} + 1 = 0$$\n\nThe above figure is centered &lt;br&gt;\nThe caption is also centered &lt;br&gt;\nThe equation is centered\n:::\n\n:::"
+  },
+  {
+    "objectID": "slides/lec-1.html#f-ing-it-all-up",
+    "href": "slides/lec-1.html#f-ing-it-all-up",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "F-ing it all up",
+    "text": "F-ing it all up\n\n\n\n\n\nRick taking a bad\n\n\n\\(e^{i\\pi} + 1 = 0\\)\nThe above figure is left-aligned  The caption is also left-aligned  The equation is left-aligned too\n\n\n\n\n\nRick taking a bad\n\n\n\n\\[e^{i\\pi} + 1 = 0\\]\nThe above figure is centered  The caption is also centered  The equation is centered\n\n\n::: columns\n::: {.column width=\"70%\"}\n![Rick taking a bad](images/lec-2/bathrick.png){fig-align=\"left\" width=\"70%\"}\n\n$e^{i\\pi} + 1 = 0$\n\n:::\n\n::: {.column width=\"30%\"}\n&lt;center&gt;\n![Rick taking a bad](images/lec-2/bathrick.png){fig-align=\"center\" width=\"30%\"}\n&lt;/center&gt;\n\n$$e^{i\\pi} + 1 = 0$$\n:::\n\n:::"
+  },
+  {
+    "objectID": "slides/lec-1.html#math-ing-it-all-up",
+    "href": "slides/lec-1.html#math-ing-it-all-up",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "Math-ing it all up",
+    "text": "Math-ing it all up\n\n\n\n\n\nRick taking a bath\n\n\n\\(e^{i\\pi} + 1 = 0\\)\n\n\n\n\n\nRick taking a bath\n\n\n\n\\[e^{i\\pi} + 1 = 0\\]\n\n\n## Math-ing it all up\n::: columns\n::: {.column width=\"70%\"}\n![Rick taking a bath](images/lec-2/goodrick.png){fig-align=\"left\" width=\"30%\"}\n\n$e^{i\\pi} + 1 = 0$\n:::\n\n::: {.column width=\"30%\"}\n&lt;center&gt;\n![Rick taking a bath](images/lec-2/goodrick.png){fig-align=\"center\" width=\"70%\"}\n&lt;/center&gt;\n\n$$e^{i\\pi} + 1 = 0$$\n:::\n\n:::\n\n```markdown\nEND OF EXAMPLE"
+  },
+  {
+    "objectID": "slides/lec-1.html#r-figures",
+    "href": "slides/lec-1.html#r-figures",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "R figures",
+    "text": "R figures\n\nlibrary(dygraphs)\ndygraph(nhtemp, main = \"New Haven Temperatures\", ylab = \"Temp (F)\") \n\n\n\n\n\n```{r, fig.width=15, fig.height=4}\nlibrary(dygraphs)\ndygraph(nhtemp, main = \"New Haven Temperatures\", ylab = \"Temp (F)\") \n```"
+  },
+  {
+    "objectID": "slides/lec-1.html#r-figures-1",
+    "href": "slides/lec-1.html#r-figures-1",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "R figures",
+    "text": "R figures\n\nlibrary(dygraphs)\ndygraph(nhtemp, main = \"New Haven Temperatures\", ylab = \"Temp (F)\") \n\n\n\n\n\n```{r, fig.width=6, fig.height=2.5}\nlibrary(dygraphs)\ndygraph(nhtemp, main = \"New Haven Temperatures\", ylab = \"Temp (F)\") \n```"
+  },
+  {
+    "objectID": "slides/lec-1.html#r-figures-2",
+    "href": "slides/lec-1.html#r-figures-2",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "R figures",
+    "text": "R figures\n\nlibrary(ggplot2, warn.conflicts = FALSE)\nlibrary(plotly, warn.conflicts = FALSE)\nggplot(mpg, aes(displ, hwy, colour = class)) +\n  geom_point() +\n  geom_smooth(se = FALSE, method = lm)"
+  },
+  {
+    "objectID": "slides/lec-1.html#r-figures-3",
+    "href": "slides/lec-1.html#r-figures-3",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "R figures",
+    "text": "R figures\n\nlibrary(ggplot2, warn.conflicts = FALSE)\nlibrary(plotly, warn.conflicts = FALSE)\np &lt;- ggplot(mpg, aes(displ, hwy, colour = class)) +\n  geom_point() +\n  geom_smooth(se = FALSE, method = lm) \np %&gt;% ggplotly()"
+  },
+  {
+    "objectID": "slides/lec-1.html#equations",
+    "href": "slides/lec-1.html#equations",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "Equations",
+    "text": "Equations\n\n$\\mu$ is used for in-line equations\n$$\\mu$$ is used for equations\n\nLet’s assume that \\(Y\\) follows a normal distribution. \\[Y \\sim  \\mathcal{N}(\\mu, \\sigma^2)\\] Where we set in our simulations \\(\\mu = 10\\) and \\(\\sigma^2 = 5\\). We do something for every \\(Y_i\\)."
+  },
+  {
+    "objectID": "slides/lec-1.html#equations-1",
+    "href": "slides/lec-1.html#equations-1",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "Equations",
+    "text": "Equations\n\n$\\mu$ is used for in-line equations\n$$\\mu$$ is used for equations\n\nLet’s assume that \\(y\\) is a vector with \\(N\\) elements such that \\[y \\sim  \\mathcal{N}(\\mu, \\sigma^2),\\] where we set in our simulations \\(\\mu = 10\\) and \\(\\sigma^2 = 5\\). We do something for every \\(y_i\\) with \\(i = 1, \\dots, N\\)."
+  },
+  {
+    "objectID": "slides/lec-1.html#code-chunks",
+    "href": "slides/lec-1.html#code-chunks",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "Code chunks",
+    "text": "Code chunks\nWe already saw some markdown code chunks. We can run inline code to calculate that 12 * 234 is 2808 by using `r ` and code chunks to evaluate larger blocks of code, such as:\n\nCode\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n\nggplot(mpg, aes(x = hwy, y = cty, color = displ)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c(option = \"E\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n\n\n(a) Color by number of cylinders\n\n\n\n\n\n\n\n\n\n\n\n(b) Color by engine displacement, in liters\n\n\n\n\n\n\n\nFigure 1: City and highway mileage for 38 popular models of cars."
+  },
+  {
+    "objectID": "slides/lec-1.html#the-previous-slide",
+    "href": "slides/lec-1.html#the-previous-slide",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "The previous slide",
+    "text": "The previous slide\n## Code chunks and explicit caching\n\n```{r}\n#| output: asis\n\nanswer &lt;- 12 * 234\n``` \n\n\nWe already saw some `markdown` code chunks. We can run inline code to calculate \nthat `12 * 234` is ` r answer ` by using `r  ` and code chunks to evaluate \nlarger blocks of code, such as:\n\n\n\n```{{r}}\n#| output: asis\n#| label: fig-mpg\n#| fig-cap: \"City and highway mileage for 38 popular models of cars.\"\n#| fig-subcap:\n#|   - \"Color by number of cylinders\"\n#|   - \"Color by engine displacement, in liters\"\n#| layout-ncol: 2\n#| column: page\n#| code-fold: true\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n\nggplot(mpg, aes(x = hwy, y = cty, color = displ)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c(option = \"E\") +\n  theme_minimal()\n```"
+  },
+  {
+    "objectID": "slides/lec-1.html#explicit-caching",
+    "href": "slides/lec-1.html#explicit-caching",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "Explicit Caching",
+    "text": "Explicit Caching\n\nExplicit caching is a technique used in RMarkdown and Quarto documents to store and reuse the results of expensive computations or data processing steps.\nIt helps improve the efficiency of document generation and ensures reproducibility by avoiding redundant calculations. \n\nWhy Use Explicit Caching?\n\nEfficiency: Caching saves time and resources by avoiding the repeated execution of time-consuming code chunks.\nReproducibility: Explicit caching ensures that the same results are used when rendering the document, even if the code is modified or re-executed.\nVersion Control: Caching reduces the size of version-controlled documents by storing intermediate results separately."
+  },
+  {
+    "objectID": "slides/lec-1.html#how-does-explicit-caching-work",
+    "href": "slides/lec-1.html#how-does-explicit-caching-work",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "How Does Explicit Caching Work?",
+    "text": "How Does Explicit Caching Work?\nIn RMarkdown and Quarto, you can use cache directives to specify which code chunks should be cached and which should not.\n\nCached chunks are identified by a unique hash based on their code content, ensuring consistency.\n\nThe following code block\n```{r}\n#| cache: true\n#| code-line-numbers: true\n#| label: imputation\nlibrary(mice)\nlibrary(magrittr)\nlibrary(purrr)\nimp &lt;- nhanes %&gt;% mice(print = FALSE)\nimp |&gt;\n  complete(\"all\") %&gt;% \n  map(~.x %$% lm(bmi ~ chl + hyp)) |&gt;\n  pool()\n```\nwould result in this output\n\nlibrary(mice)\nlibrary(magrittr)\nlibrary(purrr)\nimp &lt;- nhanes %&gt;% mice(print = FALSE)\nimp |&gt;\n  complete(\"all\") %&gt;% \n  map(~.x %$% lm(bmi ~ chl + hyp)) |&gt;\n  pool()\n\nClass: mipo    m = 5 \n         term m    estimate         ubar            b            t dfcom\n1 (Intercept) 5 21.11140301 1.508593e+01 2.8737763894 1.853446e+01    22\n2         chl 5  0.03325061 4.165502e-04 0.0000811387 5.139166e-04    22\n3         hyp 5 -0.97629112 4.517101e+00 1.0597984680 5.788859e+00    22\n        df       riv    lambda       fmi\n1 14.41839 0.2285926 0.1860606 0.2795180\n2 14.30011 0.2337448 0.1894596 0.2831631\n3 13.26553 0.2815430 0.2196907 0.3156370\n\n\nwith corresponding cache structure relative to the root and format of the output file:"
+  },
+  {
+    "objectID": "slides/lec-1.html#tables",
+    "href": "slides/lec-1.html#tables",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "Tables",
+    "text": "Tables\nUse https://www.tablesgenerator.com/markdown_tables if you need to make a table from scratch.\nOtherwise, use tibbles:\n\nmice::boys |&gt; \n  tibble::as_tibble()\n\n# A tibble: 748 × 9\n     age   hgt   wgt   bmi    hc gen   phb      tv reg  \n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;ord&gt; &lt;ord&gt; &lt;int&gt; &lt;fct&gt;\n 1 0.035  50.1  3.65  14.5  33.7 &lt;NA&gt;  &lt;NA&gt;     NA south\n 2 0.038  53.5  3.37  11.8  35   &lt;NA&gt;  &lt;NA&gt;     NA south\n 3 0.057  50    3.14  12.6  35.2 &lt;NA&gt;  &lt;NA&gt;     NA south\n 4 0.06   54.5  4.27  14.4  36.7 &lt;NA&gt;  &lt;NA&gt;     NA south\n 5 0.062  57.5  5.03  15.2  37.3 &lt;NA&gt;  &lt;NA&gt;     NA south\n 6 0.068  55.5  4.66  15.1  37   &lt;NA&gt;  &lt;NA&gt;     NA south\n 7 0.068  52.5  3.81  13.8  34.9 &lt;NA&gt;  &lt;NA&gt;     NA south\n 8 0.071  53    3.89  13.8  35.8 &lt;NA&gt;  &lt;NA&gt;     NA west \n 9 0.071  55.1  3.88  12.8  36.8 &lt;NA&gt;  &lt;NA&gt;     NA west \n10 0.073  54.5  4.2   14.1  38   &lt;NA&gt;  &lt;NA&gt;     NA east \n# ℹ 738 more rows\n\n\nor use e.g. library(DT) for customization:\n\nlibrary(DT)\nmtcars %&gt;% \n  datatable(options = list(pageLength = 25))"
+  },
+  {
+    "objectID": "slides/lec-1.html#reprex-and-renv",
+    "href": "slides/lec-1.html#reprex-and-renv",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "reprex and renv",
+    "text": "reprex and renv\nlibrary(renv)\n#&gt; \n#&gt; Attaching package: 'renv'\n#&gt; The following objects are masked from 'package:stats':\n#&gt; \n#&gt;     embed, update\n#&gt; The following objects are masked from 'package:utils':\n#&gt; \n#&gt;     history, upgrade\n#&gt; The following objects are masked from 'package:base':\n#&gt; \n#&gt;     autoload, load, remove\nrenv::init()\n#&gt; - Linking packages into the project library ... Done!\n#&gt; The following package(s) will be updated in the lockfile:\n#&gt; \n#&gt; # CRAN -----------------------------------------------------------------------\n#&gt; - backports       [* -&gt; 1.4.1]\n#&gt; - base64enc       [* -&gt; 0.1-3]\n#&gt; - broom           [* -&gt; 1.0.4]\n#&gt; - bslib           [* -&gt; 0.4.2]\n#&gt; - cachem          [* -&gt; 1.0.8]\n#&gt; - cli             [* -&gt; 3.6.1]\n#&gt; - cpp11           [* -&gt; 0.4.3]\n#&gt; - digest          [* -&gt; 0.6.31]\n#&gt; - dplyr           [* -&gt; 1.1.2]\n#&gt; - ellipsis        [* -&gt; 0.3.2]\n#&gt; - evaluate        [* -&gt; 0.21]\n#&gt; - fansi           [* -&gt; 1.0.4]\n#&gt; - fastmap         [* -&gt; 1.1.1]\n#&gt; - fontawesome     [* -&gt; 0.5.1]\n#&gt; - fs              [* -&gt; 1.6.2]\n#&gt; - generics        [* -&gt; 0.1.3]\n#&gt; - glue            [* -&gt; 1.6.2]\n#&gt; - highr           [* -&gt; 0.10]\n#&gt; - htmltools       [* -&gt; 0.5.5]\n#&gt; - jquerylib       [* -&gt; 0.1.4]\n#&gt; - jsonlite        [* -&gt; 1.8.4]\n#&gt; - knitr           [* -&gt; 1.43]\n#&gt; - lattice         [* -&gt; 0.21-8]\n#&gt; - lifecycle       [* -&gt; 1.0.3]\n#&gt; - magrittr        [* -&gt; 2.0.3]\n#&gt; - memoise         [* -&gt; 2.0.1]\n#&gt; - mime            [* -&gt; 0.12]\n#&gt; - pillar          [* -&gt; 1.9.0]\n#&gt; - pkgconfig       [* -&gt; 2.0.3]\n#&gt; - purrr           [* -&gt; 1.0.1]\n#&gt; - R6              [* -&gt; 2.5.1]\n#&gt; - rappdirs        [* -&gt; 0.3.3]\n#&gt; - Rcpp            [* -&gt; 1.0.11]\n#&gt; - RcppArmadillo   [* -&gt; 0.12.4.0.0]\n#&gt; - renv            [* -&gt; 1.0.2]\n#&gt; - rlang           [* -&gt; 1.1.1]\n#&gt; - rmarkdown       [* -&gt; 2.22]\n#&gt; - sass            [* -&gt; 0.4.6]\n#&gt; - stringi         [* -&gt; 1.7.12]\n#&gt; - stringr         [* -&gt; 1.5.0]\n#&gt; - tibble          [* -&gt; 3.2.1]\n#&gt; - tidyr           [* -&gt; 1.3.0]\n#&gt; - tidyselect      [* -&gt; 1.2.0]\n#&gt; - tinytex         [* -&gt; 0.45]\n#&gt; - utf8            [* -&gt; 1.2.3]\n#&gt; - vctrs           [* -&gt; 0.6.2]\n#&gt; - withr           [* -&gt; 2.5.0]\n#&gt; - xfun            [* -&gt; 0.39]\n#&gt; - yaml            [* -&gt; 2.3.7]\n#&gt; \n#&gt; # GitHub ---------------------------------------------------------------------\n#&gt; - mice            [* -&gt; gerkovink/mice@match_conditional]\n#&gt; \n#&gt; The version of R recorded in the lockfile will be updated:\n#&gt; - R               [* -&gt; 4.3.0]\n#&gt; \n#&gt; - Lockfile written to \"/private/var/folders/yx/6rn4qpl13wsgk4c7s3jc9d1r0000gp/T/RtmpMqetyA/reprex-1233f6d959b19-drear-kitty/renv.lock\".\nlibrary(mice)\n#&gt; \n#&gt; Attaching package: 'mice'\n#&gt; The following object is masked from 'package:stats':\n#&gt; \n#&gt;     filter\n#&gt; The following objects are masked from 'package:base':\n#&gt; \n#&gt;     cbind, rbind\nlibrary(magrittr)\nlibrary(purrr)\n#&gt; \n#&gt; Attaching package: 'purrr'\n#&gt; The following object is masked from 'package:magrittr':\n#&gt; \n#&gt;     set_names\n#&gt; The following object is masked from 'package:renv':\n#&gt; \n#&gt;     modify\nrenv::snapshot()\n#&gt; - The lockfile is already up to date.\nrenv::remove(\"mice\")\n#&gt; - Removing package(s) from project library ...\n#&gt; Removing package 'mice' ... Done!\nrenv::restore()\n#&gt; The following package(s) will be updated:\n#&gt; \n#&gt; # GitHub ---------------------------------------------------------------------\n#&gt; - mice   [* -&gt; gerkovink/mice@match_conditional]\n#&gt; \n#&gt; # Installing packages --------------------------------------------------------\n#&gt; - Installing mice ...                           OK [linked from cache]\nimp &lt;- nhanes %&gt;% mice(print = FALSE)\nimp |&gt;\n  complete(\"all\") %&gt;% \n  map(~.x %$% lm(bmi ~ chl + hyp)) |&gt;\n  pool()\n#&gt; Class: mipo    m = 5 \n#&gt;          term m   estimate         ubar            b            t dfcom\n#&gt; 1 (Intercept) 5 20.6687887 2.020809e+01 8.8963873222 3.088375e+01    22\n#&gt; 2         chl 5  0.0354435 5.409979e-04 0.0001081414 6.707676e-04    22\n#&gt; 3         hyp 5 -0.8447582 4.353337e+00 0.9275040571 5.466342e+00    22\n#&gt;          df       riv    lambda       fmi\n#&gt; 1  9.489411 0.5282868 0.3456725 0.4504537\n#&gt; 2 14.161181 0.2398710 0.1934645 0.2874598\n#&gt; 3 13.811544 0.2556671 0.2036105 0.2983537\n\nsessionInfo()\n#&gt; R version 4.3.0 (2023-04-21)\n#&gt; Platform: aarch64-apple-darwin20 (64-bit)\n#&gt; Running under: macOS Ventura 13.6\n#&gt; \n#&gt; Matrix products: default\n#&gt; BLAS:   /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib/libRblas.0.dylib \n#&gt; LAPACK: /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0\n#&gt; \n#&gt; locale:\n#&gt; [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8\n#&gt; \n#&gt; time zone: Europe/Amsterdam\n#&gt; tzcode source: internal\n#&gt; \n#&gt; attached base packages:\n#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     \n#&gt; \n#&gt; other attached packages:\n#&gt; [1] purrr_1.0.1    magrittr_2.0.3 mice_3.15.3    renv_1.0.2    \n#&gt; \n#&gt; loaded via a namespace (and not attached):\n#&gt;  [1] vctrs_0.6.2      cli_3.6.1        knitr_1.43       rlang_1.1.1     \n#&gt;  [5] xfun_0.39        generics_0.1.3   glue_1.6.2       backports_1.4.1 \n#&gt;  [9] htmltools_0.5.5  fansi_1.0.4      rmarkdown_2.22   grid_4.3.0      \n#&gt; [13] evaluate_0.21    tibble_3.2.1     fastmap_1.1.1    yaml_2.3.7      \n#&gt; [17] lifecycle_1.0.3  compiler_4.3.0   dplyr_1.1.2      fs_1.6.2        \n#&gt; [21] pkgconfig_2.0.3  Rcpp_1.0.11      tidyr_1.3.0      rstudioapi_0.14 \n#&gt; [25] lattice_0.21-8   digest_0.6.31    R6_2.5.1         tidyselect_1.2.0\n#&gt; [29] reprex_2.0.2     utf8_1.2.3       pillar_1.9.0     tools_4.3.0     \n#&gt; [33] withr_2.5.0      broom_1.0.4\nCreated on 2023-09-27 with reprex v2.0.2"
+  },
+  {
+    "objectID": "slides/lec-1.html#benefits-of-using-renv",
+    "href": "slides/lec-1.html#benefits-of-using-renv",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "Benefits of Using renv",
+    "text": "Benefits of Using renv\n\n1. Dependency Isolation: renv creates a dedicated environment for each project, preventing conflicts between package versions.\n2. Reproducibility: With renv, you can capture and record the specific package versions used in your project, ensuring reproducibility over time.\n3. Collaboration: Share your project with others, and they can easily recreate the same environment using renv.lock.\n4. Easier Package Installation: renv simplifies package installation. Just run renv::restore() to set up the project environment.\n5. Automatic Snapshot: renv automatically generates a renv.lock file, listing all package versions used, making it easy to recreate the environment.\n6. Compatibility: renv is compatible with popular version control systems like Git, facilitating collaboration and sharing.\n\nUse renv::snapshot() to update the renv.lock file when you add or update packages. You can use renv::activate() and renv::deactivate() to activate or deactivate renv for your project."
+  },
+  {
+    "objectID": "slides/lec-1.html#diagrams",
+    "href": "slides/lec-1.html#diagrams",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "Diagrams",
+    "text": "Diagrams\n```{{mermaid}}\n%%| echo: false\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C &lt;--&gt; D[Result one]\n  C --&gt; E[Result two]\n```\n\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C &lt;--&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\nSee Quarto Diagrams for a more comprehensive overview of all graphing engines. This Live online Mermaid editor is awesome!"
+  },
+  {
+    "objectID": "slides/lec-1.html#scientific-publishing-with-rticles-and-quarto",
+    "href": "slides/lec-1.html#scientific-publishing-with-rticles-and-quarto",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "Scientific publishing with rticles and Quarto",
+    "text": "Scientific publishing with rticles and Quarto\nTo use rticles from RStudio, you can access the templates through File -&gt; New File -&gt; R Markdown. This will open the dialog box where you can select from one of the available templates:\n\nQuarto\nThe quarto use template command can be used to create an article from one the below formats.\n\n\nTerminal\n\nquarto use template quarto-journals/acm\nquarto use template quarto-journals/plos\nquarto use template quarto-journals/elsevier\nquarto use template quarto-journals/acs\nquarto use template quarto-journals/jss"
+  },
+  {
+    "objectID": "slides/lec-1.html#citations",
+    "href": "slides/lec-1.html#citations",
+    "title": "Quarto, RStudio and Reproducibility",
+    "section": "Citations",
+    "text": "Citations\nOberman and Vink (2023) and Cai, Van Buuren and Vink (2023) are some of our team’s most recent publications. Some references - such as some work by Reinder Banning and Gerko Vink are much older (2010) or contain simple and contemporary solutions by Volker and Vink (2022, 2–4) or cool but potentially confusing images (Schouten and Vink 2021, 1255).\n\nBut you can also refer to Oberman and Vink (2023) here\n\n\n\nBanning, Reinder, and Gerko Vink. 2010. “Methoden En Indicatoren Voor Het Evalueren En Beschrijven van Controle- En Correctieprocessen.” CBS nota DMV-2010- 06-08-RBNG-GVNK. Centraal Bureau voor de Statistiek.\n\n\nCai, Mingyang, Stef van Buuren, and Gerko Vink. 2023. “Graphical and Numerical Diagnostic Tools to Assess Multiple Imputation Models by Posterior Predictive Checking.” Heliyon.\n\n\nOberman, Hanne I., and Gerko Vink. 2023. “Toward a Standardized Evaluation of Imputation Methodology.” Biometrical Journal, 2200107. https://doi.org/https://doi.org/10.1002/bimj.202200107.\n\n\nSchouten, Rianne Margaretha, and Gerko Vink. 2021. “The Dance of the Mechanisms: How Observed Information Influences the Validity of Missingness Assumptions.” Sociological Methods & Research 50 (3): 1243–58.\n\n\nVolker, Thom, and Gerko Vink. 2022. “Synthetic Data in r: Generating Synthetic Data with High Utility Using Mice.” Https://Www.gerkovink.com/miceVignettes/Synthetic/Synthetic.html.\n\n\n\n## Citations\n\n@eval and Cai, Van Buuren and Vink [-@cai2023graphical] are some of our team's most recent publications. Some references - such as some work by Reinder Banning and Gerko Vink are much older [-@banningvink] or contain simple and contemporary solutions by @vigntg [p. 2-4] or cool but potentially confusing images [@schouten2021dance, 1255].\n\n::: footer\nBut you can also refer to @eval here\n:::\n\n::: {#refs}\n:::\n\n\n\n\nGerko Vink and Hanne Oberman - Methods & Statistics @ UU"
+  },
+  {
+    "objectID": "tutorial_2.html",
+    "href": "tutorial_2.html",
+    "title": "Tutorial 2",
     "section": "",
-    "text": "Lecture slides\nHieronder vind je de lecture slides voor de verschillende onderdelen van de cursus.\n\nLecture 1: Introductie markup, scripting en reproduceren\nLecture 2: Reproduceerbaar programmeren met Quarto"
+    "text": "git and GitHub are tools that allow you to create a visible portfolio of your work. This tutorial will guide you through the process of creating a new repository on GitHub, forking the repository, creating a new branch, adjusting the compendium, creating a pull request, reviewing the pull request, and merging the pull request.\nFinally, we will make the portfolio visible by creating a website rendering and publishing our Quarto document to GitHub Pages.\n\n\nGit is a free and open source version control system for text files. It can handle extensive change logging for you, no matter the size of the project. Git is fast and efficient, but its effectiveness depends also on the frequency you instruct it to log your project’s changes.\nYou can see Git as a blank canvas that starts at a certain point in time. Every time you (or others) instruct Git to log any changes that have been made, Git adds the changes that are made to this canvas. We call the changes to the canvas commits. With every commit an extensive log is created that includes at least the following information:\n\nthe changes made\nwho made the changes\nmetadata\na small piece of text that describe the changes made\n\nThe difference between two commits - or the changes between them - are called diffs.\nIf you’d like to know much more about Git, this online book is a very good resource. If you’d like to practice with the command line interface use this webpage for a quick course. This book covers pretty much everything you need to marry Git and R.\n\n\n\nGitHub is the social and user interface to Git that allows you to work in repositories. These repositories can be seen as project folders in which you publish your work, but you can also use them as test sites for development, testing, etcetera. There is a distinction between private repositories (only for you and those you grant access) and public repositories (visible for everyone).\nYour public repositories can be viewed and forked by everyone. Forking is when other people create a copy of your repository on their own account. This allows them to work on a repository without affecting the master. You can also do this yourself, but then the process is called branching instead of forking. If you create a copy of a repository that is offline, the process is called cloning.\nGitHub’s ability to branch, fork and clone is very useful as it allows other people and yourself to experiment on (the code in) a repository before any definitive changes are merged with the master. If you’re working in a forked repository, you can submit a pull request to the repository collaborators to accept (or reject) any suggested changes.\nFor now, this may be confusing, but I hope you recognize the benefits GitHub can have on the process of development and bug-fixing. For example, the most up-to-date version of the mice package in R can be directly installed from the mice repository with the following code:\n\ninstall.packages(\"devtools\")\ndevtools::install_github(repo = \"stefvanbuuren/mice\")\n\nYou can see that this process requires package devtools that expands the R functionality with essential development tools. Loading packages in R directly from their respective GitHub repositories, allows you to obtain the latest - often improved and less buggy - iteration of that software even before it is published on CRAN."
+  },
+  {
+    "objectID": "tutorial_2.html#git",
+    "href": "tutorial_2.html#git",
+    "title": "Tutorial 2",
+    "section": "",
+    "text": "Git is a free and open source version control system for text files. It can handle extensive change logging for you, no matter the size of the project. Git is fast and efficient, but its effectiveness depends also on the frequency you instruct it to log your project’s changes.\nYou can see Git as a blank canvas that starts at a certain point in time. Every time you (or others) instruct Git to log any changes that have been made, Git adds the changes that are made to this canvas. We call the changes to the canvas commits. With every commit an extensive log is created that includes at least the following information:\n\nthe changes made\nwho made the changes\nmetadata\na small piece of text that describe the changes made\n\nThe difference between two commits - or the changes between them - are called diffs.\nIf you’d like to know much more about Git, this online book is a very good resource. If you’d like to practice with the command line interface use this webpage for a quick course. This book covers pretty much everything you need to marry Git and R."
+  },
+  {
+    "objectID": "tutorial_2.html#github",
+    "href": "tutorial_2.html#github",
+    "title": "Tutorial 2",
+    "section": "",
+    "text": "GitHub is the social and user interface to Git that allows you to work in repositories. These repositories can be seen as project folders in which you publish your work, but you can also use them as test sites for development, testing, etcetera. There is a distinction between private repositories (only for you and those you grant access) and public repositories (visible for everyone).\nYour public repositories can be viewed and forked by everyone. Forking is when other people create a copy of your repository on their own account. This allows them to work on a repository without affecting the master. You can also do this yourself, but then the process is called branching instead of forking. If you create a copy of a repository that is offline, the process is called cloning.\nGitHub’s ability to branch, fork and clone is very useful as it allows other people and yourself to experiment on (the code in) a repository before any definitive changes are merged with the master. If you’re working in a forked repository, you can submit a pull request to the repository collaborators to accept (or reject) any suggested changes.\nFor now, this may be confusing, but I hope you recognize the benefits GitHub can have on the process of development and bug-fixing. For example, the most up-to-date version of the mice package in R can be directly installed from the mice repository with the following code:\n\ninstall.packages(\"devtools\")\ndevtools::install_github(repo = \"stefvanbuuren/mice\")\n\nYou can see that this process requires package devtools that expands the R functionality with essential development tools. Loading packages in R directly from their respective GitHub repositories, allows you to obtain the latest - often improved and less buggy - iteration of that software even before it is published on CRAN."
+  },
+  {
+    "objectID": "tutorial_2.html#to-continue",
+    "href": "tutorial_2.html#to-continue",
+    "title": "Tutorial 2",
+    "section": "To continue",
+    "text": "To continue\nIf you have time left, you can experiment with making your compendium into a target-powered data analylis pipeline. See this link for more details."
+  },
+  {
+    "objectID": "final.html",
+    "href": "final.html",
+    "title": "Final Hand-in",
+    "section": "",
+    "text": "To finalize the day:\n\nFork this repository and create a new branch\nAdjust the readme to add your content in the following way\n\n\nyour name\n\nyour Tutorial 2 GitHub repo AND a link to your rendered Quarto (i.e. html) file.\na link to the Zenodo entry of your personal R-package\n\n\n\nPropose the changes in a Pull Request to the original repository\n\nDone!"
   },
   {
     "objectID": "schedule.html",
@@ -49,214 +364,11 @@
     "text": "Schedule\n\n\n\n\n\n\nTimeslot\nActiviteit\n\n\n\n\n09:00 - 09:30\nInloop\n\n\n09:30 - 10:30\nIntroductie markup, scripting en reproduceren\n\n\n10:30 - 10:45\nPauze\n\n\n10:45 - 11:45\nTutorial: Reproduceerbaar programmeren met Quarto  In deze tutorial werken deelnemers in groepsverband aan het maken van een reproduceerbaar archief\n\n\n12:00 - 12:30\nIntroductie tot Git en FAIR development flows\n\n\n12:30 - 13:30\nLunch\n\n\n13:30 - 14:30\nTutorial: git en GitHub  Deelnemers leren samenwerken aan code middels git en GitHub. De basis voor deze tutorial is de groepsopdracht die in de ochtend is gemaakt.\n\n\n14:30 - 14:45\nPauze\n\n\n14:45 - 15:45\nLive workshop R package maken, testen en publiceren  Deelnemers volgen de docent in de workshop waarbij ze hun groepsopdracht individueel publiceren als refereerbeer, vindbaar en werkbaar R-package\n\n\n15:45 - 16:00\nPauze\n\n\n16:00 - 16:30\nAfronden en inleveren individuele opdracht"
   },
   {
-    "objectID": "final.html",
-    "href": "final.html",
-    "title": "Final Hand-in",
+    "objectID": "lectures.html",
+    "href": "lectures.html",
+    "title": "Lectures",
     "section": "",
-    "text": "To finalize the day:\n\nFork this repository\nAdjust the readme to add your content in the following way\n\n\nyour name\n\nyour Tutorial 2 GitHub repo AND a link to your rendered Quarto (i.e. html) file.\na link to the Zenodo entry of your personal R-package\n\n\n\nPropose the changes in a Pull Request to the original repository\n\nDone!"
-  },
-  {
-    "objectID": "tutorial_2.html",
-    "href": "tutorial_2.html",
-    "title": "Tutorial 2",
-    "section": "",
-    "text": "Introduction\ngit and GitHub are tools that allow you to create a visible portfolio of your work. This tutorial will guide you through the process of creating a new repository on GitHub, forking the repository, creating a new branch, adjusting the compendium, creating a pull request, reviewing the pull request, and merging the pull request.\nFinally, we will make the portfolio visible by creating a website rendering and publishing our Quarto document to GitHub Pages.\n\n\nExercise\nDivide your group in two teams:\nTeam A will be the owner of the repository. Team B will fork the repository and act as a contributor to the repository. Follow the instructions together and make sure that you understand the process. If you have any questions, please ask me, or Carlos.\n\n1. Publish a new repository2. Add content3. Fork the repository3. Create a new branch4. Adjust the compendium5. Create a pull request6. Review and merge the pull request7. Make the portfolio visible\n\n\nFirst, we will create a new repository on with GitHub desktop.\n\nChoose File &gt; New Repository\n\n\n\nChoose a name for the repository and a location on your computer and click Create Repository\n\n\nChoose initialise this repository with a README\nChoose MIT License\nChoose R for Git Ignore\n\n 3. Now publish the repository to GitHub by clicking Publish Repository and follow the instructions.\n\nChoose a name for the repository\nUntick Keep this code private\n\n\nNow click Publish Repository and wait for the repo to be published.\n\n\nThis one is easy!\nAdd the content from Tutorial 1 to the folder that you just created. You can overwrite the README.md file with the one from Tutorial 1. There is no need to overwrite the .gitignore and LICENSE files, if relevant.\nMake sure that you add all files and folders - also the hidden ones - to the git repository on your machine.\n\nAre all folders detected?\nMake sure that all folders in your repo are detected by git. If you are using GitHub Desktop, you can check this by clicking on the Changes tab. If you are using the command line, you can use the git status command.\nDepending on your platform, you might need to change the docs folder to doc or documents for it to be detected by git.\n\nAfter making sure all changes to the folder are detected, create a commit message (initial commit is conventional) and click Commit to main, followed by Push origin.\n\n\n\nNow the contributors (Team B) will fork the repository.\n\nFind the repository on GitHub and click Fork.\n\n\ncopying the main branch only will suffice\n\n\n\nClone the repository to your computer by clicking on the green code button and choosing Open with GitHub Desktop as the clone method.\n\n\n\nChoose a location on your computer and click Clone.\n\n\n\nNever work on the main branch. Always create a new branch for your work.\n\n\nChoose Branch &gt; New Branch and give the branch a name.\n\n\ndev is a common name for a development branch\n\n\n\nNow you can start working on the repository.\n\n\n\nThis is a free exercise. You must add something to the Quarto file and re-render.\n\nUse your creativity and add two things to the Quarto file from Tutorial 1.\n\n\nThe funniest image you know or can find\nThe funniest or coolest video you know or can find\n\n\nRe-render the Quarto file and make sure that the changes are visible in the html folder.\nCommit the changes to the repository and push the changes to your fork of the repository on GitHub by clicking Push Origin.\n\n\n\nNow that you have contributed to the project and have made changes to the repository, you can create a pull request to the main repository.\n\nGo to the forked repository on GitHub and click on Compare & pull request. \n\nAlternatively, you can click on the Preview Pull request button in GitHub Desktop.\n 2. Review the changes that you made and click Create pull request.\n\nchoose main as the base (destination) repository branch and the branch that your changes are on as the compare branch\nadd an informative title and description\ndetail the changes that you made\nassign someone to review the pull request (if relevant)\n\nIn general, try to make the life of the maintainer as easy as possible by properly documenting your contributions.\n\n\n\nNow the owner of the repository (Team A) will review the pull request. This is best done in the Files changed tab and by studying the Commits tab.\n\nGo through the files and look at the code. Alternatively, you can check out the PR branch in GitHub Desktop and see the changes in the files on your machine and the commits in the Changes tab.\n If you are happy, you can approve the changes and continue with merging the pull request. Approving is done with the Review changes button under the Files changed tab. It is nice to write a message to the contributor to thank them for their contribution.\nClick on Merge pull request and then Confirm merge to merge the pool request. The changes are now merged into the main branch of the repository.\nThe development cycle is now complete and the contributed changes are part of the main repository.\n\n\nFinally, we will make the portfolio visible by creating a website rendering and publishing our Quarto document to GitHub Pages.\n\nGo to the settings of the repository and scroll down to the Pages section.\nChoose the main branch as the source for the website and click Save. \nScroll down and choose Enforce HTTPS if available. This allows you to piggyback on the GitHub global certificate and have a securely accessible website. \nWait for the website to be published. This can take a few minutes. You can check the status of the website by going to the Actions tab of the repository. You can find your website address in the Pages section of the repository settings. \nUpdate the README file with a link to the rendered Quarto document. If you did not change any parameters, this would be realized by adding the following line to the README.md file:\n\nThe rendered `Quarto` file can be found [here](/doc/reprodev-exercise_quarto.html)\nGoing to your repository webpage on GitHub (often something like https://YOURUSERNAME.github.io/REPOSITORYNAME) should now serve you the README.md as a landing page, with a working link to your rendered Quarto file."
-  },
-  {
-    "objectID": "slides/lec-1.html#disclaimer",
-    "href": "slides/lec-1.html#disclaimer",
-    "title": "All flavors markdown",
-    "section": "Disclaimer",
-    "text": "Disclaimer\nI owe a debt of gratitude to many people as the thoughts and code in these slides are the process of years-long development cycles and discussions with my team, friends, colleagues and peers. When someone has contributed to the content of the slides, I have credited their authorship.\nScientific references are in the footer. Opinions and figures are my own, AI generated or linked to source."
-  },
-  {
-    "objectID": "slides/lec-1.html#rstudio",
-    "href": "slides/lec-1.html#rstudio",
-    "title": "All flavors markdown",
-    "section": "RStudio",
-    "text": "RStudio"
-  },
-  {
-    "objectID": "slides/lec-1.html#rstudio---integrated-development-environment-ide-for-r",
-    "href": "slides/lec-1.html#rstudio---integrated-development-environment-ide-for-r",
-    "title": "All flavors markdown",
-    "section": "RStudio - Integrated Development Environment (IDE) for R",
-    "text": "RStudio - Integrated Development Environment (IDE) for R\n\nRStudio is a powerful integrated development environment (IDE) designed specifically for the R programming language.\nIt offers a user-friendly interface and a suite of tools to enhance your R coding experience.\n\nKey Features of RStudio\n\n1. Code Editing: RStudio provides a code editor with syntax highlighting, autocompletion, and error checking, making your coding process more efficient.\n2. Console: An interactive R console allows you to execute R code line by line and view results in real time.\n3. Environment Pane: Keep track of your variables, data frames, and functions with the environment pane.\n4. Plots and Visualizations: Create and view plots, charts, and visualizations within RStudio.\n5. Integrated Help: Access R documentation, packages, and online resources directly from the IDE.\n6. Version Control: Easily integrate R projects with version control systems like Git.\n7. Markdown Support: RStudio seamlessly integrates with Markdown, making it an ideal choice for creating reproducible reports and documents.\n\nIt plays a crucial role in promoting reproducibility and collaboration in data science and statistical analysis."
-  },
-  {
-    "objectID": "slides/lec-1.html#rmarkdown-github-flavored-markdown-and-quarto",
-    "href": "slides/lec-1.html#rmarkdown-github-flavored-markdown-and-quarto",
-    "title": "All flavors markdown",
-    "section": "RMarkdown, GitHub-Flavored Markdown, and Quarto",
-    "text": "RMarkdown, GitHub-Flavored Markdown, and Quarto\n\nMarkdown is a lightweight markup language for creating formatted text using plain text. It’s easy to learn and widely used in various applications.\nGitHub-Flavored Markdown (GFM) is a variant of Markdown used on GitHub (next week), enhancing its capabilities for documentation and collaboration.\nRMarkdown is an extension of Markdown that allows you to embed R code and its output directly within a document.\n\nPerfect for creating reproducible reports, research papers, and presentations.\n\nQuarto is a comprehensive tool for creating reproducible and collaborative data science documents.\n\nCombines the power of Markdown, \\(\\LaTeX\\), and code execution to streamline document preparation."
-  },
-  {
-    "objectID": "slides/lec-1.html#popular-code-editors-for-r",
-    "href": "slides/lec-1.html#popular-code-editors-for-r",
-    "title": "All flavors markdown",
-    "section": "Popular Code Editors (for R)",
-    "text": "Popular Code Editors (for R)\n\nRStudio: Ideal for R programming with features tailored for data analysis and visualization.\nVisual Studio Code (VS Code): A versatile code editor with a vast ecosystem of extensions for various languages.\nEclipse (with StatET): Eclipse StatET is an integrated development environment (IDE) for R, offering features for R programming and data analysis.\n\nPopular Notebook Environments\n\nJupyter Notebooks: Widely used interactive kernel-based computing environment for data science and machine learning, supporting multiple (i.e. almost all) programming and scripting languages.\nRMarkdown: An R-based notebook environment that combines code, output, and narrative text in a single document."
-  },
-  {
-    "objectID": "slides/lec-1.html#structure-of-a-quarto-document",
-    "href": "slides/lec-1.html#structure-of-a-quarto-document",
-    "title": "All flavors markdown",
-    "section": "Structure of a Quarto Document",
-    "text": "Structure of a Quarto Document\n\nA Quarto document is organized into blocks, which serve as the fundamental building blocks of the document’s content.\nEach block can contain a combination of the following elements:\n\nText: Narrative content and explanations.\nCode: R code chunks for computations and data analysis.\nEquations: Mathematical equations and notation.\nFigures: Visualizations, charts, and images.\nTables: Data tables for presenting results.\nYAML Headers: Metadata and document configuration.\nSections and Subsections: Structuring the document into hierarchical sections for organization."
-  },
-  {
-    "objectID": "slides/lec-1.html#quarto-the-yaml-header",
-    "href": "slides/lec-1.html#quarto-the-yaml-header",
-    "title": "All flavors markdown",
-    "section": "Quarto: the YAML header",
-    "text": "Quarto: the YAML header\nYAML (YAML Ain’t Markup Language) is a human-readable data serialization format commonly used for configuration files and metadata in various programming and markup contexts.\n\nYAML is very simple and readable\nIn Quarto and many other applications, YAML is used to specify:\n\nDocument Metadata: Information about the document itself, such as the title, author, date, and document type.\nDocument Configuration: Settings related to the document’s behavior, appearance, and rendering, such as the output format (e.g., HTML, PDF), document template, and style options.\nCustom Variables: Definitions of custom variables or parameters that can be used throughout the document to control behavior or content.\n\n\nHere’s an example of a simple YAML header in a Quarto document:\n---\ntitle: \"All flavors markdown\"\nauthor: \n  - name: Gerko Vink\n    orcid: 0000-0001-9767-1924\n    email: g.vink@uu.nl\n    affiliations:\n      - name: Methodology & Statistics @ UU University\n  - name: Hanne Oberman\n    orcid: 0000-0003-3276-2141\n    email: h.i.oberman@uu.nl\n    affiliations:\n      - name: Methodology & Statistics @ UU\ndate: 13 Sep 2023\ndate-format: \"D MMM YYYY\"\nbibliography: data/lec-2/publications.bib\nexecute: \n  echo: true\neditor: source\nformat: \n  revealjs:\n    theme: [solarized, gerko.scss]\n    progress: true\n    multiplex: true\n    transition: fade\n    slide-number: true\n    margin: 0.075\n    logo: \"images/logo.png\" \n    toc: false\n    toc-depth: 1\n    toc-title: Outline\n    scrollable: true\n    reference-location: margin\n    footer: Gerko Vink and Hanne Oberman - Markup Languages @ UU\n---\nIn this example:\n\ntitle, author, and date provide metadata about the document.\noutput specifies settings related to the document’s output format and theme.\n\nThe YAML header is a powerful tool for customizing and configuring Quarto documents, allowing you to control how the document is rendered and presented. It ensures that important document information and settings are stored in a human-readable and structured format at the beginning of the document."
-  },
-  {
-    "objectID": "slides/lec-1.html#text-in-quarto",
-    "href": "slides/lec-1.html#text-in-quarto",
-    "title": "All flavors markdown",
-    "section": "Text in Quarto",
-    "text": "Text in Quarto\nText is text. Nothing more, nothing less\nHeader\nSubheader\nSubsubheader\n# This is a heading indicating a section\n## This is a heading indicating a subsection\n### This is a heading indicating a subsubsection\nBut in the above I used\n### Header\n#### Subheader\n##### Subsubheader"
-  },
-  {
-    "objectID": "slides/lec-1.html#figures",
-    "href": "slides/lec-1.html#figures",
-    "title": "All flavors markdown",
-    "section": "Figures",
-    "text": "Figures\n\n\n\n\n\nA surfing elephant\n\n\nThe above figure is left-aligned  The caption is also left-aligned\n\n\n\n\nA surfing elephant\n\n\nThe above figure is centered  The caption is still left-aligned\n\n\nThe code for the figures is\n![A surfing elephant](images/lec-2/elephantastic.png){fig-align=\"left\"}\n![A surfing elephant](images/lec-2/elephantastic.png){fig-align=\"center\"}"
-  },
-  {
-    "objectID": "slides/lec-1.html#columns-sizing-equations-and-proper-centering",
-    "href": "slides/lec-1.html#columns-sizing-equations-and-proper-centering",
-    "title": "All flavors markdown",
-    "section": "Columns, Sizing, Equations and proper centering",
-    "text": "Columns, Sizing, Equations and proper centering\n\n\n\n\n\nA surfing \\(\\epsilon\\lambda\\epsilon\\phi h\\alpha\\nu\\tau\\)\n\n\n\\(e^{i\\pi} + 1 = 0\\)\nThe above figure is left-aligned  The caption is also left-aligned  The equation is left-aligned too\n\n\n\n\n\nA surfing elephant\n\n\n\n\\[e^{i\\pi} + 1 = 0\\]\nThe above figure is centered  The caption is also centered  The equation is centered\n\n\nThe code for the slide is\n## Columns, Sizing, Equations and proper centering\n\n::: columns\n::: {.column width=\"50%\"}\n![A surfing $\\epsilon\\lambda\\epsilon\\phi h\\alpha\\nu\\tau$](images/lec-2/elephantastic.png){fig-align=\"left\" width=\"80%\"}\n\n$e^{i\\pi} + 1 = 0$\n\nThe above figure is left-aligned &lt;br&gt;\nThe caption is also left-aligned &lt;br&gt;\nThe equation is left-aligned too\n:::\n\n::: {.column width=\"50%\"}\n&lt;center&gt;\n![A surfing elephant](images/lec-2/elephantastic.png){fig-align=\"center\" width=\"80%\"}\n&lt;/center&gt;\n\n$$e^{i\\pi} + 1 = 0$$\n\nThe above figure is centered &lt;br&gt;\nThe caption is also centered &lt;br&gt;\nThe equation is centered\n:::\n\n:::\n\nThe code for the slide is\n\n``` markdown\n## Columns, Sizing, Equations and proper centering\n\n::: columns\n::: {.column width=\"50%\"}\n![A surfing $\\epsilon\\lambda\\epsilon\\phi h\\alpha\\nu\\tau$](images/lec-2/elephantastic.png){fig-align=\"left\" width=\"80%\"}\n\n$e^{i\\pi} + 1 = 0$\n\nThe above figure is left-aligned &lt;br&gt;\nThe caption is also left-aligned &lt;br&gt;\nThe equation is left-aligned too\n:::\n\n::: {.column width=\"50%\"}\n&lt;center&gt;\n![A surfing elephant](images/lec-2/elephantastic.png){fig-align=\"center\" width=\"80%\"}\n&lt;/center&gt;\n\n$$e^{i\\pi} + 1 = 0$$\n\nThe above figure is centered &lt;br&gt;\nThe caption is also centered &lt;br&gt;\nThe equation is centered\n:::\n\n:::"
-  },
-  {
-    "objectID": "slides/lec-1.html#f-ing-it-all-up",
-    "href": "slides/lec-1.html#f-ing-it-all-up",
-    "title": "All flavors markdown",
-    "section": "F-ing it all up",
-    "text": "F-ing it all up\n\n\n\n\n\nRick taking a bad\n\n\n\\(e^{i\\pi} + 1 = 0\\)\nThe above figure is left-aligned  The caption is also left-aligned  The equation is left-aligned too\n\n\n\n\n\nRick taking a bad\n\n\n\n\\[e^{i\\pi} + 1 = 0\\]\nThe above figure is centered  The caption is also centered  The equation is centered\n\n\n::: columns\n::: {.column width=\"70%\"}\n![Rick taking a bad](images/lec-2/bathrick.png){fig-align=\"left\" width=\"70%\"}\n\n$e^{i\\pi} + 1 = 0$\n\n:::\n\n::: {.column width=\"30%\"}\n&lt;center&gt;\n![Rick taking a bad](images/lec-2/bathrick.png){fig-align=\"center\" width=\"30%\"}\n&lt;/center&gt;\n\n$$e^{i\\pi} + 1 = 0$$\n:::\n\n:::"
-  },
-  {
-    "objectID": "slides/lec-1.html#math-ing-it-all-up",
-    "href": "slides/lec-1.html#math-ing-it-all-up",
-    "title": "All flavors markdown",
-    "section": "Math-ing it all up",
-    "text": "Math-ing it all up\n\n\n\n\n\nRick taking a bath\n\n\n\\(e^{i\\pi} + 1 = 0\\)\n\n\n\n\n\nRick taking a bath\n\n\n\n\\[e^{i\\pi} + 1 = 0\\]\n\n\n## Math-ing it all up\n::: columns\n::: {.column width=\"70%\"}\n![Rick taking a bath](images/lec-2/goodrick.png){fig-align=\"left\" width=\"30%\"}\n\n$e^{i\\pi} + 1 = 0$\n:::\n\n::: {.column width=\"30%\"}\n&lt;center&gt;\n![Rick taking a bath](images/lec-2/goodrick.png){fig-align=\"center\" width=\"70%\"}\n&lt;/center&gt;\n\n$$e^{i\\pi} + 1 = 0$$\n:::\n\n:::\n\n```markdown\nEND OF EXAMPLE"
-  },
-  {
-    "objectID": "slides/lec-1.html#r-figures",
-    "href": "slides/lec-1.html#r-figures",
-    "title": "All flavors markdown",
-    "section": "R figures",
-    "text": "R figures\n\nlibrary(dygraphs)\ndygraph(nhtemp, main = \"New Haven Temperatures\", ylab = \"Temp (F)\")"
-  },
-  {
-    "objectID": "slides/lec-1.html#r-figures-1",
-    "href": "slides/lec-1.html#r-figures-1",
-    "title": "All flavors markdown",
-    "section": "R figures",
-    "text": "R figures\n\nlibrary(dygraphs)\ndygraph(nhtemp, main = \"New Haven Temperatures\", ylab = \"Temp (F)\")"
-  },
-  {
-    "objectID": "slides/lec-1.html#r-figures-2",
-    "href": "slides/lec-1.html#r-figures-2",
-    "title": "All flavors markdown",
-    "section": "R figures",
-    "text": "R figures\n\nlibrary(ggplot2, warn.conflicts = FALSE)\nlibrary(plotly, warn.conflicts = FALSE)\nggplot(mpg, aes(displ, hwy, colour = class)) +\n  geom_point() +\n  geom_smooth(se = FALSE, method = lm)"
-  },
-  {
-    "objectID": "slides/lec-1.html#r-figures-3",
-    "href": "slides/lec-1.html#r-figures-3",
-    "title": "All flavors markdown",
-    "section": "R figures",
-    "text": "R figures\n\nlibrary(ggplot2, warn.conflicts = FALSE)\nlibrary(plotly, warn.conflicts = FALSE)\np &lt;- ggplot(mpg, aes(displ, hwy, colour = class)) +\n  geom_point() +\n  geom_smooth(se = FALSE, method = lm) \np %&gt;% ggplotly()"
-  },
-  {
-    "objectID": "slides/lec-1.html#equations",
-    "href": "slides/lec-1.html#equations",
-    "title": "All flavors markdown",
-    "section": "Equations",
-    "text": "Equations\n\n$\\mu$ is used for in-line equations\n$$\\mu$$ is used for equations\n\nLet’s assume that \\(Y\\) follows a normal distribution. \\[Y \\sim  \\mathcal{N}(\\mu, \\sigma^2)\\] Where we set in our simulations \\(\\mu = 10\\) and \\(\\sigma^2 = 5\\). We do something for every \\(Y_i\\)."
-  },
-  {
-    "objectID": "slides/lec-1.html#equations-1",
-    "href": "slides/lec-1.html#equations-1",
-    "title": "All flavors markdown",
-    "section": "Equations",
-    "text": "Equations\n\n$\\mu$ is used for in-line equations\n$$\\mu$$ is used for equations\n\nLet’s assume that \\(y\\) is a vector with \\(N\\) elements such that \\[y \\sim  \\mathcal{N}(\\mu, \\sigma^2),\\] where we set in our simulations \\(\\mu = 10\\) and \\(\\sigma^2 = 5\\). We do something for every \\(y_i\\) with \\(i = 1, \\dots, N\\)."
-  },
-  {
-    "objectID": "slides/lec-1.html#code-chunks",
-    "href": "slides/lec-1.html#code-chunks",
-    "title": "All flavors markdown",
-    "section": "Code chunks",
-    "text": "Code chunks\nWe already saw some markdown code chunks. We can run inline code to calculate that 12 * 234 is 2808 by using `r ` and code chunks to evaluate larger blocks of code, such as:\n\nCode\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n\nggplot(mpg, aes(x = hwy, y = cty, color = displ)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c(option = \"E\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n\n\n(a) Color by number of cylinders\n\n\n\n\n\n\n\n\n\n\n\n(b) Color by engine displacement, in liters\n\n\n\n\n\n\n\nFigure 1: City and highway mileage for 38 popular models of cars."
-  },
-  {
-    "objectID": "slides/lec-1.html#the-previous-slide",
-    "href": "slides/lec-1.html#the-previous-slide",
-    "title": "All flavors markdown",
-    "section": "The previous slide",
-    "text": "The previous slide\n## Code chunks and explicit caching\n\n```{r}\n#| output: asis\n\nanswer &lt;- 12 * 234\n``` \n\n\nWe already saw some `markdown` code chunks. We can run inline code to calculate \nthat `12 * 234` is ` r answer ` by using `r  ` and code chunks to evaluate \nlarger blocks of code, such as:\n\n\n\n```{{r}}\n#| output: asis\n#| label: fig-mpg\n#| fig-cap: \"City and highway mileage for 38 popular models of cars.\"\n#| fig-subcap:\n#|   - \"Color by number of cylinders\"\n#|   - \"Color by engine displacement, in liters\"\n#| layout-ncol: 2\n#| column: page\n#| code-fold: true\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n\nggplot(mpg, aes(x = hwy, y = cty, color = displ)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c(option = \"E\") +\n  theme_minimal()\n```"
-  },
-  {
-    "objectID": "slides/lec-1.html#explicit-caching",
-    "href": "slides/lec-1.html#explicit-caching",
-    "title": "All flavors markdown",
-    "section": "Explicit Caching",
-    "text": "Explicit Caching\n\nExplicit caching is a technique used in RMarkdown and Quarto documents to store and reuse the results of expensive computations or data processing steps.\nIt helps improve the efficiency of document generation and ensures reproducibility by avoiding redundant calculations. \n\nWhy Use Explicit Caching?\n\nEfficiency: Caching saves time and resources by avoiding the repeated execution of time-consuming code chunks.\nReproducibility: Explicit caching ensures that the same results are used when rendering the document, even if the code is modified or re-executed.\nVersion Control: Caching reduces the size of version-controlled documents by storing intermediate results separately."
-  },
-  {
-    "objectID": "slides/lec-1.html#how-does-explicit-caching-work",
-    "href": "slides/lec-1.html#how-does-explicit-caching-work",
-    "title": "All flavors markdown",
-    "section": "How Does Explicit Caching Work?",
-    "text": "How Does Explicit Caching Work?\nIn RMarkdown and Quarto, you can use cache directives to specify which code chunks should be cached and which should not.\n\nCached chunks are identified by a unique hash based on their code content, ensuring consistency.\n\nThe following code block\n```{r}\n#| cache: true\n#| code-line-numbers: true\n#| label: imputation\nlibrary(mice)\nlibrary(magrittr)\nlibrary(purrr)\nimp &lt;- nhanes %&gt;% mice(print = FALSE)\nimp |&gt;\n  complete(\"all\") %&gt;% \n  map(~.x %$% lm(bmi ~ chl + hyp)) |&gt;\n  pool()\n```\nwould result in this output\n\nlibrary(mice)\nlibrary(magrittr)\nlibrary(purrr)\nimp &lt;- nhanes %&gt;% mice(print = FALSE)\nimp |&gt;\n  complete(\"all\") %&gt;% \n  map(~.x %$% lm(bmi ~ chl + hyp)) |&gt;\n  pool()\n\nClass: mipo    m = 5 \n         term m    estimate         ubar            b            t dfcom\n1 (Intercept) 5 21.11140301 1.508593e+01 2.8737763894 1.853446e+01    22\n2         chl 5  0.03325061 4.165502e-04 0.0000811387 5.139166e-04    22\n3         hyp 5 -0.97629112 4.517101e+00 1.0597984680 5.788859e+00    22\n        df       riv    lambda       fmi\n1 14.41839 0.2285926 0.1860606 0.2795180\n2 14.30011 0.2337448 0.1894596 0.2831631\n3 13.26553 0.2815430 0.2196907 0.3156370\n\n\nwith corresponding cache structure relative to the root and format of the output file:"
-  },
-  {
-    "objectID": "slides/lec-1.html#tables",
-    "href": "slides/lec-1.html#tables",
-    "title": "All flavors markdown",
-    "section": "Tables",
-    "text": "Tables\nUse https://www.tablesgenerator.com/markdown_tables if you need to make a table from scratch.\nOtherwise, use tibbles:\n\nmice::boys |&gt; \n  tibble::as_tibble()\n\n# A tibble: 748 × 9\n     age   hgt   wgt   bmi    hc gen   phb      tv reg  \n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;ord&gt; &lt;ord&gt; &lt;int&gt; &lt;fct&gt;\n 1 0.035  50.1  3.65  14.5  33.7 &lt;NA&gt;  &lt;NA&gt;     NA south\n 2 0.038  53.5  3.37  11.8  35   &lt;NA&gt;  &lt;NA&gt;     NA south\n 3 0.057  50    3.14  12.6  35.2 &lt;NA&gt;  &lt;NA&gt;     NA south\n 4 0.06   54.5  4.27  14.4  36.7 &lt;NA&gt;  &lt;NA&gt;     NA south\n 5 0.062  57.5  5.03  15.2  37.3 &lt;NA&gt;  &lt;NA&gt;     NA south\n 6 0.068  55.5  4.66  15.1  37   &lt;NA&gt;  &lt;NA&gt;     NA south\n 7 0.068  52.5  3.81  13.8  34.9 &lt;NA&gt;  &lt;NA&gt;     NA south\n 8 0.071  53    3.89  13.8  35.8 &lt;NA&gt;  &lt;NA&gt;     NA west \n 9 0.071  55.1  3.88  12.8  36.8 &lt;NA&gt;  &lt;NA&gt;     NA west \n10 0.073  54.5  4.2   14.1  38   &lt;NA&gt;  &lt;NA&gt;     NA east \n# ℹ 738 more rows\n\n\nor use e.g. library(DT) for customization:\n\nlibrary(DT)\nmtcars %&gt;% \n  datatable(options = list(pageLength = 25))"
-  },
-  {
-    "objectID": "slides/lec-1.html#reprex-and-renv",
-    "href": "slides/lec-1.html#reprex-and-renv",
-    "title": "All flavors markdown",
-    "section": "reprex and renv",
-    "text": "reprex and renv\nlibrary(renv)\n#&gt; \n#&gt; Attaching package: 'renv'\n#&gt; The following objects are masked from 'package:stats':\n#&gt; \n#&gt;     embed, update\n#&gt; The following objects are masked from 'package:utils':\n#&gt; \n#&gt;     history, upgrade\n#&gt; The following objects are masked from 'package:base':\n#&gt; \n#&gt;     autoload, load, remove\nrenv::init()\n#&gt; - Linking packages into the project library ... Done!\n#&gt; The following package(s) will be updated in the lockfile:\n#&gt; \n#&gt; # CRAN -----------------------------------------------------------------------\n#&gt; - backports       [* -&gt; 1.4.1]\n#&gt; - base64enc       [* -&gt; 0.1-3]\n#&gt; - broom           [* -&gt; 1.0.4]\n#&gt; - bslib           [* -&gt; 0.4.2]\n#&gt; - cachem          [* -&gt; 1.0.8]\n#&gt; - cli             [* -&gt; 3.6.1]\n#&gt; - cpp11           [* -&gt; 0.4.3]\n#&gt; - digest          [* -&gt; 0.6.31]\n#&gt; - dplyr           [* -&gt; 1.1.2]\n#&gt; - ellipsis        [* -&gt; 0.3.2]\n#&gt; - evaluate        [* -&gt; 0.21]\n#&gt; - fansi           [* -&gt; 1.0.4]\n#&gt; - fastmap         [* -&gt; 1.1.1]\n#&gt; - fontawesome     [* -&gt; 0.5.1]\n#&gt; - fs              [* -&gt; 1.6.2]\n#&gt; - generics        [* -&gt; 0.1.3]\n#&gt; - glue            [* -&gt; 1.6.2]\n#&gt; - highr           [* -&gt; 0.10]\n#&gt; - htmltools       [* -&gt; 0.5.5]\n#&gt; - jquerylib       [* -&gt; 0.1.4]\n#&gt; - jsonlite        [* -&gt; 1.8.4]\n#&gt; - knitr           [* -&gt; 1.43]\n#&gt; - lattice         [* -&gt; 0.21-8]\n#&gt; - lifecycle       [* -&gt; 1.0.3]\n#&gt; - magrittr        [* -&gt; 2.0.3]\n#&gt; - memoise         [* -&gt; 2.0.1]\n#&gt; - mime            [* -&gt; 0.12]\n#&gt; - pillar          [* -&gt; 1.9.0]\n#&gt; - pkgconfig       [* -&gt; 2.0.3]\n#&gt; - purrr           [* -&gt; 1.0.1]\n#&gt; - R6              [* -&gt; 2.5.1]\n#&gt; - rappdirs        [* -&gt; 0.3.3]\n#&gt; - Rcpp            [* -&gt; 1.0.11]\n#&gt; - RcppArmadillo   [* -&gt; 0.12.4.0.0]\n#&gt; - renv            [* -&gt; 1.0.2]\n#&gt; - rlang           [* -&gt; 1.1.1]\n#&gt; - rmarkdown       [* -&gt; 2.22]\n#&gt; - sass            [* -&gt; 0.4.6]\n#&gt; - stringi         [* -&gt; 1.7.12]\n#&gt; - stringr         [* -&gt; 1.5.0]\n#&gt; - tibble          [* -&gt; 3.2.1]\n#&gt; - tidyr           [* -&gt; 1.3.0]\n#&gt; - tidyselect      [* -&gt; 1.2.0]\n#&gt; - tinytex         [* -&gt; 0.45]\n#&gt; - utf8            [* -&gt; 1.2.3]\n#&gt; - vctrs           [* -&gt; 0.6.2]\n#&gt; - withr           [* -&gt; 2.5.0]\n#&gt; - xfun            [* -&gt; 0.39]\n#&gt; - yaml            [* -&gt; 2.3.7]\n#&gt; \n#&gt; # GitHub ---------------------------------------------------------------------\n#&gt; - mice            [* -&gt; gerkovink/mice@match_conditional]\n#&gt; \n#&gt; The version of R recorded in the lockfile will be updated:\n#&gt; - R               [* -&gt; 4.3.0]\n#&gt; \n#&gt; - Lockfile written to \"/private/var/folders/yx/6rn4qpl13wsgk4c7s3jc9d1r0000gp/T/RtmpMqetyA/reprex-1233f6d959b19-drear-kitty/renv.lock\".\nlibrary(mice)\n#&gt; \n#&gt; Attaching package: 'mice'\n#&gt; The following object is masked from 'package:stats':\n#&gt; \n#&gt;     filter\n#&gt; The following objects are masked from 'package:base':\n#&gt; \n#&gt;     cbind, rbind\nlibrary(magrittr)\nlibrary(purrr)\n#&gt; \n#&gt; Attaching package: 'purrr'\n#&gt; The following object is masked from 'package:magrittr':\n#&gt; \n#&gt;     set_names\n#&gt; The following object is masked from 'package:renv':\n#&gt; \n#&gt;     modify\nrenv::snapshot()\n#&gt; - The lockfile is already up to date.\nrenv::remove(\"mice\")\n#&gt; - Removing package(s) from project library ...\n#&gt; Removing package 'mice' ... Done!\nrenv::restore()\n#&gt; The following package(s) will be updated:\n#&gt; \n#&gt; # GitHub ---------------------------------------------------------------------\n#&gt; - mice   [* -&gt; gerkovink/mice@match_conditional]\n#&gt; \n#&gt; # Installing packages --------------------------------------------------------\n#&gt; - Installing mice ...                           OK [linked from cache]\nimp &lt;- nhanes %&gt;% mice(print = FALSE)\nimp |&gt;\n  complete(\"all\") %&gt;% \n  map(~.x %$% lm(bmi ~ chl + hyp)) |&gt;\n  pool()\n#&gt; Class: mipo    m = 5 \n#&gt;          term m   estimate         ubar            b            t dfcom\n#&gt; 1 (Intercept) 5 20.6687887 2.020809e+01 8.8963873222 3.088375e+01    22\n#&gt; 2         chl 5  0.0354435 5.409979e-04 0.0001081414 6.707676e-04    22\n#&gt; 3         hyp 5 -0.8447582 4.353337e+00 0.9275040571 5.466342e+00    22\n#&gt;          df       riv    lambda       fmi\n#&gt; 1  9.489411 0.5282868 0.3456725 0.4504537\n#&gt; 2 14.161181 0.2398710 0.1934645 0.2874598\n#&gt; 3 13.811544 0.2556671 0.2036105 0.2983537\n\nsessionInfo()\n#&gt; R version 4.3.0 (2023-04-21)\n#&gt; Platform: aarch64-apple-darwin20 (64-bit)\n#&gt; Running under: macOS Ventura 13.6\n#&gt; \n#&gt; Matrix products: default\n#&gt; BLAS:   /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib/libRblas.0.dylib \n#&gt; LAPACK: /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0\n#&gt; \n#&gt; locale:\n#&gt; [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8\n#&gt; \n#&gt; time zone: Europe/Amsterdam\n#&gt; tzcode source: internal\n#&gt; \n#&gt; attached base packages:\n#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     \n#&gt; \n#&gt; other attached packages:\n#&gt; [1] purrr_1.0.1    magrittr_2.0.3 mice_3.15.3    renv_1.0.2    \n#&gt; \n#&gt; loaded via a namespace (and not attached):\n#&gt;  [1] vctrs_0.6.2      cli_3.6.1        knitr_1.43       rlang_1.1.1     \n#&gt;  [5] xfun_0.39        generics_0.1.3   glue_1.6.2       backports_1.4.1 \n#&gt;  [9] htmltools_0.5.5  fansi_1.0.4      rmarkdown_2.22   grid_4.3.0      \n#&gt; [13] evaluate_0.21    tibble_3.2.1     fastmap_1.1.1    yaml_2.3.7      \n#&gt; [17] lifecycle_1.0.3  compiler_4.3.0   dplyr_1.1.2      fs_1.6.2        \n#&gt; [21] pkgconfig_2.0.3  Rcpp_1.0.11      tidyr_1.3.0      rstudioapi_0.14 \n#&gt; [25] lattice_0.21-8   digest_0.6.31    R6_2.5.1         tidyselect_1.2.0\n#&gt; [29] reprex_2.0.2     utf8_1.2.3       pillar_1.9.0     tools_4.3.0     \n#&gt; [33] withr_2.5.0      broom_1.0.4\nCreated on 2023-09-27 with reprex v2.0.2"
-  },
-  {
-    "objectID": "slides/lec-1.html#benefits-of-using-renv",
-    "href": "slides/lec-1.html#benefits-of-using-renv",
-    "title": "All flavors markdown",
-    "section": "Benefits of Using renv",
-    "text": "Benefits of Using renv\n\n1. Dependency Isolation: renv creates a dedicated environment for each project, preventing conflicts between package versions.\n2. Reproducibility: With renv, you can capture and record the specific package versions used in your project, ensuring reproducibility over time.\n3. Collaboration: Share your project with others, and they can easily recreate the same environment using renv.lock.\n4. Easier Package Installation: renv simplifies package installation. Just run renv::restore() to set up the project environment.\n5. Automatic Snapshot: renv automatically generates a renv.lock file, listing all package versions used, making it easy to recreate the environment.\n6. Compatibility: renv is compatible with popular version control systems like Git, facilitating collaboration and sharing.\n\nUse renv::snapshot() to update the renv.lock file when you add or update packages. You can use renv::activate() and renv::deactivate() to activate or deactivate renv for your project."
-  },
-  {
-    "objectID": "slides/lec-1.html#diagrams",
-    "href": "slides/lec-1.html#diagrams",
-    "title": "All flavors markdown",
-    "section": "Diagrams",
-    "text": "Diagrams\n```{{mermaid}}\n%%| echo: false\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C &lt;--&gt; D[Result one]\n  C --&gt; E[Result two]\n```\n\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C &lt;--&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\nSee Quarto Diagrams for a more comprehensive overview of all graphing engines. This Live online Mermaid editor is awesome!"
-  },
-  {
-    "objectID": "slides/lec-1.html#scientific-publishing-with-rticles-and-quarto",
-    "href": "slides/lec-1.html#scientific-publishing-with-rticles-and-quarto",
-    "title": "All flavors markdown",
-    "section": "Scientific publishing with rticles and Quarto",
-    "text": "Scientific publishing with rticles and Quarto\nTo use rticles from RStudio, you can access the templates through File -&gt; New File -&gt; R Markdown. This will open the dialog box where you can select from one of the available templates:\n\nQuarto\nThe quarto use template command can be used to create an article from one the below formats.\n\n\nTerminal\n\nquarto use template quarto-journals/acm\nquarto use template quarto-journals/plos\nquarto use template quarto-journals/elsevier\nquarto use template quarto-journals/acs\nquarto use template quarto-journals/jss"
-  },
-  {
-    "objectID": "slides/lec-1.html#citations",
-    "href": "slides/lec-1.html#citations",
-    "title": "All flavors markdown",
-    "section": "Citations",
-    "text": "Citations\nOberman and Vink (2023) and Cai, Van Buuren and Vink (2023) are some of our team’s most recent publications. Some references - such as some work by Reinder Banning and Gerko Vink are much older (2010) or contain simple and contemporary solutions by Volker and Vink (2022, 2–4) or cool but potentially confusing images (Schouten and Vink 2021, 1255).\n\nBut you can also refer to Oberman and Vink (2023) here\n\n\n\nBanning, Reinder, and Gerko Vink. 2010. “Methoden En Indicatoren Voor Het Evalueren En Beschrijven van Controle- En Correctieprocessen.” CBS nota DMV-2010- 06-08-RBNG-GVNK. Centraal Bureau voor de Statistiek.\n\n\nCai, Mingyang, Stef van Buuren, and Gerko Vink. 2023. “Graphical and Numerical Diagnostic Tools to Assess Multiple Imputation Models by Posterior Predictive Checking.” Heliyon.\n\n\nOberman, Hanne I., and Gerko Vink. 2023. “Toward a Standardized Evaluation of Imputation Methodology.” Biometrical Journal, 2200107. https://doi.org/https://doi.org/10.1002/bimj.202200107.\n\n\nSchouten, Rianne Margaretha, and Gerko Vink. 2021. “The Dance of the Mechanisms: How Observed Information Influences the Validity of Missingness Assumptions.” Sociological Methods & Research 50 (3): 1243–58.\n\n\nVolker, Thom, and Gerko Vink. 2022. “Synthetic Data in r: Generating Synthetic Data with High Utility Using Mice.” Https://Www.gerkovink.com/miceVignettes/Synthetic/Synthetic.html.\n\n\n\n## Citations\n\n@eval and Cai, Van Buuren and Vink [-@cai2023graphical] are some of our team's most recent publications. Some references - such as some work by Reinder Banning and Gerko Vink are much older [-@banningvink] or contain simple and contemporary solutions by @vigntg [p. 2-4] or cool but potentially confusing images [@schouten2021dance, 1255].\n\n::: footer\nBut you can also refer to @eval here\n:::\n\n::: {#refs}\n:::\n\n\n\n\nGerko Vink and Hanne Oberman - Markup Languages @ UU"
+    "text": "Lecture slides\nHieronder vind je de lecture slides voor de verschillende onderdelen van de cursus.\n\nLecture 1: Introduction to reproducibility, Quarto and Research Compendiums"
   },
   {
     "objectID": "tutorial_3.html",
