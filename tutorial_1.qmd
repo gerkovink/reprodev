@@ -268,7 +268,7 @@ The flexibility of `Quarto` is to add in-line code. This is a great way to add d
 ```{r eval=FALSE}
 #| code-overflow: wrap
 # Descriptions of the `boys` data
-The `boys` data contains `r nrow(boys` rows and `r ncol(boys)` columns. In total there are `r sum(is.na(boys)` missing values in the `boys` data, with the highest number of missing values in the `r names(which.max(apply(mice::boys, 2, function(x) sum(is.na(x)))))` column. 
+The `boys` data contains `r nrow(boys)` rows and `r ncol(boys)` columns. In total there are `r sum(is.na(boys))` missing values in the `boys` data, with the highest number of missing values in the `r names(which.max(apply(mice::boys, 2, function(x) sum(is.na(x)))))` column. 
 ```
 
 The last in-line code chunk makes it painfully clear why piping in coding is so essential for the readability of your code. The flexibility about the in-line code is that it is automatically updated from the data and analyses - so as soon as one or the other changes, the output is updated accordingly when the `Quarto` document is rendered. 
