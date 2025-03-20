@@ -1,0 +1,196 @@
+---
+title: "Tutorial 2"
+subtitle: "[`git`](https://git-scm.com) and [`GitHub`](https://github.com) - creating a visible portfolio"
+authors:
+  - name: "Gerko Vink"
+    orcid: "0000-0001-9767-1924"
+editor: source
+---
+
+You can use [this repository](https://github.com/gerkovink/reprodev-exercise_quarto) as the base for Tutorial 2. 
+
+# Introduction
+`git` and `GitHub` are tools that allow you to create a visible portfolio of your work. This tutorial will guide you through the process of creating a new repository on `GitHub`, forking the repository, creating a new branch, adjusting the compendium, creating a pull request, reviewing the pull request, and merging the pull request.
+
+Finally, we will make the portfolio visible by creating a website rendering and publishing our `Quarto` document to `GitHub Pages`.
+
+## `Git`
+
+`Git` is a free and open source version control system for text files. It can handle extensive change logging for you, no matter the size of the project. `Git` is fast and efficient, but its effectiveness depends also on the frequency you instruct it to log your project's changes.
+
+You can see `Git` as a blank canvas that starts at a certain point in time. Every time you (or others) instruct `Git` to log any changes that have been made, `Git` adds the changes that are made to this canvas. We call the changes to the canvas [`commits`](https://help.github.com/articles/github-glossary/#commit). With every `commit` an extensive log is created that includes at least the following information:
+
+-   the changes made
+-   who made the changes
+-   metadata
+-   a small piece of text that describe the changes made
+
+The difference between two commits - or the changes between them - are called [`diffs`](https://help.github.com/articles/github-glossary/#diff).
+
+If you'd like to know much more about `Git`, [this online book](https://git-scm.com/book/en/v2) is a very good resource. If you'd like to practice with the command line interface [use this webpage](https://learngitbranching.js.org) for a quick course. [This book](https://happygitwithr.com) covers pretty much everything you need to marry `Git` and `R`.
+
+## `GitHub`
+
+`GitHub` is the social and user interface to `Git` that allows you to work in [repositories](https://help.github.com/articles/github-glossary/#repository). These repositories can be seen as project folders in which you publish your work, but you can also use them as test sites for development, testing, etcetera. There is a distinction between [private repositories](https://help.github.com/articles/github-glossary/#private-repository) (only for you and those you grant access) and public repositories (visible for everyone).
+
+Your public repositories can be viewed and [forked](https://help.github.com/articles/github-glossary/#fork) by everyone. `Forking` is when other people create a copy of your repository on their own account. This allows them to work on a repository without affecting the `master`. You can also do this yourself, but then the process is called [`branching`](https://help.github.com/articles/github-glossary/#branch) instead of forking. If you create a copy of a repository that is offline, the process is called [`cloning`](https://help.github.com/articles/github-glossary/#clone).
+
+`GitHub`'s ability to branch, fork and clone is very useful as it allows other people and yourself to experiment on (the code in) a repository before any definitive changes are [`merged`](https://help.github.com/articles/github-glossary/#merge) with the `master`. If you're working in a forked repository, you can submit a [`pull request`](https://help.github.com/articles/github-glossary/#pull-request) to the repository collaborators to accept (or reject) any suggested changes.
+
+For now, this may be confusing, but I hope you recognize the benefits `GitHub` can have on the process of development and bug-fixing. For example, the most up-to-date version of the `mice` package in `R` can be directly installed from the `mice` repository with the following code:
+
+```{r eval=FALSE}
+install.packages("devtools")
+devtools::install_github(repo = "stefvanbuuren/mice")
+```
+
+You can see that this process requires package `devtools` that expands the `R` functionality with essential development tools. Loading packages in `R` directly from their respective `GitHub` repositories, allows you to obtain the latest - often improved and less buggy - iteration of that software even before it is published on [`CRAN`](https://cran.r-project.org).
+
+# Exercise
+
+Divide your group in two teams:
+
+Team A will be the owner of the repository. Team B will fork the repository and act as a contributor to the repository. Follow the instructions together and make sure that you understand the process. If you have any questions, please ask me, or Carlos. 
+
+::: {.panel-tabset}
+
+## 1. Publish a new repository
+
+First, we will create a new repository on with `GitHub` desktop.
+
+1. Choose _File > New Repository_
+
+![](tutorial_2_img/new.png){width=50%}
+
+2. Choose a name for the repository and a location on your computer and click _Create Repository_
+
+- Choose initialise this repository with a README
+- Choose MIT License
+- Choose `R` for _Git Ignore_ 
+
+![](tutorial_2_img/create.png){width=100%}
+3. Now publish the repository to `GitHub` by clicking _Publish Repository_ and follow the instructions.
+
+- Choose a name for the repository
+- Untick _Keep this code private_
+
+![](tutorial_2_img/publish.png){width=100%}
+
+Now click _Publish Repository_ and wait for the repo to be published. 
+
+## 2. Add content
+This one is easy!
+
+Add the content from Tutorial 1 to the folder that you just created. You can overwrite the `README.md` file with the one from Tutorial 1. There is no need to overwrite the `.gitignore` and `LICENSE` files, if relevant. 
+
+Make sure that you add all files and folders - also the hidden ones - to the `git` repository on your machine.
+
+::: {callout-warning}
+### Are all folders detected?
+Make sure that all folders in your repo are detected by `git`. If you are using `GitHub Desktop`, you can check this by clicking on the _Changes_ tab. If you are using the command line, you can use the `git status` command.
+
+Depending on your platform, you might need to change the `docs` folder to `doc` or `documents` for it to be detected by `git`. 
+:::
+
+After making sure all changes to the folder are detected, create a commit message (`initial commit` is conventional) and click _Commit to main_, followed by _Push origin_.
+
+![](tutorial_2_img/init.png){width=100%}
+
+## 3. Fork the repository
+Now the contributors (Team B) will fork the repository.
+
+1. Find the repository on `GitHub` and click _Fork_.
+  
+  - copying the main branch only will suffice
+
+![](tutorial_2_img/fork.png){width=100%}
+
+2. Clone the repository to your computer by clicking on the green code button and choosing _Open with GitHub Desktop_ as the clone method.
+
+![](tutorial_2_img/clone.png){width=100%}
+
+3. Choose a location on your computer and click _Clone_.
+
+## 3. Create a new branch
+Never work on the main branch. Always create a new branch for your work.
+
+![](tutorial_2_img/branch.png){width=100%}
+
+1. Choose _Branch > New Branch_ and give the branch a name.
+
+ - `dev` is a common name for a development branch
+
+![](tutorial_2_img/dev.png){width=100%}
+
+2. Now you can start working on the repository.
+
+## 4. Adjust the compendium
+This is a free exercise. You must add something to the  `Quarto` file and re-render. 
+
+1. Use your creativity and add two things to the  `Quarto` file from Tutorial 1. 
+
+ - The funniest image you know or can find
+ - The funniest or coolest video you know or can find
+ 
+2. Re-render the `Quarto` file and make sure that the changes are visible in the _html_ folder.
+
+3. Commit the changes to the repository and push the changes to your fork of the repository on `GitHub` by clicking _Push Origin_.
+
+## 5. Create a pull request
+Now that you have contributed to the project and have made changes to the repository, you can create a pull request to the main repository.
+
+1. Go to the forked repository on `GitHub` and click on _Compare & pull request_.
+![](tutorial_2_img/pr.png){width=100%}
+
+Alternatively, you can click on the _Preview Pull request_ button in `GitHub Desktop`.
+
+![](tutorial_2_img/prgh.png){width=100%}
+2. Review the changes that you made and click _Create pull request_.
+
+- choose `main` as the base (destination) repository branch and the branch that your changes are on as the compare branch
+- add an informative title and description
+- detail the changes that you made
+- assign someone to review the pull request (if relevant)
+
+In general, try to make the life of the maintainer as easy as possible by properly documenting your contributions. 
+
+![](tutorial_2_img/prmes.png){width=100%}
+
+## 6. Review and merge the pull request
+Now the owner of the repository (Team A) will review the pull request. This is best done in the _Files changed_ tab and by studying the _Commits_ tab. 
+
+![](tutorial_2_img/filch.png){width=100%}
+
+Go through the files and look at the code. Alternatively, you can check out the _PR branch_ in `GitHub Desktop` and see the changes in the files on your machine and the commits in the _Changes_ tab.
+
+![](tutorial_2_img/prbranch.png){width=100%}
+If you are happy, you can approve the changes and continue with merging the pull request. Approving is done with the _Review changes_ button under the _Files changed_ tab. It is nice to write a message to the contributor to thank them for their contribution.
+
+Click on _Merge pull request_ and then _Confirm merge_ to merge the pool request. The changes are now merged into the main branch of the repository.
+
+The development cycle is now complete and the contributed changes are part of the main repository.
+
+## 7. Make the portfolio visible
+Finally, we will make the portfolio visible by creating a website rendering and publishing our `Quarto` document to `GitHub Pages`.
+
+1. Go to the settings of the repository and scroll down to the _Pages_ section.
+2. Choose the `main` branch  as the source for the website and click _Save_. 
+![](tutorial_2_img/pages.png){width=100%}
+
+3. Scroll down and choose _Enforce HTTPS_ if available. This allows you to piggyback on the `GitHub` global certificate and have a securely accessible website.
+![](tutorial_2_img/https.png){width=100%}
+
+4. Wait for the website to be published. This can take a few minutes. You can check the status of the website by going to the _Actions_ tab of the repository. You can find your website address in the _Pages_ section of the repository settings.
+![](tutorial_2_img/where.png){width=100%}
+
+5. Update the README file with a link to the rendered `Quarto` document. If you did not change any parameters, this would be realized by adding the following line to the `README.md` file:
+
+```markdown
+The rendered `Quarto` file can be found [here](/doc/reprodev-exercise_quarto.html)
+```
+
+Going to your repository webpage on GitHub (often something like https://YOURUSERNAME.github.io/REPOSITORYNAME) should now serve you the `README.md` as a landing page, with a working link to your rendered `Quarto` file. 
+:::
+
+## To continue
+If you have time left, you can experiment with making your compendium into a `target`-powered data analylis pipeline. See [this link](https://books.ropensci.org/targets/walkthrough.html) for more details. 

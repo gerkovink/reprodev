@@ -11,7 +11,9 @@ website:
       - schedule.qmd
       - lectures.qmd
       - tutorial_1.qmd
+      - tutorial_1_cloud.qmd
       - tutorial_2.qmd
+      - tutorial_2_cloud.qmd
       - tutorial_3.qmd
       - final.qmd
   repo-url: https://github.com/gerkovink/reprodev

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tutorial 1 – reprodev</title>
+<title>Tutorial 1 (Posit Cloud) – reprodev</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -135,11 +135,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Lectures</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./tutorial_1.html" aria-current="page"> 
+    <a class="nav-link" href="./tutorial_1.html"> 
 <span class="menu-text">Tutorial 1</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./tutorial_1_cloud.html"> 
+    <a class="nav-link active" href="./tutorial_1_cloud.html" aria-current="page"> 
 <span class="menu-text">Tutorial 1 (Posit Cloud)</span></a>
   </li>  
   <li class="nav-item">
@@ -186,14 +186,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
   <li><a href="#next-tutorial" id="toc-next-tutorial" class="nav-link" data-scroll-target="#next-tutorial">Next tutorial</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/gerkovink/reprodev/edit/main/tutorial_1.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/gerkovink/reprodev/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/gerkovink/reprodev/edit/main/tutorial_1_cloud.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/gerkovink/reprodev/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Tutorial 1</h1>
+<h1 class="title">Tutorial 1 (Posit Cloud)</h1>
 <p class="subtitle lead">Reproducible programming with <a href="https://quarto.org"><code>Quarto</code></a></p>
 </div>
 
@@ -246,15 +246,16 @@ Learning objectives in the tutorials
 <p>We will work in <code>R</code>, althought the materials and flow would be easily applicable to <code>Python</code>. The reason for the focus on <code>R</code> is to set up a development mode for the next session that I will give on May 31. Because we are focusing on development in <code>R</code>, I will outline the <code>RStudio IDE</code> workflows. It is not hard to adapt these workflows to e.g.&nbsp;<code>VScode</code> or <code>Jupyter Lab</code>.</p>
 <p>That said, the materials are available <a href="https://github.com/gerkovink/reprodev/tree/exercise_quarto">in this branch of the course repository</a>. You can download the materials by following these steps:</p>
 <ol type="1">
-<li>Open the <a href="https://github.com/gerkovink/reprodev/tree/exercise_quarto"><code>exercise_quarto</code> branch</a>.</li>
-<li>Click on the green <code>Code</code> button and select <code>Download ZIP</code>.</li>
+<li>Create a GitHub account <a href="https://github.com/signup?ref_cta=Sign+up&amp;ref_loc=header+logged+out&amp;ref_page=%2F&amp;source=header-home">here</a> if you do not already have one.</li>
 </ol>
-<p><img src="tutorial_1_img/down.png" class="img-fluid"></p>
-<ol start="3" type="1">
-<li>Save the zip file in a location that you can easily access. We recommend to <strong>not</strong> use the default download location of your browser.</li>
-<li>Extract the contents of the zipped file.</li>
+<p><img src="tutorial_1_cloud_img/gh.png" class="img-fluid"></p>
+<ol start="2" type="1">
+<li><p>Once you have created a GitHub account, go to <a href="https://posit.cloud">Posit Cloud</a> and sign in with your GitHub account.</p></li>
+<li><p>A window with RStudio opens. Click on the <code>New Project</code> button in the top right corner and choose <code>New Project from Git Repository</code>.</p></li>
 </ol>
-<p>The materials should look like this:</p>
+<p><img src="tutorial_1_cloud_img/link.gif" class="img-fluid"> 4. Wait for the project to deploy. When the RStudio window appears, go to the git pane and choose the <code>exercise_quarto</code> branch.</p>
+<p><img src="tutorial_1_cloud_img/branch.gif" class="img-fluid"></p>
+<p>The materials in this branch should look like this:</p>
 <pre><code>reprodev-exercise_quarto
 ├── data
 │   └── data.csv
@@ -264,6 +265,8 @@ Learning objectives in the tutorials
 │   └── read_data.R
 ├── LICENSE.md
 └── README.md</code></pre>
+<p>This structure you can see in the <code>Files</code> pane in the RSudio IDE.</p>
+<p><img src="tutorial_1_cloud_img/project.png" class="img-fluid"></p>
 </section>
 <section id="lets-start" class="level1">
 <h1>Let’s start</h1>
@@ -292,12 +295,7 @@ Tip&nbsp;1: Install the required packages
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <p><strong>1. Create an RStudio Project</strong></p>
-<ul>
-<li>In RStudio, click <em>File</em> &gt; <em>New Project</em> &gt; <em>Existing Directory</em>.</li>
-<li>Browse to your folder <code>reprodev-exercise_quarto</code> in which you have saved the workshop materials.</li>
-<li>Check the <em>Open in new session</em> option.</li>
-<li>Click <em>Create Project</em>. This will create a <code>reprodev-exercise_quarto.Rproj</code> file.</li>
-</ul>
+<p>There is no need for this in Posit Cloud as the project is already created for you when you’ve deployed the GitHub repository.</p>
 <p><strong>2. Document your project for reproducibility</strong></p>
 <p>Your project already contains pre-made folders, a README file and a License. Open the <code>README.md</code> file and fill it with a few relevant details, for example:</p>
 <ul>
@@ -424,7 +422,7 @@ Expand to see the solution
 <p>The <code>file</code> option is the name of the file you want to load. The <code>eval</code> option is a boolean that determines if the code should be evaluated.</p>
 <p>Although <code>Quarto</code> unifies code and text, it is still a good idea to separate (parts of) the code from the text. Modular coding makes your documents easier to understand, read, maintain and debug.</p>
 <ol type="1">
-<li><p>Add the code file <code>_data_/read_data.R</code> to your document to read in the <code>boys</code> data.</p></li>
+<li><p>Add the code file <code>scripts/read_data.R</code> to your document to read in the <code>boys</code> data.</p></li>
 <li><p>In a new code chunk, ask for the <code>head(boys)</code> to verify that your code sourcing is working.</p></li>
 </ol>
 </div>
@@ -488,7 +486,8 @@ Expand to see the solution
 </section>
 <section id="next-tutorial" class="level1">
 <h1>Next tutorial</h1>
-<p>You will need your group’s <code>Quarto</code> document and the research compendium for the next tutorial. Make sure that you have saved it all.</p>
+<p>You will need your group’s <code>Quarto</code> document and the research compendium for the next tutorial. You can save it by following the below procedure.</p>
+<p><img src="tutorial_1_cloud_img/down.gif" class="img-fluid"></p>
 
 
 </section>
@@ -919,4 +918,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/gerkovink/reprodev/edit/main/tutorial_1.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/gerkovink/reprodev/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/gerkovink/reprodev/edit/main/tutorial_1_cloud.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/gerkovink/reprodev/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
