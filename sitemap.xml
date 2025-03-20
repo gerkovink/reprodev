@@ -1,39 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://gerkovink.github.io/reprodev/tutorial_1_cloud.html</loc>
+    <lastmod>2025-03-20T10:53:13.883Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gerkovink.github.io/reprodev/tutorial_2_cloud.html</loc>
+    <lastmod>2025-03-20T10:53:13.910Z</lastmod>
+  </url>
+  <url>
     <loc>https://gerkovink.github.io/reprodev/lectures.html</loc>
-    <lastmod>2024-05-22T05:23:15.010Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerkovink.github.io/reprodev/tutorial_2.html</loc>
-    <lastmod>2024-05-22T05:23:15.042Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerkovink.github.io/reprodev/tutorial_3.html</loc>
-    <lastmod>2024-05-22T05:23:15.102Z</lastmod>
+    <lastmod>2025-03-20T10:53:13.856Z</lastmod>
   </url>
   <url>
     <loc>https://gerkovink.github.io/reprodev/slides/lec-2.html</loc>
-    <lastmod>2024-05-22T05:23:15.038Z</lastmod>
+    <lastmod>2025-03-20T10:53:13.883Z</lastmod>
   </url>
   <url>
-    <loc>https://gerkovink.github.io/reprodev/schedule.html</loc>
-    <lastmod>2024-05-22T05:23:15.010Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerkovink.github.io/reprodev/slides/lec-1.html</loc>
-    <lastmod>2024-05-22T05:23:15.034Z</lastmod>
+    <loc>https://gerkovink.github.io/reprodev/tutorial_3.html</loc>
+    <lastmod>2025-03-20T10:53:13.963Z</lastmod>
   </url>
   <url>
     <loc>https://gerkovink.github.io/reprodev/index.html</loc>
-    <lastmod>2024-05-22T05:23:15.010Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gerkovink.github.io/reprodev/final.html</loc>
-    <lastmod>2024-05-22T05:23:15.010Z</lastmod>
+    <lastmod>2025-03-20T10:53:13.856Z</lastmod>
   </url>
   <url>
     <loc>https://gerkovink.github.io/reprodev/tutorial_1.html</loc>
-    <lastmod>2024-05-22T05:23:15.038Z</lastmod>
+    <lastmod>2025-03-20T10:53:13.883Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gerkovink.github.io/reprodev/slides/lec-1.html</loc>
+    <lastmod>2025-03-20T10:53:13.879Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gerkovink.github.io/reprodev/final.html</loc>
+    <lastmod>2025-03-20T10:53:13.856Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gerkovink.github.io/reprodev/schedule.html</loc>
+    <lastmod>2025-03-20T10:53:13.857Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gerkovink.github.io/reprodev/tutorial_2.html</loc>
+    <lastmod>2025-03-20T10:53:13.910Z</lastmod>
   </url>
 </urlset>
