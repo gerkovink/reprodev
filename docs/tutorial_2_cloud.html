@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tutorial 2 – reprodev</title>
+<title>Tutorial 2 (Posit Cloud) – reprodev</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -148,7 +148,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./tutorial_2_cloud.html" aria-current="page"> 
-<span class="menu-text">Tutorial 2</span></a>
+<span class="menu-text">Tutorial 2 (Posit Cloud)</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./tutorial_3.html"> 
@@ -191,7 +191,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Tutorial 2</h1>
+<h1 class="title">Tutorial 2 (Posit Cloud)</h1>
 <p class="subtitle lead"><a href="https://git-scm.com"><code>git</code></a> and <a href="https://github.com"><code>GitHub</code></a> - creating a visible portfolio</p>
 </div>
 
@@ -254,38 +254,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">1. Publish a new repository</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">2. Add content</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">3. Fork the repository</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">3. Create a new branch</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">4. Adjust the compendium</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false">5. Create a pull request</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" role="tab" aria-controls="tabset-1-7" aria-selected="false">6. Review and merge the pull request</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-8" role="tab" aria-controls="tabset-1-8" aria-selected="false">7. Make the portfolio visible</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>First, we will create a new repository on with <code>GitHub</code> desktop.</p>
-<ol type="1">
-<li>Choose <em>File &gt; New Repository</em></li>
-</ol>
-<p><img src="tutorial_2_img/new.png" class="img-fluid" style="width:50.0%"></p>
-<ol start="2" type="1">
-<li>Choose a name for the repository and a location on your computer and click <em>Create Repository</em></li>
-</ol>
+<p>First, we will create a new repository on <code>GitHub</code>. Go to <a href="https://www.github.com">https://www.github.com</a> and log into your account.</p>
 <ul>
-<li>Choose initialise this repository with a README</li>
+<li>Click on the <code>Repositories</code> tab and then on the green <code>New</code> button</li>
+<li>Give your repo a name and a description</li>
+<li>Choose <code>Public</code> as the visibility</li>
+<li>Choose initialize this repository with a README</li>
 <li>Choose MIT License</li>
 <li>Choose <code>R</code> for <em>Git Ignore</em></li>
 </ul>
-<p><img src="tutorial_2_img/create.png" class="img-fluid" style="width:100.0%"> 3. Now publish the repository to <code>GitHub</code> by clicking <em>Publish Repository</em> and follow the instructions.</p>
-<ul>
-<li>Choose a name for the repository</li>
-<li>Untick <em>Keep this code private</em></li>
-</ul>
-<p><img src="tutorial_2_img/publish.png" class="img-fluid" style="width:100.0%"></p>
-<p>Now click <em>Publish Repository</em> and wait for the repo to be published.</p>
+<p><img src="tutorial_2_cloud_img/repo.gif" class="img-fluid"></p>
+<ol start="2" type="1">
+<li>Now publish the repository to <code>GitHub</code> by clicking <em>Create Repository</em> and admire your new repository.</li>
+</ol>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <p>This one is easy!</p>
-<p>Add the content from Tutorial 1 to the folder that you just created. You can overwrite the <code>README.md</code> file with the one from Tutorial 1. There is no need to overwrite the <code>.gitignore</code> and <code>LICENSE</code> files, if relevant.</p>
+<p>Add the content from Tutorial 1 to the folder that you just created. If you don’t have a record of it, you can use <a href="https://github.com/gerkovink/reprodev-exercise_quarto">this repository</a> as the base.</p>
+<p>You can overwrite the <code>README.md</code> file with the one from Tutorial 1. Add all files from the your repo, except for the <em>renv</em> folder (if you do you will get a complaint about the number of files). There is no need to overwrite the <code>.gitignore</code> and <code>LICENSE</code> files, if relevant.</p>
 <p>Make sure that you add all files and folders - also the hidden ones - to the <code>git</code> repository on your machine.</p>
 <section id="are-all-folders-detected" class="level3 {callout-warning}">
 <h3 class="anchored" data-anchor-id="are-all-folders-detected">Are all folders detected?</h3>
-<p>Make sure that all folders in your repo are detected by <code>git</code>. If you are using <code>GitHub Desktop</code>, you can check this by clicking on the <em>Changes</em> tab. If you are using the command line, you can use the <code>git status</code> command.</p>
-<p>Depending on your platform, you might need to change the <code>docs</code> folder to <code>doc</code> or <code>documents</code> for it to be detected by <code>git</code>.</p>
+<p>Make sure that all folders in your repo are detected by <code>git</code>. You’ll get an overview of the added files and folders. If you see that some folders are not detected, or if you have forgotten some files, you can add them manually by clicking on the <em>+ Add</em> button.</p>
 </section>
-<p>After making sure all changes to the folder are detected, create a commit message (<code>initial commit</code> is conventional) and click <em>Commit to main</em>, followed by <em>Push origin</em>.</p>
-<p><img src="tutorial_2_img/init.png" class="img-fluid" style="width:100.0%"></p>
+<p>After making sure all changes to the folder are detected, create a commit message (<code>initial commit</code> is conventional) and click <em>Commit to main</em>.</p>
+<p><img src="tutorial_2_cloud_img/upload.gif" class="img-fluid"></p>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
 <p>Now the contributors (Team B) will fork the repository.</p>
@@ -295,26 +288,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>copying the main branch only will suffice</li>
 </ul>
-<p><img src="tutorial_2_img/fork.png" class="img-fluid" style="width:100.0%"></p>
+<p><img src="tutorial_2_cloud_img/fork.png" class="img-fluid" style="width:100.0%"></p>
 <ol start="2" type="1">
-<li>Clone the repository to your computer by clicking on the green code button and choosing <em>Open with GitHub Desktop</em> as the clone method.</li>
+<li>Clone the repository to a new RStudio project on <code>posit.cloud</code></li>
 </ol>
-<p><img src="tutorial_2_img/clone.png" class="img-fluid" style="width:100.0%"></p>
-<ol start="3" type="1">
-<li>Choose a location on your computer and click <em>Clone</em>.</li>
-</ol>
+<p><img src="tutorial_2_cloud_img/project.gif" class="img-fluid"></p>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<p>Never work on the main branch. Always create a new branch for your work.</p>
-<p><img src="tutorial_2_img/branch.png" class="img-fluid" style="width:100.0%"></p>
+<p>Never work on the main branch. Always create a new branch for your work. With Posit Cloud, we need to first create an access token to communicate with <code>GitHub</code>.</p>
 <ol type="1">
-<li>Choose <em>Branch &gt; New Branch</em> and give the branch a name.</li>
+<li>Go to your <code>GitHub</code> account and click on your profile picture in the top right corner. Choose <em>Settings</em> and then <em>Developer settings</em>. There you can create a token.</li>
+</ol>
+<ul>
+<li>A classic token will suffice</li>
+<li>The token needs to have the <code>repo</code> scope</li>
+<li>Choose an expiration date that you are comfortable with</li>
+</ul>
+<p>Don’t forget to copy the token, once you are done. It will only be shown once.</p>
+<p><img src="tutorial_2_cloud_img/token.gif" class="img-fluid"></p>
+<ol start="2" type="1">
+<li>Take your copied token and go to Posit Cloud. Click on the <em>new branch</em> icon to create a new branch.</li>
 </ol>
 <ul>
 <li><code>dev</code> is a common name for a development branch</li>
+<li>you’ll have to authenticate with your <code>GitHub</code> account</li>
+<li>use your <code>GitHub</code> username as the username</li>
+<li>use the copied token as the password</li>
 </ul>
-<p><img src="tutorial_2_img/dev.png" class="img-fluid" style="width:100.0%"></p>
-<ol start="2" type="1">
+<p><img src="tutorial_2_cloud_img/branch.gif" class="img-fluid"></p>
+<ol start="3" type="1">
 <li>Now you can start working on the repository.</li>
 </ol>
 </div>
@@ -329,16 +331,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <ol start="2" type="1">
 <li><p>Re-render the <code>Quarto</code> file and make sure that the changes are visible in the <em>html</em> folder.</p></li>
-<li><p>Commit the changes to the repository and push the changes to your fork of the repository on <code>GitHub</code> by clicking <em>Push Origin</em>.</p></li>
+<li><p>Commit the changes to the repository (commit button) and push the changes to your fork of the repository on <code>GitHub</code> by clicking the green up arrow.</p></li>
 </ol>
 </div>
 <div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
-<p>Now that you have contributed to the project and have made changes to the repository, you can create a pull request to the main repository.</p>
+<p>Now that you have contributed to the project and have made changes to the repository, you can create a pull request to the main repository. I will illustrate this proces on <a href="https://github.com/gerkovink/reprodev-exercise_quarto">my <code>reprodev-exercise_quarto</code> repository</a></p>
 <ol type="1">
-<li>Go to the forked repository on <code>GitHub</code> and click on <em>Compare &amp; pull request</em>. <img src="tutorial_2_img/pr.png" class="img-fluid" style="width:100.0%"></li>
+<li><p>Go to the forked repository on <code>GitHub</code> and click on <em>Compare &amp; pull request</em>. <img src="tutorial_2_img/pr.png" class="img-fluid" style="width:100.0%"></p></li>
+<li><p>Review the changes that you made and click <em>Create pull request</em>.</p></li>
 </ol>
-<p>Alternatively, you can click on the <em>Preview Pull request</em> button in <code>GitHub Desktop</code>.</p>
-<p><img src="tutorial_2_img/prgh.png" class="img-fluid" style="width:100.0%"> 2. Review the changes that you made and click <em>Create pull request</em>.</p>
 <ul>
 <li>choose <code>main</code> as the base (destination) repository branch and the branch that your changes are on as the compare branch</li>
 <li>add an informative title and description</li>
@@ -351,8 +352,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="tabset-1-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-7-tab">
 <p>Now the owner of the repository (Team A) will review the pull request. This is best done in the <em>Files changed</em> tab and by studying the <em>Commits</em> tab.</p>
 <p><img src="tutorial_2_img/filch.png" class="img-fluid" style="width:100.0%"></p>
-<p>Go through the files and look at the code. Alternatively, you can check out the <em>PR branch</em> in <code>GitHub Desktop</code> and see the changes in the files on your machine and the commits in the <em>Changes</em> tab.</p>
-<p><img src="tutorial_2_img/prbranch.png" class="img-fluid" style="width:100.0%"> If you are happy, you can approve the changes and continue with merging the pull request. Approving is done with the <em>Review changes</em> button under the <em>Files changed</em> tab. It is nice to write a message to the contributor to thank them for their contribution.</p>
+<p>Go through the files and look at the code.</p>
+<p>If you are happy, you can approve the changes and continue with merging the pull request. Approving is done with the <em>Review changes</em> button under the <em>Files changed</em> tab. It is nice to write a message to the contributor to thank them for their contribution.</p>
 <p>Click on <em>Merge pull request</em> and then <em>Confirm merge</em> to merge the pool request. The changes are now merged into the main branch of the repository.</p>
 <p>The development cycle is now complete and the contributed changes are part of the main repository.</p>
 </div>

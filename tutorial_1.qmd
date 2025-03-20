@@ -23,7 +23,6 @@ This course has its own repository at `GitHub` where you can find all sources fo
 
 # Course materials
 The tutorial materials consist of a project structure (borrowed from [here](https://utrechtuniversity.github.io/workshop-reproducible-manuscripts/workshop-materials.html)) and dummy scripts that we will use, fill and later on publish. 
-
 We will work in `R`, althought the materials and flow would be easily applicable to `Python`. The reason for the focus on `R` is to set up a development mode for the next session that I will give on May 31. Because we are focusing on development in `R`, I will outline the `RStudio IDE` workflows. It is not hard to adapt these workflows to e.g. `VScode` or `Jupyter Lab`.
 
 That said, the materials are available [in this branch of the course repository](https://github.com/gerkovink/reprodev/tree/exercise_quarto). 
@@ -199,7 +198,7 @@ The `file` option is the name of the file you want to load. The `eval` option is
 
 Although `Quarto` unifies code and text, it is still a good idea to separate (parts of) the code from the text. Modular coding makes your documents easier to understand, read, maintain and debug. 
 
-1. Add the code file `_data_/read_data.R` to your document to read in the `boys` data.
+1. Add the code file `scripts/read_data.R` to your document to read in the `boys` data.
 
 2. In a new code chunk, ask for the `head(boys)` to verify that your code sourcing is working.
 

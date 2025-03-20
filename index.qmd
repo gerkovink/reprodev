@@ -2,7 +2,7 @@
 title: "Reproducible Programming and Development"
 ---
 
-- Teaching team: [Gerko Vink](https://www.gerkovink.com) & [Carlos Poses](https://carlosposes.github.io)
+- Teaching team: [Gerko Vink](https://www.gerkovink.com), [Hanne Oberman](https://www.hanneoberman.github.io) & Paolo Colussi
 
 # Introductie
 Welkom bij deze cursusdag, speciaal ontworpen voor aankomende data science professionals die zich willen verdiepen in de praktische ontwikkelvaardigheden die essentieel zijn voor de co-creatie van code en software. In de dynamische wereld van data science is de kunst van samenwerking tussen data analisten, ontwikkelaars en eindgebruikers cruciaal. Deze dag staat daarom in het teken van hands-on leren en samenwerken, met een sterke focus op praktische toepassing.

@@ -148,7 +148,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./tutorial_2_cloud.html"> 
-<span class="menu-text">Tutorial 2</span></a>
+<span class="menu-text">Tutorial 2 (Posit Cloud)</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./tutorial_3.html"> 
@@ -242,8 +242,7 @@ Learning objectives in the tutorials
 </section>
 <section id="course-materials" class="level1">
 <h1>Course materials</h1>
-<p>The tutorial materials consist of a project structure (borrowed from <a href="https://utrechtuniversity.github.io/workshop-reproducible-manuscripts/workshop-materials.html">here</a>) and dummy scripts that we will use, fill and later on publish.</p>
-<p>We will work in <code>R</code>, althought the materials and flow would be easily applicable to <code>Python</code>. The reason for the focus on <code>R</code> is to set up a development mode for the next session that I will give on May 31. Because we are focusing on development in <code>R</code>, I will outline the <code>RStudio IDE</code> workflows. It is not hard to adapt these workflows to e.g.&nbsp;<code>VScode</code> or <code>Jupyter Lab</code>.</p>
+<p>The tutorial materials consist of a project structure (borrowed from <a href="https://utrechtuniversity.github.io/workshop-reproducible-manuscripts/workshop-materials.html">here</a>) and dummy scripts that we will use, fill and later on publish. We will work in <code>R</code>, althought the materials and flow would be easily applicable to <code>Python</code>. The reason for the focus on <code>R</code> is to set up a development mode for the next session that I will give on May 31. Because we are focusing on development in <code>R</code>, I will outline the <code>RStudio IDE</code> workflows. It is not hard to adapt these workflows to e.g.&nbsp;<code>VScode</code> or <code>Jupyter Lab</code>.</p>
 <p>That said, the materials are available <a href="https://github.com/gerkovink/reprodev/tree/exercise_quarto">in this branch of the course repository</a>. You can download the materials by following these steps:</p>
 <ol type="1">
 <li>Open the <a href="https://github.com/gerkovink/reprodev/tree/exercise_quarto"><code>exercise_quarto</code> branch</a>.</li>
@@ -424,7 +423,7 @@ Expand to see the solution
 <p>The <code>file</code> option is the name of the file you want to load. The <code>eval</code> option is a boolean that determines if the code should be evaluated.</p>
 <p>Although <code>Quarto</code> unifies code and text, it is still a good idea to separate (parts of) the code from the text. Modular coding makes your documents easier to understand, read, maintain and debug.</p>
 <ol type="1">
-<li><p>Add the code file <code>_data_/read_data.R</code> to your document to read in the <code>boys</code> data.</p></li>
+<li><p>Add the code file <code>scripts/read_data.R</code> to your document to read in the <code>boys</code> data.</p></li>
 <li><p>In a new code chunk, ask for the <code>head(boys)</code> to verify that your code sourcing is working.</p></li>
 </ol>
 </div>

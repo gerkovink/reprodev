@@ -56,7 +56,7 @@ Team A will be the owner of the repository. Team B will fork the repository and 
 
 ## 1. Publish a new repository
 
-First, we will create a new repository on with `GitHub` desktop.
+First, we will create a new repository with `GitHub` desktop.
 
 1. Choose _File > New Repository_
 
