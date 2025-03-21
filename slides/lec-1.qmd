@@ -137,7 +137,7 @@ Reproducible research is not the norm:
 
 ![](images/lec-1/compendium.png){width=50%}
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8169292.svg)](https://doi.org/10.5281/zenodo.8169292)
+[![](https://zenodo.org/badge/DOI/10.5281/zenodo.8169292.svg)](https://doi.org/10.5281/zenodo.8169292)
 
 
 ## Definition
