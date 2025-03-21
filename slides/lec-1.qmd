@@ -11,7 +11,7 @@ author:
     email: h.i.oberman@uu.nl
     affiliations:
       - name: Methodology & Statistics @ UU
-date: 15 Mar 2023
+date: 21 Mar 2025
 date-format: "D MMM YYYY"
 bibliography: data/lec-2/publications.bib
 execute: 
@@ -20,6 +20,7 @@ editor: source
 format: 
   revealjs:
     theme: [solarized, gerko.scss]
+    embed-resources: true
     progress: true
     multiplex: true
     transition: fade
