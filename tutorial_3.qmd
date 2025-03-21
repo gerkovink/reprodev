@@ -338,12 +338,10 @@ Once you have selected the correct option, we can re-run the `CHECK`. You will f
 
 Our package `CHECK` cannot find function `rounder()`. That may seem weird, since it is the only function in our package. The thing is - we have not explicitly told `roxygen2` to `export` our function, i.e. to make our function available outside of the package namespace. Simply adding `@export` to the `rounder.R` file would solve this error:
 ```{r eval = FALSE}
-...
 #' @author Gerko Vink \email{g.vink@uu.nl} and Hanne Oberman \email{h.i.oberman@uu.nl}
 #' @export
 #' @examples
 #' library(magrittr)
-...
 ```
 
 Try re-running the `CHECK` to see if you hit three green check marks (NO errors, warnings and notes). If all is well, you'll see:
