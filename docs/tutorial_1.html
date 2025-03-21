@@ -432,17 +432,16 @@ Expand to see the solution
 <ol type="1">
 <li>Add the following syntax with code block to your <code>Quarto</code> document:</li>
 </ol>
-<div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>#| code-overflow: wrap</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>Not every value in the <span class="in">`mice::boys`</span> set is observed. This may pose problems with the analysis of the <span class="in">`boys`</span> data. To get an idea about the problem, we can use missing data patterns. created the <span class="co">[</span><span class="ot">`ggmice`</span><span class="co">](https://github.com/amices/ggmice)</span>{.pkg} package to create a <span class="co">[</span><span class="ot">`ggplot2`</span><span class="co">](https://ggplot2.tidyverse.org)</span>{.pkg} <span class="co">[</span><span class="ot">@ggplot2</span><span class="co">]</span> type plot of the missing values in the <span class="in">`boys`</span> data.</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="in">```{r mdpattern}</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="in">library(mice)</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="in">library(ggmice)</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="in"># visualize ggplot2-like missing data pattern</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="in">mice::boys |&gt; </span></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="in">  ggmice::plot_pattern()</span></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Not every value in the <span class="in">`mice::boys`</span> set is observed. This may pose problems with the analysis of the <span class="in">`boys`</span> data. To get an idea about the problem, we can use missing data patterns. created the <span class="co">[</span><span class="ot">`ggmice`</span><span class="co">](https://github.com/amices/ggmice)</span>{.pkg} package to create a <span class="co">[</span><span class="ot">`ggplot2`</span><span class="co">](https://ggplot2.tidyverse.org)</span>{.pkg} <span class="co">[</span><span class="ot">@ggplot2</span><span class="co">]</span> type plot of the missing values in the <span class="in">`boys`</span> data.</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="in">```{r mdpattern}</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="in">library(mice)</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="in">library(ggmice)</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="in"># visualize ggplot2-like missing data pattern</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="in">mice::boys |&gt; </span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="in">  ggmice::plot_pattern()</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The above syntax uses the <code>Quarto</code> referencing environment to create a reference for the <code>ggplot2</code> package.</p>
 <ol start="2" type="1">
 <li>For the referencing to work, you need to add the <code>references.bib</code> file to your project. You can find the file in the docs folder of your project. Add the following line to the YAML front matter of your Quarto document.</li>

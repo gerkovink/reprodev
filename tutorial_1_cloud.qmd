@@ -216,7 +216,6 @@ Now let's start with a quick investigation into the `boys` data and its missingn
 1. Add the following syntax with code block to your `Quarto` document:
 
 ````
-#| code-overflow: wrap
 Not every value in the `mice::boys` set is observed. This may pose problems with the analysis of the `boys` data. To get an idea about the problem, we can use missing data patterns. created the [`ggmice`](https://github.com/amices/ggmice){.pkg} package to create a [`ggplot2`](https://ggplot2.tidyverse.org){.pkg} [@ggplot2] type plot of the missing values in the `boys` data.
 
 ```{{r mdpattern}}
