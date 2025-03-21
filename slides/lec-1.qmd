@@ -134,16 +134,11 @@ Reproducible research is not the norm:
 :::
 
 ## Research compendium
-::: columns
-::: {.column width="50%"}
-![](https://the-turing-way.netlify.app/_images/research-compendium.svg){width=90%}
+
+![](images/lec-1/compendium.png){width=50%}
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8169292.svg)](https://doi.org/10.5281/zenodo.8169292)
-:::
 
-::: {.column width="45%"}
-
-:::
-:::
 
 ## Definition
 
